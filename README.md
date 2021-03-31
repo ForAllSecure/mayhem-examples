@@ -19,10 +19,11 @@ Mayhem Docker boilerplates / templates for most of the common programming langua
 [![](https://img.shields.io/badge/python-%20-blue)](https://img.shields.io/badge/python-%20-blue)
 [![](https://img.shields.io/badge/rust-%20-blue)](https://img.shields.io/badge/rust-%20-blue)
 
-|     Image Name   |     Language     |     Base Image    |     Layers        |     Image Size     |
-| :--------------- | :--------------: | :---------------: | :---------------: | -----------------: |
-| [fuzzme/java-jazzer](java-jazzer/Dockerfile) | java | openjdk11 | [![](https://images.microbadger.com/badges/image/gauthamp10/java.svg)](https://microbadger.com/images/gauthamp10/java) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
-| [fuzzme/python-atheris](python-atheris/Dockerfile) | python | python3.8 | [![](https://images.microbadger.com/badges/image/gauthamp10/python.svg)](https://microbadger.com/images/gauthamp10/python) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
+|     Image Name   |     Language     |    Environment    |     Fuzzer        |     Layers        |     Image Size     |
+| :--------------- | :--------------: | :---------------: | :---------------: | :---------------: | -----------------: |
+| [fuzzme/java-jazzer](java-jazzer/Dockerfile) | java | openjdk11 | Jazzer | [![](https://images.microbadger.com/badges/image/gauthamp10/java.svg)](https://microbadger.com/images/gauthamp10/java) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
+| [fuzzme/python-atheris](python-atheris/Dockerfile) | python | python3.8 | Atheris | [![](https://images.microbadger.com/badges/image/gauthamp10/python.svg)](https://microbadger.com/images/gauthamp10/python) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
+| [fuzzme/c-mfuzz](c-mfuzz/Dockerfile) | C | C99 | Mfuzz | [![](https://images.microbadger.com/badges/image/gauthamp10/c.svg)](https://microbadger.com/images/gauthamp10/c) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
 | [forallsecure/testme](c-cpp/uninstrumented/Dockerfile) | c-cpp | debian:stable-slim | [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
 | [forallsecure/bacsrv](c-cpp/bacsrv/Dockerfile) | c-cpp | debian:stable-slim | [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
 | [forallsecure/lighttpd-1.4.15](c-cpp/lighttpd/Dockerfile-lighttpd-1.4.15) | c-cpp | debian:stable-slim | [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
