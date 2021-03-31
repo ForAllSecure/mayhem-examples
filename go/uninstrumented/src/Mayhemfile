@@ -1,0 +1,27 @@
+# Mayhem version number
+version: '1.11'
+
+# A user-meaningful name to group like targets
+project: go
+
+# A user-meaningful name of the target
+target: testme-go-uninstrumented
+
+# Time to spend fuzzing.
+duration: 180
+
+# Perform advanced triage and diagnosis of each test case.
+# This will find many more defects, but add additional processing time.
+advanced_triage: false
+
+# List of executable programs to analyze.  For most use, you only
+# need one.
+cmds:
+
+    # The full path to the executable program to test.
+    #   - "@@" is the  to test.
+    #     For programs that take input from a file, use '@@' to mark
+    #     the location in the target's command line where the input
+    #     file name should be placed. Mayhem will substitute this
+    #     for you.
+    - cmd: /root/tutorial/testme_go/uninstrumented/testme_go @@
