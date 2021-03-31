@@ -6,8 +6,7 @@
 
 Mayhem Docker boilerplates / templates for most of the common programming languages—like a "Hello World!" but for Docker images to be used with Mayhem.
 
-![GitHub repo size](https://img.shields.io/github/repo-size/ForAllSecure/examples)
-![Visitors](https://visitor-badge.glitch.me/badge?page_id=ForAllSecure.examples)
+![Page views](https://visitor-badge.glitch.me/badge?page_id=ForAllSecure.examples)
 
 ---
 
@@ -22,7 +21,9 @@ Mayhem Docker boilerplates / templates for most of the common programming langua
 
 |     Image Name   |     Language     |     Base Image    |     Layers        |     Image Size     |
 | :--------------- | :--------------: | :---------------: | :---------------: | -----------------: |
-| [forallsecure/testme](cpp/uninstrumented/Dockerfile) | cpp | debian:stable-slim | [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
+| [forallsecure/testme](c-cpp/uninstrumented/Dockerfile) | c-cpp | debian:stable-slim | [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
+| [forallsecure/bacsrv](c-cpp/bacsrv/Dockerfile) | c-cpp | rust:1.44-buster | [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
+| [forallsecure/lighttpd](c-cpp/lighttpd/Dockerfile) | c-cpp | rust:1.44-buster | [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
 | [forallsecure/testme-go](go/uninstrumented/Dockerfile) | go | golang:1.13.3-buster | [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
 | [forallsecure/testme-rust](rust/uninstrumented/Dockerfile) | rust | rust:1.44-buster | [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
 
