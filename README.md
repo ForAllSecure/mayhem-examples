@@ -22,6 +22,7 @@ Mayhem Docker boilerplates / templates for most of the common programming langua
 |     Image Name     |     Language Version     |     Base Image     |     Layers      |     Image Size     |
 | :--------------- | :--------------: | :---------------: | :---------------: | ------------------------------------------: |
 | [gauthamp10/ada](https://github.com/gauthamp10/dockerfile-boilerplates/blob/master/ada/Dockerfile)        |     10.1.0-1     |   ubuntu:latest |   [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada)   |             [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
+| [gauthamp10/ada](https://github.com/gauthamp10/dockerfile-boilerplates/blob/master/ada/Dockerfile)        |     10.1.0-1     |   ubuntu:latest |   [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada)   |             [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
 
 ## Why Use Docker?
 
