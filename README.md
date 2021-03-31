@@ -6,7 +6,7 @@
 
 Mayhem Docker boilerplates / templates for most of the common programming languages—like a "Hello World!" but for Docker images to be used with Mayhem.
 
-![Page views](https://visitor-badge.glitch.me/badge?page_id=ForAllSecure.examples)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=ForAllSecure.examples)
 
 ---
 
