@@ -4,7 +4,7 @@
   <img src=".images/mayhem-logo.png" alt="Hello World! of Mayhem Docker Images"/>
 </p>
 
-Mayhem Docker boilerplates / templates for most common progamming languages. Like a Hello World! but for Docker images to be used with Mayhem.
+Mayhem Docker boilerplates / templates for most of the common programming languages—like a "Hello World!" but for Docker images to be used with Mayhem.
 
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=ForAllSecure.examples)
 
