@@ -1,7 +1,7 @@
 <h1 align="center">Fuzzme with Mayhem</h1>
 
 <p align="center">
-  <img src=".images/mayhem-logo.png" alt="Hello World! of Mayhem Docker Images"/>
+  <img src=".mayhem-logo.png" alt="Hello World! of Mayhem Docker Images"/>
 </p>
 
 Mayhem fuzzme templates for programming languages and fuzzers that you love! Like a "Hello World!" but for fuzzing!
