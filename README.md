@@ -40,9 +40,8 @@ Order is alphabetical.
 | [fuzzme/ocaml-uninstrumented](ocaml-uninstrumented/Dockerfile) | OCaml            | OCaml 4.0         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/ocaml-uninstrumented)  |
 | [fuzzme/python-atheris](python-atheris/Dockerfile)             | Python           | Python3.8         | Atheris            | ![](https://img.shields.io/docker/image-size/fuzzme/python-atheris) |
 | [fuzzme/rust-afl](rust-afl/Dockerfile)                         | Rust             | Rust 1.44         | afl.rs             | ![](https://img.shields.io/docker/image-size/fuzzme/rust-afl)  |
-| [fuzzme/rust-cargo-fuzz](rust-cargo-fuzz/Dockerfile            | Rust             | Rust 1.44         | cargo-fuzz         | ![](https://img.shields.io/docker/image-size/fuzzme/rust-cargo-fuzz)  |
+| [fuzzme/rust-cargo-fuzz](rust-cargo-fuzz/Dockerfile)            | Rust             | Rust 1.44         | cargo-fuzz         | ![](https://img.shields.io/docker/image-size/fuzzme/rust-cargo-fuzz)  |
 | [fuzzme/rust-uninstrumented](rust-uninstrumented/Dockerfile)   | Rust             | Rust 1.44         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/rust-uninstrumented)  |
-
 
 ## How can I contribute?
 
