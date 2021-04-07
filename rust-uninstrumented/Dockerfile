@@ -4,4 +4,4 @@ RUN rustc -o /fuzzme fuzzme.rs
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /fuzzme @@
+CMD ["/fuzzme", "@@"]

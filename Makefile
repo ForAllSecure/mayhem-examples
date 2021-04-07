@@ -7,8 +7,9 @@ BUILD_PREFIX := build/
 PUSH_PREFIX := push/
 CLEAN_PREFIX := clean/
 FUZZERS := \
-	python-atheris \
+	ada-uninstrumented \
 	java-jazzer \
+	python-atheris \
 	rust-uninstrumented
 BUILD_FUZZERS := $(addprefix $(BUILD_PREFIX), $(FUZZERS))
 PUSH_FUZZERS := $(addprefix $(PUSH_PREFIX), $(FUZZERS))
