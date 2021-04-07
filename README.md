@@ -1,16 +1,16 @@
-<h1 align="center">Mayhem Boilerplates</h1>
+<h1 align="center">Fuzzme with Mayhem</h1>
 
 <p align="center">
   <img src=".images/mayhem-logo.png" alt="Hello World! of Mayhem Docker Images"/>
 </p>
 
-Mayhem Docker boilerplates / templates for most of the common programming languages—like a "Hello World!" but for Docker images to be used with Mayhem.
+Mayhem fuzzme templates for most common programming languages and fuzzers that are available! Like a "Hello World!" but for fuzzing!
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=ForAllSecure.examples)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=ForAllSecure.fuzzme)
 
 ---
 
-## List Of Programming Languages
+## List Of Fuzzme Examples
 
 [![](https://img.shields.io/badge/c-%20-blue)](https://img.shields.io/badge/C-%20-blue)
 [![](https://img.shields.io/badge/cpp-%20-blue)](https://img.shields.io/badge/cpp-%20-blue)
@@ -30,6 +30,10 @@ Mayhem Docker boilerplates / templates for most of the common programming langua
 | [forallsecure/lighttpd-1.4.52](c-cpp/lighttpd/Dockerfile-lighttpd-1.4.52) | c-cpp | debian:stable-slim | | [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
 | [forallsecure/testme-go](go/uninstrumented/Dockerfile) | go | golang:1.13.3-buster | | [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
 | [forallsecure/testme-rust](rust/uninstrumented/Dockerfile) | rust | rust:1.44-buster | | [![](https://images.microbadger.com/badges/image/gauthamp10/ada.svg)](https://microbadger.com/images/gauthamp10/ada) | [![](https://img.shields.io/badge/size-492MB-orange)](https://img.shields.io/badge/size-492MB-orange) |
+
+## How can I contribute?
+
+Don't see your language/fuzzer in the list above? Let us know or better yet send us a PR adding it! Checkout our [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
 
 ## Why Use Docker?
 
