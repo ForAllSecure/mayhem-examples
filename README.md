@@ -15,22 +15,22 @@ Mayhem fuzzme templates for most common programming languages and fuzzers that a
 
 ![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/fuzzme/java-jazzer)
 
-|     Image Name                                                 |     Language     |    Environment    |     Fuzzer        |     Layers                                                       |     Image Size     |
-| :---------------                                               | :--------------: | :---------------: | :---------------: | :---------------:                                                | -----------------: |
-| [fuzzme/c-afl](c-afl/Dockerfile)                               | C                | C99               | AFL               | ![](https://microbadger.com/images/fuzzme/c-afl)                 | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl)  |
-| [fuzzme/c-libfuzzer](c-libfuzzer/Dockerfile)                   | C                | C99               | libFuzzer         | ![](https://microbadger.com/images/fuzzme/c-libfuzzer)           | ![](https://img.shields.io/docker/image-size/fuzzme/c-libfuzzer)  |
-| [fuzzme/c-honggfuzz](c-honggfuzz/Dockerfile)                   | C                | C99               | Honggfuzz         | ![](https://microbadger.com/images/fuzzme/c-honggfuzz)           | ![](https://img.shields.io/docker/image-size/fuzzme/c-honggfuzz)  |
-| [fuzzme/c-uninstrumented](c-uninstrumented/Dockerfile)         | C                | C99               | Uninstrumented    | ![](https://microbadger.com/images/fuzzme/c-uninstrumented)      | ![](https://img.shields.io/docker/image-size/fuzzme/c-uninstrumented)  |
-| [fuzzme/cpp-afl](cpp-afl/Dockerfile)                           | C++              | C++11             | AFL               | ![](https://microbadger.com/images/fuzzme/cpp-uninstrumented)    | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-uninstrumented)  |
-| [fuzzme/cpp-libfuzzer](cpp-libfuzzer/Dockerfile)               | C++              | C++11             | libFuzzer         | ![](https://microbadger.com/images/fuzzme/cpp-uninstrumented)    | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-uninstrumented)  |
-| [fuzzme/cpp-honggfuzz](cpp-honggfuzz/Dockerfile)               | C++              | C++11             | Honggfuzz         | ![](https://microbadger.com/images/fuzzme/cpp-uninstrumented)    | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-uninstrumented)  |
-| [fuzzme/cpp-uninstrumented](cpp-uninstrumented/Dockerfile)     | C++              | C++11             | Uninstrumented    | ![](https://microbadger.com/images/fuzzme/cpp-uninstrumented)    | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-uninstrumented)  |
-| [fuzzme/java-jazzer](java-jazzer/Dockerfile)                   | java             | openjdk11         | Jazzer            | ![](https://microbadger.com/images/fuzzme/java-jazzer)           | ![](https://img.shields.io/docker/image-size/fuzzme/java-jazzer) |
-| [fuzzme/go-go-fuzz](go-go-fuzz/Dockerfile)                     | Go               | Go 1.11           | Go-fuzz           | ![](https://microbadger.com/images/fuzzme/go-go-fuzz)            | ![](https://img.shields.io/docker/image-size/fuzzme/go-go-fuzz)  |
-| [fuzzme/go-uninstrumented](go-uninstrumented/Dockerfile)       | Go               | Go 1.11           | Uninstrumented    | ![](https://microbadger.com/images/fuzzme/go-uninstrumented)     | ![](https://img.shields.io/docker/image-size/fuzzme/go-uninstrumented)  |
-| [fuzzme/rust-rust-fuzz](rust-rust-fuzz/Dockerfile)             | Rust             | Rust 1.44         | Go-fuzz           | ![](https://microbadger.com/images/fuzzme/rust-rust-fuzz)        | ![](https://img.shields.io/docker/image-size/fuzzme/rust-rust-fuzz)  |
-| [fuzzme/rust-uninstrumented](rust-uninstrumented/Dockerfile)   | Rust             | Rust 1.44         | Uninstrumented    | ![](https://microbadger.com/images/fuzzme/rust-uninstrumented)   | ![](https://img.shields.io/docker/image-size/fuzzme/rust-uninstrumented)  |
-| [fuzzme/python-atheris](python-atheris/Dockerfile)             | python           | python3.8         | Atheris           | ![](https://microbadger.com/images/fuzzme/python-atheris)        | ![](https://img.shields.io/docker/image-size/fuzzme/python-atheris) |
+|     Image Name                                                 |     Language     |    Environment    |     Fuzzer         |     Image Size     |
+| :---------------                                               | :--------------: | :---------------: | :---------------:  | -----------------: |
+| [fuzzme/c-afl](c-afl/Dockerfile)                               | C                | C99               | AFL                | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl)  |
+| [fuzzme/c-libfuzzer](c-libfuzzer/Dockerfile)                   | C                | C99               | libFuzzer          | ![](https://img.shields.io/docker/image-size/fuzzme/c-libfuzzer)  |
+| [fuzzme/c-honggfuzz](c-honggfuzz/Dockerfile)                   | C                | C99               | Honggfuzz          | ![](https://img.shields.io/docker/image-size/fuzzme/c-honggfuzz)  |
+| [fuzzme/c-uninstrumented](c-uninstrumented/Dockerfile)         | C                | C99               | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/c-uninstrumented)  |
+| [fuzzme/cpp-afl](cpp-afl/Dockerfile)                           | C++              | C++11             | AFL                | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-afl)  |
+| [fuzzme/cpp-libfuzzer](cpp-libfuzzer/Dockerfile)               | C++              | C++11             | libFuzzer          | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-libfuzzer)  |
+| [fuzzme/cpp-honggfuzz](cpp-honggfuzz/Dockerfile)               | C++              | C++11             | Honggfuzz          | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-honggfuzz)  |
+| [fuzzme/cpp-uninstrumented](cpp-uninstrumented/Dockerfile)     | C++              | C++11             | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-uninstrumented)  |
+| [fuzzme/java-jazzer](java-jazzer/Dockerfile)                   | java             | openjdk11         | Jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/java-jazzer) |
+| [fuzzme/go-go-fuzz](go-go-fuzz/Dockerfile)                     | Go               | Go 1.11           | go-fuzz            | ![](https://img.shields.io/docker/image-size/fuzzme/go-go-fuzz)  |
+| [fuzzme/go-uninstrumented](go-uninstrumented/Dockerfile)       | Go               | Go 1.11           | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/go-uninstrumented)  |
+| [fuzzme/rust-rust-fuzz](rust-rust-fuzz/Dockerfile)             | Rust             | Rust 1.44         | rust-fuzz          | ![](https://img.shields.io/docker/image-size/fuzzme/rust-rust-fuzz)  |
+| [fuzzme/rust-uninstrumented](rust-uninstrumented/Dockerfile)   | Rust             | Rust 1.44         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/rust-uninstrumented)  |
+| [fuzzme/python-atheris](python-atheris/Dockerfile)             | python           | python3.8         | Atheris            | ![](https://img.shields.io/docker/image-size/fuzzme/python-atheris) |
 
 
 ## How can I contribute?
