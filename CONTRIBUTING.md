@@ -5,7 +5,19 @@ The general structure is:
 
 ```
   - <language>-<fuzzer>
+    - Dockerfile
 ```
+
+All targets should be buildable through:
+
+```
+docker build -t <language>-<fuzzer> ./<language-fuzzer>
+```
+
+The docker ENTRYPOINT for all fuzzmes must be empty `[]`. The `CMD`
+for every dockerfile should be the command that is expected to be
+passed to the fuzzer.
+
 
 All examples should expose a defect in the underlying language.
 We have been using a division-by-zero example in most cases but

@@ -1,2 +1,0 @@
-all:
-	# intentionally left blank

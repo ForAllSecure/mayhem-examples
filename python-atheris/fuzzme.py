@@ -6,8 +6,8 @@ import sys
 
 def TestOneInput(data):
     if data.startswith(b"b"):
-        if data[1:].startswith(b"a"):
-            if data[2:].startswith(b"d"):
+        if data[1:].startswith(b"u"):
+            if data[2:].startswith(b"g"):
                 return 1 / 0
 
 
