@@ -8,8 +8,12 @@ PUSH_PREFIX := push/
 CLEAN_PREFIX := clean/
 FUZZERS := \
 	ada-uninstrumented \
+	c-uninstrumented \
+	c-afl \
+	go-uninstrumented \
 	java-jazzer \
 	python-atheris \
+	rust-uninstrumented
 	rust-uninstrumented
 BUILD_FUZZERS := $(addprefix $(BUILD_PREFIX), $(FUZZERS))
 PUSH_FUZZERS := $(addprefix $(PUSH_PREFIX), $(FUZZERS))
@@ -24,14 +28,14 @@ build: $(BUILD_FUZZERS)
 
 $(BUILD_FUZZERS):
 	$(eval IMAGE_FUZZER := $(@:$(BUILD_PREFIX)%=%))
-	docker build -t $(DOCKER_REGISTRY)$(FUZZME_ORG)/$(IMAGE_FUZZER) $(IMAGE_FUZZER)
+	docker build -t $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(IMAGE_FUZZER) $(IMAGE_FUZZER)
 
 .PHONY: push
 push: $(PUSH_FUZZERS)
 
 $(PUSH_FUZZERS):
 	$(eval IMAGE_FUZZER := $(@:$(PUSH_PREFIX)%=%))
-	docker push $(DOCKER_REGISTRY)$(FUZZME_ORG)/$(IMAGE_FUZZER)
+	docker push $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(IMAGE_FUZZER)
 
 clean: $(CLEAN_FUZZERS)
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int testme(char *buf, unsigned len);
+int fuzzme(char *buf, unsigned len);
 
 int main(int argc, char *argv[])
 {
@@ -21,21 +21,21 @@ int main(int argc, char *argv[])
     fprintf(stderr, "Could not read from %s\n", argv[1]);
     return -1;
   }
-  testme(buf, strlen(buf));
+  fuzzme(buf, strlen(buf));
   return 0;
 }
 
-int testme(char *buf, unsigned len)
+int fuzzme(char *buf, unsigned len)
 {
-  unsigned ok = (len > 3);
+  unsigned ok;
 
-  if(!ok) // Fixed: ok is now initialized.
-    return -1;
+  if(!ok) // Defect: uninitialized use of ok.
+    ok = len;
 
   if(buf[0] == 'b')
     if(buf[1] == 'u')
       if(buf[2] == 'g') {
-        return 1/1;      // Fixed: no more divide-by-zero.
+        return 1/0;      // Defect: divide-by-zero.
       }
   return 0;
 }

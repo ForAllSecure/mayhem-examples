@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int testme(char *buf, unsigned len);
+int fuzzme(char *buf, unsigned len);
 
 int main(int argc, char *argv[])
 {
@@ -21,11 +21,11 @@ int main(int argc, char *argv[])
     fprintf(stderr, "Could not read from %s\n", argv[1]);
     return -1;
   }
-  testme(buf, strlen(buf));
+  fuzzme(buf, strlen(buf));
   return 0;
 }
 
-int testme(char *buf, unsigned len)
+int fuzzme(char *buf, unsigned len)
 {
   unsigned ok;
 
