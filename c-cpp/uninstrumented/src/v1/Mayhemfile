@@ -1,9 +1,0 @@
-version: '1.10'
-project: testme
-target: testme
-baseimage: DOCKERID/mayhem-examples
-duration: 20
-advanced_triage: true
-
-cmds:
-    - cmd: /mayhem/examples/testme/v1/testme @@
