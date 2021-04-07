@@ -16,6 +16,7 @@ Order is alphabetical.
 
 |     Target Name                                                |     Language     |    Environment    |     Fuzzer         |     Image Size     |
 | :---------------                                               | :--------------: | :---------------: | :---------------:  | -----------------: |
+| [fuzzme/ada-uninstrumented](ada-uninstrumented/Dockerfile)     | Ada              | Ada2012           | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/ada-uninstrumented)  |
 | [fuzzme/c-afl-clang](c-afl-clang/Dockerfile)                   | C                | C99               | AFL-clang          | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-clang)  |
 | [fuzzme/c-afl-gcc](c-afl-gcc/Dockerfile)                       | C                | C99               | AFL-gcc            | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-gcc)  |
 | [fuzzme/c-aflpp-clang](c-aflpp-clang/Dockerfile)               | C                | C99               | AFL++-clang        | ![](https://img.shields.io/docker/image-size/fuzzme/c-aflpp-clang)  |
@@ -32,12 +33,14 @@ Order is alphabetical.
 | [fuzzme/cpp-honggfuzz-clang](cpp-honggfuzz-clang/Dockerfile)   | C++              | C++11             | Honggfuzz-clang    | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-honggfuzz-clang)  |
 | [fuzzme/cpp-honggfuzz-gcc](cpp-honggfuzz-gcc/Dockerfile)       | C++              | C++11             | Honggfuzz-gcc      | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-honggfuzz-gcc)  |
 | [fuzzme/cpp-uninstrumented](cpp-uninstrumented/Dockerfile)     | C++              | C++11             | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-uninstrumented)  |
+| [fuzzme/kotlin-jazzer](kotlin-jazzer/Dockerfile)               | Kotlin           | Openjdk11         | jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/kotlin-jazzer) |
 | [fuzzme/java-jazzer](java-jazzer/Dockerfile)                   | Java             | Openjdk11         | jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/java-jazzer) |
 | [fuzzme/go-go-fuzz](go-go-fuzz/Dockerfile)                     | Go               | Go 1.11           | go-fuzz            | ![](https://img.shields.io/docker/image-size/fuzzme/go-go-fuzz)  |
 | [fuzzme/go-uninstrumented](go-uninstrumented/Dockerfile)       | Go               | Go 1.11           | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/go-uninstrumented)  |
+| [fuzzme/ocaml-uninstrumented](ocaml-uninstrumented/Dockerfile) | OCaml            | OCaml 4.0         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/ocaml-uninstrumented)  |
+| [fuzzme/python-atheris](python-atheris/Dockerfile)             | Python           | Python3.8         | Atheris            | ![](https://img.shields.io/docker/image-size/fuzzme/python-atheris) |
 | [fuzzme/rust-rust-fuzz](rust-rust-fuzz/Dockerfile)             | Rust             | Rust 1.44         | rust-fuzz          | ![](https://img.shields.io/docker/image-size/fuzzme/rust-rust-fuzz)  |
 | [fuzzme/rust-uninstrumented](rust-uninstrumented/Dockerfile)   | Rust             | Rust 1.44         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/rust-uninstrumented)  |
-| [fuzzme/python-atheris](python-atheris/Dockerfile)             | Python           | Python3.8         | Atheris            | ![](https://img.shields.io/docker/image-size/fuzzme/python-atheris) |
 
 
 ## How can I contribute?
