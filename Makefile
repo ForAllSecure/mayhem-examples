@@ -10,7 +10,8 @@ FUZZERS := \
 	python-atheris \
 	java-jazzer \
 	rust-uninstrumented \
-	c-uninstrumented
+	c-uninstrumented \
+	go-uninstrumented
 BUILD_FUZZERS := $(addprefix $(BUILD_PREFIX), $(FUZZERS))
 PUSH_FUZZERS := $(addprefix $(PUSH_PREFIX), $(FUZZERS))
 CLEAN_FUZZERS := $(addprefix $(CLEAN_PREFIX), $(FUZZERS))
