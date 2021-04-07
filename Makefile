@@ -11,7 +11,8 @@ FUZZERS := \
 	java-jazzer \
 	rust-uninstrumented \
 	c-uninstrumented \
-	go-uninstrumented
+	go-uninstrumented \
+	c-afl
 BUILD_FUZZERS := $(addprefix $(BUILD_PREFIX), $(FUZZERS))
 PUSH_FUZZERS := $(addprefix $(PUSH_PREFIX), $(FUZZERS))
 CLEAN_FUZZERS := $(addprefix $(CLEAN_PREFIX), $(FUZZERS))
