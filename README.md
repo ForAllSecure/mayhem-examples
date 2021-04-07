@@ -4,7 +4,7 @@
   <img src=".images/mayhem-logo.png" alt="Hello World! of Mayhem Docker Images"/>
 </p>
 
-Mayhem fuzzme templates for most common programming languages and fuzzers that are available! Like a "Hello World!" but for fuzzing!
+Mayhem fuzzme templates for programming languages and fuzzers that you love! Like a "Hello World!" but for fuzzing!
 
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=ForAllSecure.fuzzme)
 
