@@ -4,7 +4,7 @@ All targets are broken down by language and underlying fuzzer.
 The general structure is:
 
 ```sh
-  - <language>-<fuzzer>-<compiler>
+  - <language>-<fuzzer>
     - Dockerfile
     - source.x
 ```
