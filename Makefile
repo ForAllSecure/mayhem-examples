@@ -8,6 +8,7 @@ PUSH_PREFIX := push/
 CLEAN_PREFIX := clean/
 FUZZERS := \
 	ada-uninstrumented \
+	c-afl-clang \
 	c-afl-gcc \
 	c-uninstrumented \
 	go-uninstrumented \

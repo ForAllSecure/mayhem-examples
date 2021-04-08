@@ -87,3 +87,39 @@ You'll need to first log into your desired Docker registry using the `docker log
 make build
 make push
 ```
+
+With the Docker images now pushed to a private or public Docker registry, just use either the Mayhem CLI or the Mayhem UI to create a new run and start fuzzing!
+
+For example, you'll need to set a `Mayhemfile` with a `baseimage` parameter similar to the following for a private Docker registry, where `$MAYHEM_DOCKER_REGISTRY` represents the URL of the private Mayhem Docker registry:
+
+```yaml
+version: '1.12'
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-uninstrumented:latest
+duration: 60
+project: fuzzme
+target: c-uninstrumented
+tasks:
+  - name: exploitability_factors
+  - name: corpus_minimization
+  - name: regression_testing
+  - name: behavior_testing
+cmds:
+  - cmd: /fuzzme @@
+```
+
+Otherwise, you can set the `Mayhemfile` with a `baseimage` parameter to a public Docker Hub URL.
+
+```yaml
+version: '1.12'
+baseimage: forallsecure/fuzzme/c-uninstrumented:latest
+duration: 60
+project: fuzzme
+target: c-uninstrumented
+tasks:
+  - name: exploitability_factors
+  - name: corpus_minimization
+  - name: regression_testing
+  - name: behavior_testing
+cmds:
+  - cmd: /fuzzme @@
+```
