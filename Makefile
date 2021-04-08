@@ -10,6 +10,7 @@ FUZZERS := \
 	ada-uninstrumented \
 	c-afl-clang \
 	c-afl-gcc \
+	c-libfuzzer \
 	c-uninstrumented \
 	go-uninstrumented \
 	java-jazzer \
