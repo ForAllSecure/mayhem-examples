@@ -15,7 +15,7 @@ Mayhem fuzzme templates for programming languages and fuzzers that you love! Lik
 Order is alphabetical.
 
 |     Target Name                                                |     Language     |    Environment    |     Fuzzer         |     Image Size     |
-| :---------------                                               | :--------------: | :---------------: | :---------------:  | :----------------- |
+| :---------------                                               | :--------------: | :---------------: | :---------------:  | -----------------: |
 | [fuzzme/ada-uninstrumented](ada-uninstrumented/Dockerfile)     | Ada              | Ada2012           | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/ada-uninstrumented)  |
 | [fuzzme/c-afl-clang](c-afl-clang/Dockerfile)                   | C                | C99               | AFL-clang          | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-clang)  |
 | [fuzzme/c-afl-gcc](c-afl-gcc/Dockerfile)                       | C                | C99               | AFL-gcc            | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-gcc)  |
