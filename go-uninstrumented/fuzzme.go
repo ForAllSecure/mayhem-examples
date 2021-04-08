@@ -9,7 +9,7 @@ import (
 
 func main() {
 	if len(os.Args) != 2 {
-		fmt.Printf("Usagage: ./fuzzme_go <file>\n")
+		fmt.Printf("Usage: ./fuzzme <file>\n")
 		os.Exit(1)
 	}
 	bytes, err := ioutil.ReadFile(os.Args[1])

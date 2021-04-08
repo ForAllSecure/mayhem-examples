@@ -8,8 +8,8 @@ PUSH_PREFIX := push/
 CLEAN_PREFIX := clean/
 FUZZERS := \
 	ada-uninstrumented \
+	c-afl-gcc \
 	c-uninstrumented \
-	c-afl \
 	go-uninstrumented \
 	java-jazzer \
 	python-atheris \
@@ -40,4 +40,4 @@ clean: $(CLEAN_FUZZERS)
 
 $(CLEAN_FUZZERS):
 	$(eval IMAGE_FUZZER := $(@:$(CLEAN_PREFIX)%=%))
-	docker rmi $(DOCKER_REGISTRY)$(FUZZME_ORG)/$(IMAGE_FUZZER)
+	docker rmi $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(IMAGE_FUZZER)

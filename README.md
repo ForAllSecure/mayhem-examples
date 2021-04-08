@@ -35,12 +35,12 @@ Order is alphabetical.
 | [fuzzme/cpp-uninstrumented](cpp-uninstrumented/Dockerfile)     | C++              | C++11             | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-uninstrumented)  |
 | [fuzzme/kotlin-jazzer](kotlin-jazzer/Dockerfile)               | Kotlin           | Openjdk11         | jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/kotlin-jazzer) |
 | [fuzzme/java-jazzer](java-jazzer/Dockerfile)                   | Java             | Openjdk11         | jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/java-jazzer) |
-| [fuzzme/go-go-fuzz](go-go-fuzz/Dockerfile)                     | Go               | Go 1.11           | go-fuzz            | ![](https://img.shields.io/docker/image-size/fuzzme/go-go-fuzz)  |
-| [fuzzme/go-uninstrumented](go-uninstrumented/Dockerfile)       | Go               | Go 1.11           | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/go-uninstrumented)  |
+| [fuzzme/go-go-fuzz](go-go-fuzz/Dockerfile)                     | Go               | Go 1.13           | go-fuzz            | ![](https://img.shields.io/docker/image-size/fuzzme/go-go-fuzz)  |
+| [fuzzme/go-uninstrumented](go-uninstrumented/Dockerfile)       | Go               | Go 1.13           | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/go-uninstrumented)  |
 | [fuzzme/ocaml-uninstrumented](ocaml-uninstrumented/Dockerfile) | OCaml            | OCaml 4.0         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/ocaml-uninstrumented)  |
 | [fuzzme/python-atheris](python-atheris/Dockerfile)             | Python           | Python3.8         | Atheris            | ![](https://img.shields.io/docker/image-size/fuzzme/python-atheris) |
 | [fuzzme/rust-afl](rust-afl/Dockerfile)                         | Rust             | Rust 1.44         | afl.rs             | ![](https://img.shields.io/docker/image-size/fuzzme/rust-afl)  |
-| [fuzzme/rust-cargo-fuzz](rust-cargo-fuzz/Dockerfile)            | Rust             | Rust 1.44         | cargo-fuzz         | ![](https://img.shields.io/docker/image-size/fuzzme/rust-cargo-fuzz)  |
+| [fuzzme/rust-cargo-fuzz](rust-cargo-fuzz/Dockerfile)           | Rust             | Rust 1.44         | cargo-fuzz         | ![](https://img.shields.io/docker/image-size/fuzzme/rust-cargo-fuzz)  |
 | [fuzzme/rust-uninstrumented](rust-uninstrumented/Dockerfile)   | Rust             | Rust 1.44         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/rust-uninstrumented)  |
 
 ## How can I contribute?
