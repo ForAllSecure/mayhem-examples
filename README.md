@@ -76,3 +76,14 @@ Mayhem can launch a Docker image up to thousands of times per second. Each time 
 The images themselves are stored on a Docker registry. The largest registry is [hub.docker.com](https://hub.docker.com), which has tens of thousands of preconfigured applications. As part of your Mayhem install, there is also a *private* Docker registry. The private registry can be used to include your internal images, all within your own network or cloud.
 
 Mayhem can run Docker images stored on either your private registry or Docker Hub. If you are storing your images on your private registry, you will need to specify that in the Mayhemfile.
+
+## How to Get Started
+
+Use the included `Makefile` in the root directory of the `fuzzme` GitHub repository to build the compilation of Dockerfiles, and then tag and push their resulting Docker images to the Docker registry (private or public such as Docker Hub) of your choice—all in one go!
+
+You'll need to first log into your desired Docker registry using the `docker login` command and then set a `DOCKER_REGISTRY` environment variable to the URL of the specified Docker registry. Once complete, just run the following commands:
+
+```sh
+make build
+make push
+```
