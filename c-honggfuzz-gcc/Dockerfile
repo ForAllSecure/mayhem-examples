@@ -8,3 +8,7 @@ RUN apt-get update && \
     make install
 COPY fuzzme.c .
 RUN hfuzz-gcc -O1 -o fuzzme fuzzme.c
+
+# Set to fuzz!
+ENTRYPOINT []
+CMD /fuzzme @@
