@@ -107,7 +107,7 @@ cmds:
   - cmd: /fuzzme @@
 ```
 
-Otherwise, you can set the `Mayhemfile` with a `baseimage` parameter to a public Docker Hub URL.
+Otherwise, you can set the `Mayhemfile` with a `baseimage` parameter to a public Docker Hub URL like so:
 
 ```yaml
 version: '1.12'
