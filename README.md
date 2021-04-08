@@ -111,7 +111,7 @@ Otherwise, you can set the `Mayhemfile` with a `baseimage` parameter to a public
 
 ```yaml
 version: '1.12'
-baseimage: forallsecure/fuzzme/c-uninstrumented:latest
+baseimage: fuzzme/c-uninstrumented:latest
 duration: 60
 project: fuzzme
 target: c-uninstrumented
