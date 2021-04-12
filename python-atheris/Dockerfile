@@ -4,4 +4,4 @@ COPY fuzzme.py /fuzzme.py
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /fuzzme.py
+CMD ["/fuzzme.py"]
