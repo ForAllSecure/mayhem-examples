@@ -4,4 +4,4 @@ RUN afl-clang-fast -O0 -g -o fuzzme fuzzme.c
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /fuzzme @@
+CMD /AFLplusplus/fuzzme @@
