@@ -1,7 +1,8 @@
 FROM fuzzers/afl-gcc:2.52
 COPY fuzzme.c .
-RUN afl-clang -O0 -g -o fuzzme fuzzme.c
+RUN afl-clang -O0 -g -o /fuzzme fuzzme.c
+RUN echo seed > /corpus/seed
 
 # Set to fuzz!
-ENTRYPOINT []
-CMD /fuzzme @@
+ENTRYPOINT ["afl-fuzz", "-i", "/corpus", "-o", "/out"]
+CMD ["/fuzzme", "@@"]
