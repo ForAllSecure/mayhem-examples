@@ -10,6 +10,8 @@ FUZZERS := \
 	ada-uninstrumented \
 	c-afl-clang \
 	c-afl-gcc \
+	c-aflpp-clang \
+	c-aflpp-gcc \
 	c-honggfuzz-clang \
 	c-honggfuzz-gcc \
 	c-libfuzzer \
