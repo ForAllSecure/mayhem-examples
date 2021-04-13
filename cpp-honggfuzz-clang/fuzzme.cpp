@@ -11,6 +11,6 @@ int fuzzme(char *buf, unsigned len)
   return 0;
 }
 
-int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size){
+extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size){
   return fuzzme((char *) Data, Size);
 }
