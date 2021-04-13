@@ -7,7 +7,7 @@ RUN apt-get update && \
     make && \
     make install
 COPY fuzzme.cpp .
-RUN hfuzz-gcc -O1 -o fuzzme fuzzme.cpp
+RUN hfuzz-g++ -O1 -o fuzzme fuzzme.cpp
 
 # Set to fuzz!
 ENTRYPOINT []
