@@ -7,27 +7,28 @@ BUILD_PREFIX := build/
 PUSH_PREFIX := push/
 CLEAN_PREFIX := clean/
 FUZZERS := \
-	ada-uninstrumented \
-	c-afl-clang \
-	c-afl-gcc \
-	c-aflpp-clang \
-	c-aflpp-gcc \
-	c-honggfuzz-clang \
-	c-honggfuzz-gcc \
-	c-libfuzzer \
-	c-uninstrumented \
-	cpp-afl-clang \
-	cpp-afl-gcc \
-	cpp-aflpp-clang \
-	cpp-aflpp-gcc \
-	cpp-honggfuzz-clang \
-	cpp-honggfuzz-gcc \
-	cpp-libfuzzer \
-	cpp-uninstrumented \
-	go-uninstrumented \
-	java-jazzer \
-	python-atheris \
-	rust-uninstrumented
+	ada/ada-uninstrumented \
+	c/c-afl-clang \
+	c/c-afl-gcc \
+	c/c-aflpp-clang \
+	c/c-aflpp-gcc \
+	c/c-honggfuzz-clang \
+	c/c-honggfuzz-gcc \
+	c/c-libfuzzer \
+	c/c-uninstrumented \
+	cpp/cpp-afl-clang \
+	cpp/cpp-afl-gcc \
+	cpp/cpp-aflpp-clang \
+	cpp/cpp-aflpp-gcc \
+	cpp/cpp-honggfuzz-clang \
+	cpp/cpp-honggfuzz-gcc \
+	cpp/cpp-libfuzzer \
+	cpp/cpp-uninstrumented \
+	go/go-go-fuzz \
+	go/go-uninstrumented \
+	java/java-jazzer \
+	python/python-atheris \
+	rust/rust-uninstrumented
 BUILD_FUZZERS := $(addprefix $(BUILD_PREFIX), $(FUZZERS))
 PUSH_FUZZERS := $(addprefix $(PUSH_PREFIX), $(FUZZERS))
 CLEAN_FUZZERS := $(addprefix $(CLEAN_PREFIX), $(FUZZERS))
