@@ -1,4 +1,4 @@
-FROM fuzzers/aflpp-gcc:3.12c
+FROM fuzzers/aflplusplus:3.12c
 COPY fuzzme.c .
 RUN afl-clang-fast -O0 -g -o /fuzzme fuzzme.c
 RUN echo seed > /corpus/seed

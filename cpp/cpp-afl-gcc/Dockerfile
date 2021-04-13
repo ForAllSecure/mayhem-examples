@@ -1,4 +1,4 @@
-FROM fuzzers/afl-gcc:2.52
+FROM fuzzers/afl:2.52
 COPY fuzzme.cpp .
 RUN afl-g++ -O0 -g -fno-inline -o /fuzzme fuzzme.cpp
 RUN echo seed > /corpus/seed
