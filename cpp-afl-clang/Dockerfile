@@ -1,6 +1,6 @@
-FROM fuzzers/aflpp-gcc:3.12c
-COPY fuzzme.c .
-RUN afl-gcc-fast -O0 -g -o /fuzzme fuzzme.c
+FROM fuzzers/afl-gcc:2.52
+COPY fuzzme.cpp .
+RUN afl-clang++ -O0 -g -fno-inline -o /fuzzme fuzzme.cpp
 RUN echo seed > /corpus/seed
 
 # Set to fuzz!
