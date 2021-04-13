@@ -20,6 +20,8 @@ FUZZERS := \
 	cpp-afl-gcc \
 	cpp-aflpp-clang \
 	cpp-aflpp-gcc \
+	cpp-honggfuzz-clang \
+	cpp-honggfuzz-gcc \
 	go-uninstrumented \
 	java-jazzer \
 	python-atheris \
