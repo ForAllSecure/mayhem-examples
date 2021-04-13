@@ -17,6 +17,9 @@ FUZZERS := \
 	c-libfuzzer \
 	c-uninstrumented \
 	cpp-afl-clang \
+	cpp-afl-gcc \
+	cpp-aflpp-clang \
+	cpp-aflpp-gcc \
 	go-uninstrumented \
 	java-jazzer \
 	python-atheris \

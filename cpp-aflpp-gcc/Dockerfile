@@ -1,0 +1,8 @@
+FROM fuzzers/aflpp-gcc:3.12c
+COPY fuzzme.cpp .
+RUN afl-g++-fast -O0 -g -fno-inline -o /fuzzme fuzzme.cpp
+RUN echo seed > /corpus/seed
+
+# Set to fuzz!
+ENTRYPOINT ["afl-fuzz", "-i", "/corpus", "-o", "/out"]
+CMD ["/fuzzme", "@@"]
