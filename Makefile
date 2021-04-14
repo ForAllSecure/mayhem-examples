@@ -16,6 +16,7 @@ FUZZERS := \
 	c/c-honggfuzz-gcc \
 	c/c-libfuzzer \
 	c/c-uninstrumented \
+	c/powerpc-c-uninstrumented \
 	cpp/cpp-afl-clang \
 	cpp/cpp-afl-gcc \
 	cpp/cpp-aflpp-clang \
