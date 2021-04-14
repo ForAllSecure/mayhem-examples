@@ -24,7 +24,7 @@ FUZZERS := \
 	cpp/cpp-honggfuzz-gcc \
 	cpp/cpp-libfuzzer \
 	cpp/cpp-uninstrumented \
-	kotlin \
+	kotlin/kotlin-jazzer \
 	go/go-go-fuzz \
 	go/go-uninstrumented \
 	java/java-jazzer \
