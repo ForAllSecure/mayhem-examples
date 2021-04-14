@@ -13,4 +13,4 @@ RUN source "$HOME/.sdkman/bin/sdkman-init.sh" && \
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD [ "/usr/bin/jazzer_driver", "--cp=/fuzzme.jar", "--target_class=fuzzme.FuzzMe" ]
+CMD [ "/usr/bin/jazzer_driver", "--cp=/fuzzme.jar", "--target_class=fuzzme.FuzzmeKt" ]
