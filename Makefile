@@ -29,6 +29,8 @@ FUZZERS := \
 	go/go-uninstrumented \
 	java/java-jazzer \
 	python/python-atheris \
+	rust/rust-afl \
+	rust/rust-cargo-fuzz \
 	rust/rust-uninstrumented
 BUILD_FUZZERS := $(addprefix $(BUILD_PREFIX), $(FUZZERS))
 PUSH_FUZZERS := $(addprefix $(PUSH_PREFIX), $(FUZZERS))
