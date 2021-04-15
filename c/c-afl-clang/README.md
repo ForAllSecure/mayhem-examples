@@ -1,10 +1,10 @@
 # Build Instructions
 
-Run the following to build the `c-afl-clang` Docker image and push it to a specified Docker registry.
+Run the following to build the `fuzzme/c-afl-clang` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $DOCKER_REGISTRY/c/c-afl-clang .
-docker push $DOCKER_REGISTRY/c/c-afl-clang
+docker build -t $DOCKER_REGISTRY/fuzzme/c-afl-clang .
+docker push $DOCKER_REGISTRY/fuzzme/c-afl-clang
 ```
 
 Then initiate a Mayhem run using the following Mayhemfile:
