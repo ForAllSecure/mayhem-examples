@@ -7,7 +7,7 @@ docker build -t $DOCKER_REGISTRY/fuzzme/c-honggfuzz-gcc .
 docker push $DOCKER_REGISTRY/fuzzme/c-honggfuzz-gcc
 ```
 
-Then initiate a Mayhem run using the following Mayhemfile:
+Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
 version: '1.12'

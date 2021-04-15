@@ -1,20 +1,20 @@
 # Build Instructions
 
-Run the following to build the `fuzzme/c-libfuzzer` Docker image and push it to a specified Docker registry.
+Run the following to build the `fuzzme/cpp-libfuzzer` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $DOCKER_REGISTRY/fuzzme/c-libfuzzer .
-docker push $DOCKER_REGISTRY/fuzzme/c-libfuzzer
+docker build -t $DOCKER_REGISTRY/fuzzme/cpp-libfuzzer .
+docker push $DOCKER_REGISTRY/fuzzme/cpp-libfuzzer
 ```
 
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
 version: '1.12'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-libfuzzer:latest
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-libfuzzer:latest
 duration: 300
 project: fuzzme
-target: c-libfuzzer
+target: cpp-libfuzzer
 tasks:
   - name: exploitability_factors
   - name: corpus_minimization
