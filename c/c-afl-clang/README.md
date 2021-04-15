@@ -1,19 +1,20 @@
 # Build Instructions
 
-Run the following to build the `fuzzme/ada-uninstrumented` Docker image and push it to a specified Docker registry.
+Run the following to build the `fuzzme/c-afl-clang` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $DOCKER_REGISTRY/fuzzme/ada-uninstrumented .
-docker push $DOCKER_REGISTRY/fuzzme/ada-uninstrumented
+docker build -t $DOCKER_REGISTRY/fuzzme/c-afl-clang .
+docker push $DOCKER_REGISTRY/fuzzme/c-afl-clang
 ```
 
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
 version: '1.12'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/ada-uninstrumented:latest
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-afl-clang:latest
+duration: 600
 project: fuzzme
-target: ada-uninstrumented
+target: c-afl-clang
 tasks:
   - name: exploitability_factors
   - name: corpus_minimization
@@ -21,4 +22,5 @@ tasks:
   - name: behavior_testing
 cmds:
   - cmd: /fuzzme @@
+    afl: true
 ```
