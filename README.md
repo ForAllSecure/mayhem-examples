@@ -79,7 +79,7 @@ Mayhem can run Docker images stored on either your private registry or Docker Hu
 
 ## How to Get Started
 
-Navigate to each Language/Fuzzer folder and follow the individual build instructions or use the included `Makefile` in the root directory of the `fuzzme` GitHub repository to build the compilation of Dockerfiles and then tag and push the resulting Docker images to the Docker registry of your choice (private or public such as [Docker Hub](https://hub.docker.com/)) all in one go!
+Navigate to each Language/Fuzzer folder and follow the individual build instructions. Alternatively, you can use the included `Makefile` in the root directory of the `fuzzme` GitHub repository to build the compilation of Dockerfiles and then tag and push the resulting Docker images to the Docker registry of your choice (private or public such as [Docker Hub](https://hub.docker.com/)) all in one go!
 
 You'll need to first log into your desired Docker registry using the `docker login` command and then set a `DOCKER_REGISTRY` environment variable to the URL of the specified Docker registry. Once complete, just run the following commands:
 
