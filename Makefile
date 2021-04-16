@@ -46,7 +46,9 @@ build: $(BUILD_FUZZERS)
 
 $(BUILD_FUZZERS):
 	$(eval IMAGE_FUZZER := $(@:$(BUILD_PREFIX)%=%))
-	docker build -t $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(IMAGE_FUZZER) $(IMAGE_FUZZER)
+	$(eval SPLIT_IMAGE_FUZZER = $(subst /, ,$(IMAGE_FUZZER)))
+	$(eval SPLIT_IMAGE_FUZZER_2 = $(word 2, $(SPLIT_IMAGE_FUZZER)))
+	docker build -t $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(SPLIT_IMAGE_FUZZER_2) $(IMAGE_FUZZER)
 
 .PHONY: push
 push: $(PUSH_FUZZERS)
