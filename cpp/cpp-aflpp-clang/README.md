@@ -1,4 +1,4 @@
-# Build Instructions
+## Building and Pushing the Docker Image
 
 Run the following to build the `fuzzme/cpp-aflpp-clang` Docker image and push it to a specified Docker registry.
 
@@ -6,6 +6,8 @@ Run the following to build the `fuzzme/cpp-aflpp-clang` Docker image and push it
 docker build -t $DOCKER_REGISTRY/fuzzme/cpp-aflpp-clang .
 docker push $DOCKER_REGISTRY/fuzzme/cpp-aflpp-clang
 ```
+
+## Executing the Mayhem Run
 
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
