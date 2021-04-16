@@ -1,13 +1,9 @@
-FROM fuzzers/jazzer:0.9.1-openjdk11
-RUN apt-get update && \
-    rm /bin/sh && ln -s /bin/bash /bin/sh && \
-    apt-get -qq -y install curl unzip zip && \
-    curl -s https://get.sdkman.io | bash && \
-    chmod a+x "$HOME/.sdkman/bin/sdkman-init.sh"
+FROM zenika/kotlin:1.4.20-M2-jdk11-slim
 COPY fuzzme.kt .
-RUN source "$HOME/.sdkman/bin/sdkman-init.sh" && \
-    sdk install kotlin && \
-    kotlinc fuzzme.kt -include-runtime -d fuzzme.jar
+RUN kotlinc fuzzme.kt -include-runtime -d fuzzme.jar
+
+FROM fuzzers/jazzer:0.9.1-openjdk11
+COPY --from=0 /fuzzme.jar .
 
 # Set to fuzz!
 ENTRYPOINT []

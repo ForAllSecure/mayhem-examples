@@ -1,5 +1,4 @@
-FROM golang:1.13.3-buster as go-target
-RUN go get -u github.com/dvyukov/go-fuzz/go-fuzz github.com/dvyukov/go-fuzz/go-fuzz-build
+FROM fuzzers/go-fuzz:1.2.0
 COPY fuzzme.go .
 RUN go build -ldflags "-linkmode external -extldflags -static" -tags="netgo osusergo" -o fuzzme -a fuzzme.go
 
