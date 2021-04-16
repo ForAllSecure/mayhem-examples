@@ -10,7 +10,7 @@ Mayhem fuzzme templates for programming languages and fuzzers that you love! Lik
 
 ---
 
-## Fuzzme list by Language/Fuzzer
+## Fuzzme List by Language/Fuzzer
 
 Order is alphabetical.
 
