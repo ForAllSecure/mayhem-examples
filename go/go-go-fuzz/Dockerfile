@@ -5,4 +5,4 @@ RUN go-fuzz-build -libfuzzer -o fuzzme.a && \
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /go/fuzzme.libfuzzer @@
+CMD ["/go/fuzzme.libfuzzer"]

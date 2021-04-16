@@ -12,4 +12,4 @@ RUN export USER=root && \
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD ["/fuzzme/fuzz/target/x86_64-unknown-linux-gnu/release/fuzzme", "@@"]
+CMD ["/fuzzme/fuzz/target/x86_64-unknown-linux-gnu/release/fuzzme"]

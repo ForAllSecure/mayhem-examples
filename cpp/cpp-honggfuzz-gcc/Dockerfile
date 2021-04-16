@@ -1,14 +1,7 @@
-FROM debian:stable-slim as builder
-RUN apt-get update && \
-    apt-get install -y make curl build-essential binutils-dev libunwind-dev && \
-    curl -L -o honggfuzz-1.9.tgz https://github.com/google/honggfuzz/archive/1.9.tar.gz && \
-    tar zxf honggfuzz-1.9.tgz && \
-    cd honggfuzz-1.9 && \
-    make && \
-    make install
+FROM fuzzers/honggfuzz:1.9
 COPY fuzzme.cpp .
 RUN hfuzz-g++ -O1 -o fuzzme fuzzme.cpp
 
 # Set to fuzz!
-ENTRYPOINT []
-CMD /fuzzme @@
+ENTRYPOINT ["honggfuzz", "-f", "/corpus", "--"]
+CMD ["/fuzzme", "___FILE___"]

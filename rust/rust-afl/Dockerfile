@@ -6,7 +6,8 @@ RUN export USER=root && \
     cd fuzzme && \
     mv /fuzzme.rs src/main.rs && \
     cargo afl build
+RUN echo seed > /tmp/seed
 
 # Set to fuzz!
-ENTRYPOINT []
+ENTRYPOINT ["cargo", "afl", "fuzz", "-i", "/tmp", "-o", "/out"]
 CMD ["/fuzzme/target/debug/fuzzme", "@@"]
