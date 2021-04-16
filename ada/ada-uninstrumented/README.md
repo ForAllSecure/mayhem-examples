@@ -11,6 +11,8 @@ docker push $DOCKER_REGISTRY/fuzzme/ada-uninstrumented
 
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
+> **Note:** This run may take up to two hours to detect the bug!
+
 ```yaml
 version: '1.12'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/ada-uninstrumented:latest

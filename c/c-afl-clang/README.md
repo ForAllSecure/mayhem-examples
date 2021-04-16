@@ -14,7 +14,7 @@ Then initiate a Mayhem run using a Mayhemfile similar to the following:
 ```yaml
 version: '1.12'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-afl-clang:latest
-duration: 600
+duration: 300
 project: fuzzme
 target: c-afl-clang
 tasks:

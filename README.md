@@ -95,7 +95,7 @@ For example, you'll need to set a `Mayhemfile` with a `baseimage` parameter simi
 ```yaml
 version: '1.12'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-uninstrumented:latest
-duration: 60
+duration: 300
 project: fuzzme
 target: c-uninstrumented
 tasks:
@@ -112,7 +112,7 @@ Otherwise, you can set the `Mayhemfile` with a `baseimage` parameter to a public
 ```yaml
 version: '1.12'
 baseimage: fuzzme/c-uninstrumented:latest
-duration: 60
+duration: 300
 project: fuzzme
 target: c-uninstrumented
 tasks:
