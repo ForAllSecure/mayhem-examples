@@ -1,5 +1,3 @@
-# Instructions
-
 ## Building and Pushing the Docker Image
 
 Run the following to build the `fuzzme/ada-uninstrumented` Docker image and push it to a specified Docker registry.
