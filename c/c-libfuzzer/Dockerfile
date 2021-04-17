@@ -4,4 +4,4 @@ RUN clang -g -fsanitize=fuzzer,address -o fuzzme -fno-stack-protector -no-pie fu
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /fuzzme @@
+CMD /fuzzme
