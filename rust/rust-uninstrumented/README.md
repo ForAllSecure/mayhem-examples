@@ -14,7 +14,7 @@ Then initiate a Mayhem run using a Mayhemfile similar to the following:
 ```yaml
 version: '1.12'
 baseimage: fuzzme/rust-uninstrumented:latest
-duration: 300
+duration: 600
 project: fuzzme
 target: rust-uninstrumented
 tasks:
