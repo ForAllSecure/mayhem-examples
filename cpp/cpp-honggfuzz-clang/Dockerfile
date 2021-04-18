@@ -4,4 +4,4 @@ RUN hfuzz-clang++ -O0 -g -fno-inline -o fuzzme fuzzme.cpp
 
 # Set to fuzz!
 ENTRYPOINT ["honggfuzz", "-f", "/corpus", "--"]
-CMD ["/fuzzme", "___FILE___"]
+CMD ["/fuzzme"]

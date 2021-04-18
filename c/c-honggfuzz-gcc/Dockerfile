@@ -4,4 +4,4 @@ RUN hfuzz-gcc -O1 -o fuzzme fuzzme.c
 
 # Set to fuzz!
 ENTRYPOINT ["honggfuzz", "-f", "/corpus", "--"]
-CMD ["/fuzzme", "___FILE___"]
+CMD ["/fuzzme"]
