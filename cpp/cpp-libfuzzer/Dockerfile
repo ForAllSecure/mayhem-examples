@@ -4,4 +4,4 @@ RUN clang++ -g -fsanitize=fuzzer,address -fno-inline -o fuzzme fuzzme.cpp
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /fuzzme @@
+CMD /fuzzme
