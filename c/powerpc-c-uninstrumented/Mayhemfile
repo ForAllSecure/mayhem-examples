@@ -1,0 +1,12 @@
+version: '1.11'
+baseimage: $MAYHEM_DOCKER_REGISTRY/testme-ppc-docker:latest
+project: testme-ppc-docker
+target: testme-ppc-docker
+tasks:
+  - name: exploitability_factors
+  - name: regression_testing
+  - name: behavior_testing
+cmds:
+  - cmd: /mayhem/testme/v1/testme @@
+    env:
+      QEMU_LD_PREFIX: /usr/powerpc-linux-gnu/lib/
