@@ -7,6 +7,6 @@ tasks:
   - name: regression_testing
   - name: behavior_testing
 cmds:
-  - cmd: /mayhem/testme/v1/testme @@
+  - cmd: /fuzzme @@
     env:
-      QEMU_LD_PREFIX: /usr/powerpc-linux-gnu/lib/
+      QEMU_LD_PREFIX: /usr/powerpc-linux-gnu
