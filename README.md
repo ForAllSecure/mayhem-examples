@@ -61,21 +61,11 @@ A container runs natively on Linux, and shares the underlying runtime. Three key
 2. **Configuration-as-Code:**  When you create a Docker image, you write a `Dockerfile`, which gives the exact commands to build the image. The `Dockerfile` can be edited and revision controlled like any other text file.
 3. **Efficiency:** Docker uses a layered file system, which means if two applications share the same files, you only need one copy.
 
-## How Mayhem Uses Docker
+## Fuzzing Docker Targets with Mayhem
 
-Consider the problem of analyzing the Apache web server. When you start Apache, it writes a PID file. Writing that file is a *side effect*. We want runs to be reproducible, so Mayhem has to undo side effects on each run.
+Given a Docker image, Mayhem will spin up and tear down Docker containers as needed to run the specified application in the containerized environment.
 
-Therefore, Mayhem will automatically pull and run an application within a Docker image, and each time Mayhem runs the application, it:
-
-1. Starts up a fresh copy of the image.
-2. Runs the program specified in the `Mayhemfile`
-3. Stops the image, deleting any side-effects.
-
-Mayhem can launch a Docker image up to thousands of times per second. Each time the image is launched, a new process is created. Each time the process finishes, Mayhem (using Docker) cleans up any side-effects making sure the next run is fresh.
-
-The images themselves are stored on a Docker registry. The largest registry is [hub.docker.com](https://hub.docker.com), which has tens of thousands of preconfigured applications. As part of your Mayhem install, there is also a *private* Docker registry. The private registry can be used to include your internal images, all within your own network or cloud.
-
-Mayhem can run Docker images stored on either your private registry or Docker Hub. If you are storing your images on your private registry, you will need to specify that in the Mayhemfile.
+Mayhem can run Docker images stored on either the included private Docker registry (as a part of your Mayhem deployment) or through [Docker Hub](https://hub.docker.com), which hosts tens of thousands of public Docker images. If you are storing your images on your private registry, you will need to specify this in the Mayhemfile.
 
 ## How to Get Started
 
