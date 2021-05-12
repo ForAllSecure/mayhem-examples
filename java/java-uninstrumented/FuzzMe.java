@@ -23,7 +23,7 @@ public class FuzzMe {
         if (input.startsWith("b", 0)) {
             if (input.startsWith("u", 1)) {
                 if (input.startsWith("g", 2)) {
-                    System.out.println(args[-1]);
+                    int i = 1 / 0;
                 }
             }
         }
