@@ -28,6 +28,7 @@ FUZZERS := \
 	go/go-go-fuzz \
 	go/go-uninstrumented \
 	java/java-jazzer \
+	java/java-uninstrumented \
 	ocaml/ocaml-uninstrumented \
 	python/python-atheris \
 	rust/rust-afl \

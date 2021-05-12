@@ -13,9 +13,9 @@ Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
 version: '1.12'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/java/java-jazzer:latest
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/java-jazzer:latest
 duration: 300
-project: java
+project: fuzzme
 target: java-jazzer
 tasks:
   - name: exploitability_factors
