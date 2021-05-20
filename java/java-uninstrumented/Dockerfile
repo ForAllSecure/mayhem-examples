@@ -1,4 +1,4 @@
-FROM openjdk:11.0-slim
+FROM openjdk:8-jdk
 
 COPY FuzzMe.java .
 
@@ -6,7 +6,7 @@ COPY FuzzMe.java .
 RUN mkdir -p build && \
     javac -d build FuzzMe.java && \
     cd build && \
-    jar --create --file FuzzMe.jar --main-class fuzzme.FuzzMe * && \
+    jar -cfe FuzzMe.jar fuzzme.FuzzMe * && \
     chmod u+x FuzzMe.jar && \
     mv FuzzMe.jar /usr/bin/FuzzMe.jar && \
     rm -rf build
