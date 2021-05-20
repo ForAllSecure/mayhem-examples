@@ -1,4 +1,4 @@
-FROM openjdk:15-jdk
+FROM openjdk:11.0-slim
 
 COPY FuzzMe.java .
 
