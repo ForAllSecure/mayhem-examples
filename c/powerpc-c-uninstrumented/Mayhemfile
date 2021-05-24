@@ -10,3 +10,4 @@ cmds:
   - cmd: /fuzzme @@
     env:
       QEMU_LD_PREFIX: /usr/powerpc-linux-gnu
+      LD_LIBRARY_PATH: /usr/powerpc-linux-gnu/lib
