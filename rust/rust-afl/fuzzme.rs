@@ -3,15 +3,13 @@ extern crate afl;
 
 fn main() {
     fuzz!(|data: &[u8]| {
-    if let Ok(contents) = std::str::from_utf8(data) {
-        if contents.starts_with("b") {
-            if contents[1..].starts_with("u") {
-                if contents[2..].starts_with("g") {
+        if data[0] == 'b' as u8 {
+            if data[1] == 'u' as u8 {
+                if data[2] == 'g' as u8 {
                     div_by_val(0);
                 }
             }
         }
-    }
     });
 }
 
