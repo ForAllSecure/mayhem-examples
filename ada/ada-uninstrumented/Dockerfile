@@ -1,5 +1,4 @@
 FROM tomekw/ada-gnat
-
 COPY fuzzme.adb .
 RUN gnatmake -o /fuzzme fuzzme.adb
 

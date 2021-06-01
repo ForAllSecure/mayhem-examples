@@ -31,6 +31,7 @@ FUZZERS := \
 	go/go-go-fuzz \
 	go/go-uninstrumented \
 	java/java-jazzer \
+	java/java-uninstrumented \
 	ocaml/ocaml-uninstrumented \
 	python/python-atheris \
 	rust/rust-afl \
@@ -49,17 +50,23 @@ build: $(BUILD_FUZZERS)
 
 $(BUILD_FUZZERS):
 	$(eval IMAGE_FUZZER := $(@:$(BUILD_PREFIX)%=%))
-	docker build -t $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(IMAGE_FUZZER) $(IMAGE_FUZZER)
+	$(eval SPLIT_IMAGE_FUZZER = $(subst /, ,$(IMAGE_FUZZER)))
+	$(eval SPLIT_IMAGE_FUZZER_2 = $(word 2, $(SPLIT_IMAGE_FUZZER)))
+	docker build -t $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(SPLIT_IMAGE_FUZZER_2) $(IMAGE_FUZZER)
 
 .PHONY: push
 push: $(PUSH_FUZZERS)
 
 $(PUSH_FUZZERS):
 	$(eval IMAGE_FUZZER := $(@:$(PUSH_PREFIX)%=%))
-	docker push $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(IMAGE_FUZZER)
+	$(eval SPLIT_IMAGE_FUZZER = $(subst /, ,$(IMAGE_FUZZER)))
+	$(eval SPLIT_IMAGE_FUZZER_2 = $(word 2, $(SPLIT_IMAGE_FUZZER)))
+	docker push $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(SPLIT_IMAGE_FUZZER_2)
 
 clean: $(CLEAN_FUZZERS)
 
 $(CLEAN_FUZZERS):
 	$(eval IMAGE_FUZZER := $(@:$(CLEAN_PREFIX)%=%))
-	docker rmi $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(IMAGE_FUZZER)
+	$(eval SPLIT_IMAGE_FUZZER = $(subst /, ,$(IMAGE_FUZZER)))
+	$(eval SPLIT_IMAGE_FUZZER_2 = $(word 2, $(SPLIT_IMAGE_FUZZER)))
+	docker rmi $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(SPLIT_IMAGE_FUZZER_2)

@@ -10,38 +10,38 @@ Mayhem fuzzme templates for programming languages and fuzzers that you love! Lik
 
 ---
 
-## Fuzzme list by Language/Fuzzer
+## Fuzzme List by Language/Fuzzer
 
 Order is alphabetical.
 
-|     Target Name                                                |     Language     |    Environment    |     Fuzzer         |     Image Size     |
-| :---------------                                               | :--------------: | :---------------: | :---------------:  | -----------------: |
-| [fuzzme/ada-uninstrumented](ada/ada-uninstrumented/Dockerfile)     | Ada              | Ada2012           | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/ada-uninstrumented)  |
-| [fuzzme/c-afl-clang](c/c-afl-clang/Dockerfile)                   | C                | C99               | AFL-clang          | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-clang)  |
-| [fuzzme/c-afl-gcc](c/c-afl-gcc/Dockerfile)                       | C                | C99               | AFL-gcc            | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-gcc)  |
-| [fuzzme/c-aflpp-clang](c/c-aflpp-clang/Dockerfile)               | C                | C99               | AFL++-clang        | ![](https://img.shields.io/docker/image-size/fuzzme/c-aflpp-clang)  |
-| [fuzzme/c-aflpp-gcc](c/c-aflpp-gcc/Dockerfile)                   | C                | C99               | AFL++-gcc          | ![](https://img.shields.io/docker/image-size/fuzzme/c-aflpp-gcc)  |
-| [fuzzme/c-libfuzzer](c/c-libfuzzer/Dockerfile)                   | C                | C99               | libFuzzer          | ![](https://img.shields.io/docker/image-size/fuzzme/c-libfuzzer)  |
-| [fuzzme/c-honggfuzz-clang](c/c-honggfuzz-clang/Dockerfile)       | C                | C99               | Honggfuzz-clang    | ![](https://img.shields.io/docker/image-size/fuzzme/c-honggfuzz-clang)  |
-| [fuzzme/c-honggfuzz-gcc](c/c-honggfuzz-gcc/Dockerfile)           | C                | C99               | Honggfuzz-gcc      | ![](https://img.shields.io/docker/image-size/fuzzme/c-honggfuzz-gcc)  |
-| [fuzzme/c-uninstrumented](c/c-uninstrumented/Dockerfile)         | C                | C99               | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/c-uninstrumented)  |
-| [fuzzme/cpp-afl-clang](cpp/cpp-afl-clang/Dockerfile)               | C++              | C++11             | AFL-clang          | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-afl-clang)  |
-| [fuzzme/cpp-afl-gcc](cpp/cpp-afl-gcc/Dockerfile)                   | C++              | C++11             | AFL-gcc            | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-afl-gcc)  |
-| [fuzzme/cpp-aflpp-clang](cpp/cpp-aflpp-clang/Dockerfile)           | C++              | C++11             | AFL++-clang        | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-aflpp-clang)  |
-| [fuzzme/cpp-aflpp-gcc](cpp/cpp-aflpp-gcc/Dockerfile)               | C++              | C++11             | AFL++-gcc          | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-aflpp-gcc)  |
-| [fuzzme/cpp-libfuzzer](cpp/cpp-libfuzzer/Dockerfile)               | C++              | C++11             | libFuzzer          | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-libfuzzer)  |
-| [fuzzme/cpp-honggfuzz-clang](cpp/cpp-honggfuzz-clang/Dockerfile)   | C++              | C++11             | Honggfuzz-clang    | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-honggfuzz-clang)  |
-| [fuzzme/cpp-honggfuzz-gcc](cpp/cpp-honggfuzz-gcc/Dockerfile)       | C++              | C++11             | Honggfuzz-gcc      | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-honggfuzz-gcc)  |
-| [fuzzme/cpp-uninstrumented](cpp/cpp-uninstrumented/Dockerfile)     | C++              | C++11             | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-uninstrumented)  |
-| [fuzzme/kotlin-jazzer](kotlin/kotlin-jazzer/Dockerfile)               | Kotlin           | Openjdk11         | jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/kotlin-jazzer) |
-| [fuzzme/java-jazzer](java/java-jazzer/Dockerfile)                   | Java             | Openjdk11         | jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/java-jazzer) |
-| [fuzzme/go-go-fuzz](go/go-go-fuzz/Dockerfile)                     | Go               | Go 1.13           | go-fuzz            | ![](https://img.shields.io/docker/image-size/fuzzme/go-go-fuzz)  |
-| [fuzzme/go-uninstrumented](go/go-uninstrumented/Dockerfile)       | Go               | Go 1.13           | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/go-uninstrumented)  |
-| [fuzzme/ocaml-uninstrumented](ocaml/ocaml-uninstrumented/Dockerfile) | OCaml            | OCaml 4.0         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/ocaml-uninstrumented)  |
-| [fuzzme/python-atheris](python/python-atheris/Dockerfile)             | Python           | Python3.8         | Atheris            | ![](https://img.shields.io/docker/image-size/fuzzme/python-atheris) |
-| [fuzzme/rust-afl](rust/rust-afl/Dockerfile)                         | Rust             | Rust 1.44         | afl.rs             | ![](https://img.shields.io/docker/image-size/fuzzme/rust-afl)  |
-| [fuzzme/rust-cargo-fuzz](rust/rust-cargo-fuzz/Dockerfile)           | Rust             | Rust 1.44         | cargo-fuzz         | ![](https://img.shields.io/docker/image-size/fuzzme/rust-cargo-fuzz)  |
-| [fuzzme/rust-uninstrumented](rust/rust-uninstrumented/Dockerfile)   | Rust             | Rust 1.44         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/rust-uninstrumented)  |
+|     Target Name                                               |     Language     |    Environment    |     Fuzzer         |     Image Size     |
+| :---------------                                              | :--------------: | :---------------: | :---------------:  | -----------------: |
+| [fuzzme/ada-uninstrumented](ada/ada-uninstrumented)           | Ada              | Ada2012           | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/ada-uninstrumented)  |
+| [fuzzme/c-afl-clang](c/c-afl-clang)                           | C                | C99               | AFL-clang          | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-clang)  |
+| [fuzzme/c-afl-gcc](c/c-afl-gcc)                               | C                | C99               | AFL-gcc            | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-gcc)  |
+| [fuzzme/c-aflpp-clang](c/c-aflpp-clang)                       | C                | C99               | AFL++-clang        | ![](https://img.shields.io/docker/image-size/fuzzme/c-aflpp-clang)  |
+| [fuzzme/c-aflpp-gcc](c/c-aflpp-gcc)                           | C                | C99               | AFL++-gcc          | ![](https://img.shields.io/docker/image-size/fuzzme/c-aflpp-gcc)  |
+| [fuzzme/c-libfuzzer](c/c-libfuzzer)                           | C                | C99               | libFuzzer          | ![](https://img.shields.io/docker/image-size/fuzzme/c-libfuzzer)  |
+| [fuzzme/c-honggfuzz-clang](c/c-honggfuzz-clang)               | C                | C99               | Honggfuzz-clang    | ![](https://img.shields.io/docker/image-size/fuzzme/c-honggfuzz-clang)  |
+| [fuzzme/c-honggfuzz-gcc](c/c-honggfuzz-gcc)                   | C                | C99               | Honggfuzz-gcc      | ![](https://img.shields.io/docker/image-size/fuzzme/c-honggfuzz-gcc)  |
+| [fuzzme/c-uninstrumented](c/c-uninstrumented)                 | C                | C99               | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/c-uninstrumented)  |
+| [fuzzme/cpp-afl-clang](cpp/cpp-afl-clang)                     | C++              | C++11             | AFL-clang          | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-afl-clang)  |
+| [fuzzme/cpp-afl-gcc](cpp/cpp-afl-gcc)                         | C++              | C++11             | AFL-gcc            | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-afl-gcc)  |
+| [fuzzme/cpp-aflpp-clang](cpp/cpp-aflpp-clang)                 | C++              | C++11             | AFL++-clang        | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-aflpp-clang)  |
+| [fuzzme/cpp-aflpp-gcc](cpp/cpp-aflpp-gcc)                     | C++              | C++11             | AFL++-gcc          | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-aflpp-gcc)  |
+| [fuzzme/cpp-libfuzzer](cpp/cpp-libfuzzer)                     | C++              | C++11             | libFuzzer          | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-libfuzzer)  |
+| [fuzzme/cpp-honggfuzz-clang](cpp/cpp-honggfuzz-clang)         | C++              | C++11             | Honggfuzz-clang    | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-honggfuzz-clang)  |
+| [fuzzme/cpp-honggfuzz-gcc](cpp/cpp-honggfuzz-gcc)             | C++              | C++11             | Honggfuzz-gcc      | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-honggfuzz-gcc)  |
+| [fuzzme/cpp-uninstrumented](cpp/cpp-uninstrumented)           | C++              | C++11             | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-uninstrumented)  |
+| [fuzzme/kotlin-jazzer](kotlin/kotlin-jazzer)                  | Kotlin           | Openjdk11         | jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/kotlin-jazzer) |
+| [fuzzme/java-jazzer](java/java-jazzer)                        | Java             | Openjdk11         | jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/java-jazzer) |
+| [fuzzme/go-go-fuzz](go/go-go-fuzz)                            | Go               | Go 1.13           | go-fuzz            | ![](https://img.shields.io/docker/image-size/fuzzme/go-go-fuzz)  |
+| [fuzzme/go-uninstrumented](go/go-uninstrumented)              | Go               | Go 1.13           | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/go-uninstrumented)  |
+| [fuzzme/ocaml-uninstrumented](ocaml/ocaml-uninstrumented)     | OCaml            | OCaml 4.0         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/ocaml-uninstrumented)  |
+| [fuzzme/python-atheris](python/python-atheris)                | Python           | Python3.8         | Atheris            | ![](https://img.shields.io/docker/image-size/fuzzme/python-atheris) |
+| [fuzzme/rust-afl](rust/rust-afl)                              | Rust             | Rust 1.44         | afl.rs             | ![](https://img.shields.io/docker/image-size/fuzzme/rust-afl)  |
+| [fuzzme/rust-cargo-fuzz](rust/rust-cargo-fuzz)                | Rust             | Rust 1.44         | cargo-fuzz         | ![](https://img.shields.io/docker/image-size/fuzzme/rust-cargo-fuzz)  |
+| [fuzzme/rust-uninstrumented](rust/rust-uninstrumented)        | Rust             | Rust 1.44         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/rust-uninstrumented)  |
 
 ## How can I contribute?
 
@@ -61,27 +61,31 @@ A container runs natively on Linux, and shares the underlying runtime. Three key
 2. **Configuration-as-Code:**  When you create a Docker image, you write a `Dockerfile`, which gives the exact commands to build the image. The `Dockerfile` can be edited and revision controlled like any other text file.
 3. **Efficiency:** Docker uses a layered file system, which means if two applications share the same files, you only need one copy.
 
-## How Mayhem Uses Docker
+## Fuzzing Docker Targets with Mayhem
 
-Consider the problem of analyzing the Apache web server. When you start Apache, it writes a PID file. Writing that file is a *side effect*. We want runs to be reproducible, so Mayhem has to undo side effects on each run.
+Given a Docker image, Mayhem will spin up and tear down Docker containers as needed to run the specified application in the containerized environment.
 
-Therefore, Mayhem will automatically pull and run an application within a Docker image, and each time Mayhem runs the application, it:
-
-1. Starts up a fresh copy of the image.
-2. Runs the program specified in the `Mayhemfile`
-3. Stops the image, deleting any side-effects.
-
-Mayhem can launch a Docker image up to thousands of times per second. Each time the image is launched, a new process is created. Each time the process finishes, Mayhem (using Docker) cleans up any side-effects making sure the next run is fresh.
-
-The images themselves are stored on a Docker registry. The largest registry is [hub.docker.com](https://hub.docker.com), which has tens of thousands of preconfigured applications. As part of your Mayhem install, there is also a *private* Docker registry. The private registry can be used to include your internal images, all within your own network or cloud.
-
-Mayhem can run Docker images stored on either your private registry or Docker Hub. If you are storing your images on your private registry, you will need to specify that in the Mayhemfile.
+Mayhem can run Docker images stored on either the included private Docker registry (as a part of your Mayhem deployment) or through [Docker Hub](https://hub.docker.com), which hosts tens of thousands of public Docker images. If you are storing your images on your private registry, you will need to specify this in the Mayhemfile.
 
 ## How to Get Started
 
-Use the included `Makefile` in the root directory of the `fuzzme` GitHub repository to build the compilation of Dockerfiles, and then tag and push the resulting Docker images to the Docker registry (private or public such as [Docker Hub](https://hub.docker.com/)) of your choice—all in one go!
+Navigate to each Language/Fuzzer folder and follow the individual build instructions. Alternatively, you can use the included `Makefile` in the root directory of the `fuzzme` GitHub repository to build the compilation of Dockerfiles and then tag and push the resulting Docker images to the Docker registry of your choice (private or public such as [Docker Hub](https://hub.docker.com/)) all in one go!
 
-You'll need to first log into your desired Docker registry using the `docker login` command and then set a `DOCKER_REGISTRY` environment variable to the URL of the specified Docker registry. Once complete, just run the following commands:
+You'll need to first log into your desired Docker registry using the `docker login` command and then set a `DOCKER_REGISTRY` environment variable to the URL of the specified Docker registry.
+
+For example, for a private Docker registry you'll want the following:
+
+```sh
+export DOCKER_REGISTRY=tutorial.forallsecure.com:5000
+```
+
+Alternatively, for a public Docker registry like Docker Hub, you'll want the following:
+
+```sh
+export DOCKER_REGISTRY=docker.io
+```
+
+Once complete, just run the following commands:
 
 ```sh
 make build
@@ -95,7 +99,7 @@ For example, you'll need to set a `Mayhemfile` with a `baseimage` parameter simi
 ```yaml
 version: '1.12'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-uninstrumented:latest
-duration: 60
+duration: 300
 project: fuzzme
 target: c-uninstrumented
 tasks:
@@ -112,7 +116,7 @@ Otherwise, you can set the `Mayhemfile` with a `baseimage` parameter to a public
 ```yaml
 version: '1.12'
 baseimage: fuzzme/c-uninstrumented:latest
-duration: 60
+duration: 300
 project: fuzzme
 target: c-uninstrumented
 tasks:

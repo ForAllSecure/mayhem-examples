@@ -1,7 +1,7 @@
+use std::env;
 use std::fs::File;
 use std::io;
 use std::io::prelude::*;
-use std::env;
 
 fn main() -> io::Result<()> {
     let args: Vec<String> = env::args().collect();
@@ -17,17 +17,15 @@ fn main() -> io::Result<()> {
 }
 
 fn bad(data: &[u8]) {
-    if let Ok(contents) = std::str::from_utf8(data) {
-        if contents.starts_with("b") {
-            if contents[1..].starts_with("u") {
-                if contents[2..].starts_with("g") {
-                    div_by_val(0);
-                }
+    if data[0] == 'b' as u8 {
+        if data[1] == 'u' as u8 {
+            if data[2] == 'g' as u8 {
+                div_by_val(0);
             }
         }
     }
 }
 
 fn div_by_val(num: i32) -> i32 {
-    return 1/num;
+    return 1 / num;
 }

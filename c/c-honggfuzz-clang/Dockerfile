@@ -1,14 +1,17 @@
-FROM debian:stable-slim as builder
-RUN apt-get update && \
-    apt-get install -y make curl build-essential binutils-dev libunwind-dev clang && \
-    curl -L -o honggfuzz-1.9.tgz https://github.com/google/honggfuzz/archive/1.9.tar.gz && \
-    tar zxf honggfuzz-1.9.tgz && \
-    cd honggfuzz-1.9 && \
-    make && \
-    make install
+FROM fuzzers/honggfuzz:1.9
 COPY fuzzme.c .
-RUN hfuzz-clang -O1 -o fuzzme fuzzme.c
+RUN hfuzz-clang -O0 -g -fno-inline -o fuzzme fuzzme.c
+
+FROM debian:stable-slim
+COPY --from=0 /fuzzme .
+COPY --from=0 /usr/local/bin/honggfuzz /usr/local/bin/honggfuzz
+COPY --from=0 /usr/lib/x86_64-linux-gnu/libunwind-ptrace.so.0 /usr/lib/x86_64-linux-gnu/libunwind-ptrace.so.0
+COPY --from=0 /usr/lib/x86_64-linux-gnu/libunwind-x86_64.so.8 /usr/lib/x86_64-linux-gnu/libunwind-x86_64.so.8
+COPY --from=0 /usr/lib/x86_64-linux-gnu/libbfd-2.31.1-system.so /usr/lib/x86_64-linux-gnu/libbfd-2.31.1-system.so
+COPY --from=0 /usr/lib/x86_64-linux-gnu/libopcodes-2.31.1-system.so /usr/lib/x86_64-linux-gnu/libopcodes-2.31.1-system.so
+COPY --from=0 /usr/lib/x86_64-linux-gnu/libunwind.so.8 /usr/lib/x86_64-linux-gnu/libunwind.so.8
+RUN mkdir /corpus && echo seed > /corpus/seed
 
 # Set to fuzz!
-ENTRYPOINT []
-CMD /fuzzme @@
+ENTRYPOINT ["honggfuzz", "-f", "/corpus", "--"]
+CMD ["/fuzzme"]

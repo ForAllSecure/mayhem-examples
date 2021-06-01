@@ -2,12 +2,14 @@
 #[macro_use] extern crate libfuzzer_sys;
 
 fuzz_target!(|data: &[u8]| {
-    if let Ok(contents) = std::str::from_utf8(data) {
-       if contents.contains("bad") {
-           div_by_val(0);
-       } else {
-           div_by_val(1);
-       }
+    if data.len() >= 3 {
+        if data[0] == 'b' as u8 {
+            if data[1] == 'u' as u8 {
+                if data[2] == 'g' as u8 {
+                    div_by_val(0);
+                }
+            }
+        }
     }
 });
 

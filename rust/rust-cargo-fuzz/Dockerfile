@@ -1,7 +1,4 @@
-FROM rust:1.44-buster as rust-target
-RUN cargo install cargo-fuzz && \
-    rustup install nightly && \
-    rustup default nightly
+FROM fuzzers/cargo-fuzz:0.10.0
 COPY fuzzme.rs .
 RUN export USER=root && \
     cargo new fuzzme && \
@@ -15,4 +12,4 @@ RUN export USER=root && \
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD ["/fuzzme/fuzz/target/x86_64-unknown-linux-gnu/release/fuzzme", "@@"]
+CMD ["/fuzzme/fuzz/target/x86_64-unknown-linux-gnu/release/fuzzme"]
