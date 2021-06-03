@@ -4,7 +4,7 @@ with Ada.Assertions;
 with GNAT.Exception_Actions;
 
 procedure Fuzzme is
-  Length : Integer := 128;
+  Length : Integer := 3;
   Input : String (1 .. Length);
   Fd : File_Type;
   Filename : aliased String := Ada.Command_Line.Argument(1);
