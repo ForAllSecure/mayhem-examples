@@ -20,9 +20,9 @@ public class FuzzMe {
             return;
         }
 
-        if (input.startsWith("b", 0)) {
-            if (input.startsWith("u", 1)) {
-                if (input.startsWith("g", 2)) {
+        if (input.charAt(0) == 'b') {
+            if (input.charAt(1) == 'u') {
+                if (input.charAt(2) == 'g') {
                     int i = 1 / 0;
                 }
             }
