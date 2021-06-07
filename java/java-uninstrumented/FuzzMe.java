@@ -20,10 +20,12 @@ public class FuzzMe {
             return;
         }
 
-        if (input.charAt(0) == 'b') {
-            if (input.charAt(1) == 'u') {
-                if (input.charAt(2) == 'g') {
-                    int i = 1 / 0;
+        if (input.length() >= 3) {
+            if (input.charAt(0) == 'b') {
+                if (input.charAt(1) == 'u') {
+                    if (input.charAt(2) == 'g') {
+                        int i = 1 / 0;
+                    }
                 }
             }
         }
