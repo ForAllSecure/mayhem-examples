@@ -1,11 +1,8 @@
-version: '1.11'
-baseimage: $MAYHEM_DOCKER_REGISTRY/testme-ppc-docker:latest
-project: testme-ppc-docker
-target: testme-ppc-docker
-tasks:
-  - name: exploitability_factors
-  - name: regression_testing
-  - name: behavior_testing
+version: '1.13'
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/powerpc-c-uninstrumented:latest
+duration: 300
+project: fuzzme
+target: powerpc-c-uninstrumented
 cmds:
   - cmd: /fuzzme @@
     env:
