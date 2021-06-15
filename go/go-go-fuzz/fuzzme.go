@@ -2,13 +2,12 @@ package test
 
 func fuzzme(bytes []byte) int {
     content := string(bytes)
-    if len(content) < 3 {
-        return 0
-    }
-    if string(content[0]) == "b" {
-        if string(content[1]) == "u" {
-            if string(content[2]) == "g" {
-                _ = divBy(0)
+    if len(content) >= 3 {
+        if string(content[0]) == "b" {
+            if string(content[1]) == "u" {
+                if string(content[2]) == "g" {
+                    _ = divBy(0)
+                }
             }
         }
     }
