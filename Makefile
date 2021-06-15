@@ -29,7 +29,7 @@ FUZZERS := \
 	cpp/cpp-uninstrumented \
 	kotlin/kotlin-jazzer \
 	go/go-go-fuzz \
-	go/go-uninstrumented \
+	go/go-base-executable \
 	java/java-jazzer \
 	java/java-uninstrumented \
 	ocaml/ocaml-uninstrumented \
