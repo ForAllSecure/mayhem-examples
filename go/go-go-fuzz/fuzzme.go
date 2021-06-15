@@ -1,25 +1,6 @@
 package test
 
-import (
-    "fmt"
-    "io/ioutil"
-    "log"
-    "os"
-)
-
-func test() {
-    if len(os.Args) != 2 {
-        fmt.Printf("Usage: ./fuzzme <file>\n")
-        os.Exit(1)
-    }
-    bytes, err := ioutil.ReadFile(os.Args[1])
-    if err != nil {
-        log.Fatal(err)
-    }
-    Bad(bytes)
-}
-
-func Bad(bytes []byte) int {
+func fuzzme(bytes []byte) int {
     content := string(bytes)
     if len(content) < 3 {
         return 0
@@ -40,6 +21,6 @@ func divBy(val int) int {
 }
 
 func Fuzz(data []byte) int {
-    _ = Bad(data)
+    _ = fuzzme(data)
     return 0
 }
