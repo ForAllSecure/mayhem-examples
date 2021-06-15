@@ -7,7 +7,7 @@ BUILD_PREFIX := build/
 PUSH_PREFIX := push/
 CLEAN_PREFIX := clean/
 FUZZERS := \
-	ada/ada-uninstrumented \
+	ada/ada-base-executable \
 	c/c-afl-clang \
 	c/c-afl-gcc \
 	c/c-aflpp-clang \
