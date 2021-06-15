@@ -8,7 +8,6 @@ def TestOneInput(data):
         if data[0] == ord('b'):
             if data[1] == ord('u'):
                 if data[2] == ord('g'):
-                    print("Made it to the bug!")
                     return 1 / 0
 
 atheris.Setup(sys.argv, TestOneInput)
