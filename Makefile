@@ -36,7 +36,7 @@ FUZZERS := \
 	python/python-atheris \
 	rust/rust-afl \
 	rust/rust-cargo-fuzz \
-	rust/rust-uninstrumented
+	rust/rust-base-executable
 BUILD_FUZZERS := $(addprefix $(BUILD_PREFIX), $(FUZZERS))
 PUSH_FUZZERS := $(addprefix $(PUSH_PREFIX), $(FUZZERS))
 CLEAN_FUZZERS := $(addprefix $(CLEAN_PREFIX), $(FUZZERS))

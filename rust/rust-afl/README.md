@@ -12,16 +12,11 @@ docker push $DOCKER_REGISTRY/fuzzme/rust-afl
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.12'
+version: '1.13'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/rust/rust-afl:latest
-duration: 300
+duration: 600
 project: rust
 target: rust-afl
-tasks:
-  - name: exploitability_factors
-  - name: corpus_minimization
-  - name: regression_testing
-  - name: behavior_testing
 cmds:
   - cmd: /fuzzme/target/debug/fuzzme @@
     afl: true

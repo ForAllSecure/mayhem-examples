@@ -41,7 +41,7 @@ Order is alphabetical.
 | [fuzzme/python-atheris](python/python-atheris)                | Python           | Python3.8         | Atheris            | ![](https://img.shields.io/docker/image-size/fuzzme/python-atheris) |
 | [fuzzme/rust-afl](rust/rust-afl)                              | Rust             | Rust 1.44         | afl.rs             | ![](https://img.shields.io/docker/image-size/fuzzme/rust-afl)  |
 | [fuzzme/rust-cargo-fuzz](rust/rust-cargo-fuzz)                | Rust             | Rust 1.44         | cargo-fuzz         | ![](https://img.shields.io/docker/image-size/fuzzme/rust-cargo-fuzz)  |
-| [fuzzme/rust-uninstrumented](rust/rust-uninstrumented)        | Rust             | Rust 1.44         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/rust-uninstrumented)  |
+| [fuzzme/rust-base-executable](rust/rust-base-executable)      | Rust             | Rust 1.44         | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/rust-base-executable)  |
 
 ## How can I contribute?
 
