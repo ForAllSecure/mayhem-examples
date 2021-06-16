@@ -16,7 +16,7 @@ Order is alphabetical.
 
 |     Target Name                                               |     Language     |    Environment    |     Fuzzer         |     Image Size     |
 | :---------------                                              | :--------------: | :---------------: | :---------------:  | -----------------: |
-| [fuzzme/ada-uninstrumented](ada/ada-uninstrumented)           | Ada              | Ada2012           | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/ada-uninstrumented)  |
+| [fuzzme/ada-base-executable](ada/ada-base-executable)         | Ada              | Ada2012           | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/ada-base-executable)  |
 | [fuzzme/c-afl-clang](c/c-afl-clang)                           | C                | C99               | AFL-clang          | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-clang)  |
 | [fuzzme/c-afl-gcc](c/c-afl-gcc)                               | C                | C99               | AFL-gcc            | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-gcc)  |
 | [fuzzme/c-aflpp-clang](c/c-aflpp-clang)                       | C                | C99               | AFL++-clang        | ![](https://img.shields.io/docker/image-size/fuzzme/c-aflpp-clang)  |
@@ -36,7 +36,7 @@ Order is alphabetical.
 | [fuzzme/kotlin-jazzer](kotlin/kotlin-jazzer)                  | Kotlin           | Openjdk11         | jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/kotlin-jazzer) |
 | [fuzzme/java-jazzer](java/java-jazzer)                        | Java             | Openjdk11         | jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/java-jazzer) |
 | [fuzzme/go-go-fuzz](go/go-go-fuzz)                            | Go               | Go 1.13           | go-fuzz            | ![](https://img.shields.io/docker/image-size/fuzzme/go-go-fuzz)  |
-| [fuzzme/go-uninstrumented](go/go-uninstrumented)              | Go               | Go 1.13           | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/go-uninstrumented)  |
+| [fuzzme/go-base-executable](go/go-base-executable)            | Go               | Go 1.13           | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/go-base-executable)  |
 | [fuzzme/ocaml-uninstrumented](ocaml/ocaml-uninstrumented)     | OCaml            | OCaml 4.0         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/ocaml-uninstrumented)  |
 | [fuzzme/python-atheris](python/python-atheris)                | Python           | Python3.8         | Atheris            | ![](https://img.shields.io/docker/image-size/fuzzme/python-atheris) |
 | [fuzzme/rust-afl](rust/rust-afl)                              | Rust             | Rust 1.44         | afl.rs             | ![](https://img.shields.io/docker/image-size/fuzzme/rust-afl)  |

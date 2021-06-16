@@ -12,16 +12,11 @@ docker push $DOCKER_REGISTRY/fuzzme/java-jazzer
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.12'
+version: '1.13'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/java-jazzer:latest
-duration: 300
+duration: 600
 project: fuzzme
 target: java-jazzer
-tasks:
-  - name: exploitability_factors
-  - name: corpus_minimization
-  - name: regression_testing
-  - name: behavior_testing
 cmds:
   - cmd: /usr/bin/jazzer_driver --cp=/usr/bin/FuzzMe.jar --target_class=fuzzme.FuzzMe
     libfuzzer: true
