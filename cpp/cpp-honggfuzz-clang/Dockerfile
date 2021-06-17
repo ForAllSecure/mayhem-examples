@@ -1,6 +1,6 @@
 FROM fuzzers/honggfuzz:1.9
 COPY fuzzme.cpp .
-RUN hfuzz-clang++ -O0 -g -fno-inline -o fuzzme fuzzme.cpp
+RUN hfuzz-clang++ -fno-inline fuzzme.cpp -o fuzzme 
 
 FROM debian:stable-slim
 COPY --from=0 /fuzzme .
