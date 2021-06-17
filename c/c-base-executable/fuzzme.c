@@ -3,13 +3,14 @@
 
 int fuzzme(char *buf)
 {
-  if(buf[0] == 'b')
-    if(buf[1] == 'u')
-      if(buf[2] == 'g') {
-        printf("You've got it!");
-        return 1/0;      // Defect: divide-by-zero.
-      }
-  return 0;
+  if(strlen(buf) >= 3)
+    if(buf[0] == 'b')
+      if(buf[1] == 'u')
+        if(buf[2] == 'g') {
+          printf("You've got it!");
+          return 1/0;      // Defect: divide-by-zero.
+        }
+    return 0;
 }
 
 int main(int argc, char *argv[])
