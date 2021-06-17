@@ -12,11 +12,11 @@ fn main() -> io::Result<()> {
 
     // read up to 10 bytes
     f.read(&mut buffer)?;
-    bad(&buffer);
+    fuzzme(&buffer);
     Ok(())
 }
 
-fn bad(data: &[u8]) {
+fn fuzzme(data: &[u8]) {
     if data[0] == 'b' as u8 {
         if data[1] == 'u' as u8 {
             if data[2] == 'g' as u8 {

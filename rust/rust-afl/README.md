@@ -18,6 +18,6 @@ duration: 600
 project: rust
 target: rust-afl
 cmds:
-  - cmd: /fuzzme/target/debug/fuzzme @@
+  - cmd: /fuzzme/target/debug/fuzzme
     afl: true
 ```
