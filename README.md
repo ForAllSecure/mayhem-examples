@@ -24,7 +24,7 @@ Order is alphabetical.
 | [fuzzme/c-libfuzzer](c/c-libfuzzer)                           | C                | C99               | libFuzzer          | ![](https://img.shields.io/docker/image-size/fuzzme/c-libfuzzer)  |
 | [fuzzme/c-honggfuzz-clang](c/c-honggfuzz-clang)               | C                | C99               | Honggfuzz-clang    | ![](https://img.shields.io/docker/image-size/fuzzme/c-honggfuzz-clang)  |
 | [fuzzme/c-honggfuzz-gcc](c/c-honggfuzz-gcc)                   | C                | C99               | Honggfuzz-gcc      | ![](https://img.shields.io/docker/image-size/fuzzme/c-honggfuzz-gcc)  |
-| [fuzzme/c-uninstrumented](c/c-uninstrumented)                 | C                | C99               | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/c-uninstrumented)  |
+| [fuzzme/c-base-executable](c/c-base-executable)               | C                | C99               | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/c-base-executable)  |
 | [fuzzme/cpp-afl-clang](cpp/cpp-afl-clang)                     | C++              | C++11             | AFL-clang          | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-afl-clang)  |
 | [fuzzme/cpp-afl-gcc](cpp/cpp-afl-gcc)                         | C++              | C++11             | AFL-gcc            | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-afl-gcc)  |
 | [fuzzme/cpp-aflpp-clang](cpp/cpp-aflpp-clang)                 | C++              | C++11             | AFL++-clang        | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-aflpp-clang)  |

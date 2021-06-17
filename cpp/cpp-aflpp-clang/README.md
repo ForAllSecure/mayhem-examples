@@ -12,16 +12,11 @@ docker push $DOCKER_REGISTRY/fuzzme/cpp-aflpp-clang
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.12'
+version: '1.13'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-aflpp-clang:latest
 duration: 300
 project: fuzzme
 target: cpp-aflpp-clang
-tasks:
-  - name: exploitability_factors
-  - name: corpus_minimization
-  - name: regression_testing
-  - name: behavior_testing
 cmds:
   - cmd: /fuzzme @@
     afl: true

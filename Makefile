@@ -16,9 +16,9 @@ FUZZERS := \
 	c/c-honggfuzz-gcc \
 	c/c-libfuzzer \
 	c/c-uninstrumented \
-	c/powerpc-c-uninstrumented \
-	c/powerpc64-c-uninstrumented \
-	c/powerpc64le-c-uninstrumented \
+	c/powerpc-c-base-executable \
+	c/powerpc64-c-base-executable \
+	c/powerpc64le-c-base-executable \
 	cpp/cpp-afl-clang \
 	cpp/cpp-afl-gcc \
 	cpp/cpp-aflpp-clang \
@@ -26,7 +26,7 @@ FUZZERS := \
 	cpp/cpp-honggfuzz-clang \
 	cpp/cpp-honggfuzz-gcc \
 	cpp/cpp-libfuzzer \
-	cpp/cpp-uninstrumented \
+	cpp/cpp-base-executable \
 	kotlin/kotlin-jazzer \
 	go/go-go-fuzz \
 	go/go-base-executable \
