@@ -32,12 +32,12 @@ Order is alphabetical.
 | [fuzzme/cpp-libfuzzer](cpp/cpp-libfuzzer)                     | C++              | C++11             | libFuzzer          | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-libfuzzer)  |
 | [fuzzme/cpp-honggfuzz-clang](cpp/cpp-honggfuzz-clang)         | C++              | C++11             | Honggfuzz-clang    | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-honggfuzz-clang)  |
 | [fuzzme/cpp-honggfuzz-gcc](cpp/cpp-honggfuzz-gcc)             | C++              | C++11             | Honggfuzz-gcc      | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-honggfuzz-gcc)  |
-| [fuzzme/cpp-uninstrumented](cpp/cpp-uninstrumented)           | C++              | C++11             | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-uninstrumented)  |
+| [fuzzme/cpp-base-executable](cpp/cpp-base-executable)         | C++              | C++11             | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-base-executable)  |
 | [fuzzme/kotlin-jazzer](kotlin/kotlin-jazzer)                  | Kotlin           | Openjdk11         | jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/kotlin-jazzer) |
 | [fuzzme/java-jazzer](java/java-jazzer)                        | Java             | Openjdk11         | jazzer             | ![](https://img.shields.io/docker/image-size/fuzzme/java-jazzer) |
 | [fuzzme/go-go-fuzz](go/go-go-fuzz)                            | Go               | Go 1.13           | go-fuzz            | ![](https://img.shields.io/docker/image-size/fuzzme/go-go-fuzz)  |
 | [fuzzme/go-base-executable](go/go-base-executable)            | Go               | Go 1.13           | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/go-base-executable)  |
-| [fuzzme/ocaml-uninstrumented](ocaml/ocaml-uninstrumented)     | OCaml            | OCaml 4.0         | Uninstrumented     | ![](https://img.shields.io/docker/image-size/fuzzme/ocaml-uninstrumented)  |
+| [fuzzme/ocaml-base-executable](ocaml/ocaml-base-executable)   | OCaml            | OCaml 4.0         | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/ocaml-base-executable)  |
 | [fuzzme/python-atheris](python/python-atheris)                | Python           | Python3.8         | Atheris            | ![](https://img.shields.io/docker/image-size/fuzzme/python-atheris) |
 | [fuzzme/rust-afl](rust/rust-afl)                              | Rust             | Rust 1.44         | afl.rs             | ![](https://img.shields.io/docker/image-size/fuzzme/rust-afl)  |
 | [fuzzme/rust-cargo-fuzz](rust/rust-cargo-fuzz)                | Rust             | Rust 1.44         | cargo-fuzz         | ![](https://img.shields.io/docker/image-size/fuzzme/rust-cargo-fuzz)  |

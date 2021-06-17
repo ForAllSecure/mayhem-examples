@@ -32,7 +32,7 @@ FUZZERS := \
 	go/go-base-executable \
 	java/java-jazzer \
 	java/java-base-executable \
-	ocaml/ocaml-uninstrumented \
+	ocaml/ocaml-base-executable \
 	python/python-atheris \
 	rust/rust-afl \
 	rust/rust-cargo-fuzz \
