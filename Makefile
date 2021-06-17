@@ -15,7 +15,7 @@ FUZZERS := \
 	c/c-honggfuzz-clang \
 	c/c-honggfuzz-gcc \
 	c/c-libfuzzer \
-	c/c-uninstrumented \
+	c/c-base-executable \
 	c/powerpc-c-base-executable \
 	c/powerpc64-c-base-executable \
 	c/powerpc64le-c-base-executable \
