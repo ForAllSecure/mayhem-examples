@@ -1,6 +1,6 @@
 FROM fuzzers/aflplusplus:3.12c
 COPY fuzzme.c .
-RUN afl-gcc-fast -O0 -g -o /fuzzme fuzzme.c
+RUN afl-gcc-fast fuzzme.c -o /fuzzme 
 RUN echo seed > /corpus/seed
 
 # Set to fuzz!

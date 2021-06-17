@@ -1,6 +1,6 @@
 FROM fuzzers/libfuzzer:12.0
 COPY fuzzme.c .
-RUN clang-12 -g -fsanitize=fuzzer,address -o fuzzme -fno-stack-protector -no-pie fuzzme.c
+RUN clang-12 -fsanitize=fuzzer,address fuzzme.c -o fuzzme 
 
 # Set to fuzz!
 ENTRYPOINT []

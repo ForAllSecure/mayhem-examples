@@ -1,6 +1,6 @@
 FROM fuzzers/honggfuzz:1.9
 COPY fuzzme.c .
-RUN hfuzz-gcc -O1 -o fuzzme fuzzme.c
+RUN hfuzz-gcc fuzzme.c -o /fuzzme 
 
 FROM debian:stable-slim
 COPY --from=0 /fuzzme .

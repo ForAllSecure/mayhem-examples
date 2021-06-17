@@ -1,6 +1,6 @@
 FROM fuzzers/afl:2.52
 COPY fuzzme.c .
-RUN afl-clang -O0 -g -fno-inline -o /fuzzme fuzzme.c
+RUN afl-clang -fno-inline fuzzme.c -o /fuzzme
 RUN echo seed > /corpus/seed
 
 # Set to fuzz!
