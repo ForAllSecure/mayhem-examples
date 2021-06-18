@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string.h>
 
-int fuzzme(char *buf, unsigned len)
+int fuzzme(char *buf)
 {
   if(strlen(buf) >= 3)
     if(buf[0] == 'b')

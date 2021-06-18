@@ -97,16 +97,11 @@ With the Docker images now pushed to a private or public Docker registry, just u
 For example, you'll need to set a `Mayhemfile` with a `baseimage` parameter similar to the following for a private Docker registry, where `$MAYHEM_DOCKER_REGISTRY` represents the URL of the private Mayhem Docker registry:
 
 ```yaml
-version: '1.12'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-uninstrumented:latest
-duration: 300
+version: '1.13'
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-base-executable:latest
+duration: 600
 project: fuzzme
-target: c-uninstrumented
-tasks:
-  - name: exploitability_factors
-  - name: corpus_minimization
-  - name: regression_testing
-  - name: behavior_testing
+target: c-base-executable
 cmds:
   - cmd: /fuzzme @@
 ```
@@ -114,16 +109,11 @@ cmds:
 Otherwise, you can set the `Mayhemfile` with a `baseimage` parameter to a public Docker Hub URL like so:
 
 ```yaml
-version: '1.12'
-baseimage: fuzzme/c-uninstrumented:latest
-duration: 300
+version: '1.13'
+baseimage: fuzzme/c-base-executable:latest
+duration: 600
 project: fuzzme
-target: c-uninstrumented
-tasks:
-  - name: exploitability_factors
-  - name: corpus_minimization
-  - name: regression_testing
-  - name: behavior_testing
+target: c-base-executable
 cmds:
   - cmd: /fuzzme @@
 ```
