@@ -12,6 +12,15 @@ int fuzzme(char *buf, unsigned len)
   return 0;
 }
 
-extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size){
-  return fuzzme((char *) Data, Size);
+extern "C" int HF_ITER(uint8_t** buf, size_t* len);
+
+int main(void) {
+	for (;;) {
+		size_t len;
+		uint8_t *buf;
+
+		HF_ITER(&buf, &len);
+
+		fuzzme(reinterpret_cast<char *>(buf), len);
+	}
 }

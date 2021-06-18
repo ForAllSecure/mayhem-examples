@@ -3,7 +3,7 @@
 
 int fuzzme(char *buf, unsigned len)
 {
-  if(strlen(buf) >= 3)
+  if(len >= 3)
     if(buf[0] == 'b')
       if(buf[1] == 'u')
         if(buf[2] == 'g') {
@@ -12,6 +12,15 @@ int fuzzme(char *buf, unsigned len)
   return 0;
 }
 
-int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size){
-  return fuzzme((char *) Data, Size);
+extern HF_ITER(uint8_t** buf, size_t* len);
+
+int main(void) {
+	for (;;) {
+		size_t len;
+		uint8_t *buf;
+
+		HF_ITER(&buf, &len);
+
+		fuzzme(buf, len);
+	}
 }
