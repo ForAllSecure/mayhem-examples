@@ -12,7 +12,7 @@ int fuzzme(char *buf, unsigned len)
   return 0;
 }
 
-extern HF_ITER(uint8_t** buf, size_t* len);
+extern int HF_ITER(uint8_t** buf, size_t* len);
 
 int main(void) {
 	for (;;) {
