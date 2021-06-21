@@ -7,36 +7,36 @@ BUILD_PREFIX := build/
 PUSH_PREFIX := push/
 CLEAN_PREFIX := clean/
 FUZZERS := \
-	ada/ada-base-executable \
-	c/c-afl-clang \
-	c/c-afl-gcc \
-	c/c-aflpp-clang \
-	c/c-aflpp-gcc \
-	c/c-honggfuzz-clang \
-	c/c-honggfuzz-gcc \
-	c/c-libfuzzer \
-	c/c-base-executable \
-	c/powerpc-c-base-executable \
-	c/powerpc64-c-base-executable \
-	c/powerpc64le-c-base-executable \
-	cpp/cpp-afl-clang \
-	cpp/cpp-afl-gcc \
-	cpp/cpp-aflpp-clang \
-	cpp/cpp-aflpp-gcc \
-	cpp/cpp-honggfuzz-clang \
-	cpp/cpp-honggfuzz-gcc \
-	cpp/cpp-libfuzzer \
-	cpp/cpp-base-executable \
-	kotlin/kotlin-jazzer \
-	go/go-go-fuzz \
-	go/go-base-executable \
-	java/java-jazzer \
-	java/java-base-executable \
-	ocaml/ocaml-base-executable \
-	python/python-atheris \
-	rust/rust-afl \
-	rust/rust-cargo-fuzz \
-	rust/rust-base-executable
+	ada/base-executable/ada-base-executable \
+	c/afl/c-afl-clang \
+	c/afl/c-afl-gcc \
+	c/aflpp/c-aflpp-clang \
+	c/aflpp/c-aflpp-gcc \
+	c/honggfuzz/c-honggfuzz-clang \
+	c/honggfuzz/c-honggfuzz-gcc \
+	c/libfuzzer/c-libfuzzer \
+	c/base-executable/c-base-executable \
+	c/base-executable/powerpc-c-base-executable \
+	c/base-executable/powerpc64-c-base-executable \
+	c/base-executable/powerpc64le-c-base-executable \
+	cpp/afl/cpp-afl-clang \
+	cpp/afl/cpp-afl-gcc \
+	cpp/aflpp/cpp-aflpp-clang \
+	cpp/aflpp/cpp-aflpp-gcc \
+	cpp/honggfuzz/cpp-honggfuzz-clang \
+	cpp/honggfuzz/cpp-honggfuzz-gcc \
+	cpp/libfuzzer/cpp-libfuzzer \
+	cpp/base-executable/cpp-base-executable \
+	kotlin/libfuzzer/kotlin-jazzer \
+	go/libfuzzer/go-go-fuzz \
+	go/base-executable/go-base-executable \
+	java/libfuzzer/java-jazzer \
+	java/base-executable/java-base-executable \
+	ocaml/base-executable/ocaml-base-executable \
+	python/libfuzzer/python-atheris \
+	rust/afl/rust-afl \
+	rust/libfuzzer/rust-cargo-fuzz \
+	rust/base-executable/rust-base-executable
 BUILD_FUZZERS := $(addprefix $(BUILD_PREFIX), $(FUZZERS))
 PUSH_FUZZERS := $(addprefix $(PUSH_PREFIX), $(FUZZERS))
 CLEAN_FUZZERS := $(addprefix $(CLEAN_PREFIX), $(FUZZERS))
@@ -51,8 +51,8 @@ build: $(BUILD_FUZZERS)
 $(BUILD_FUZZERS):
 	$(eval IMAGE_FUZZER := $(@:$(BUILD_PREFIX)%=%))
 	$(eval SPLIT_IMAGE_FUZZER = $(subst /, ,$(IMAGE_FUZZER)))
-	$(eval SPLIT_IMAGE_FUZZER_2 = $(word 2, $(SPLIT_IMAGE_FUZZER)))
-	docker build -t $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(SPLIT_IMAGE_FUZZER_2) $(IMAGE_FUZZER)
+	$(eval SPLIT_IMAGE_FUZZER_3 = $(word 3, $(SPLIT_IMAGE_FUZZER)))
+	docker build -t $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(SPLIT_IMAGE_FUZZER_3) $(IMAGE_FUZZER)
 
 .PHONY: push
 push: $(PUSH_FUZZERS)
@@ -60,13 +60,13 @@ push: $(PUSH_FUZZERS)
 $(PUSH_FUZZERS):
 	$(eval IMAGE_FUZZER := $(@:$(PUSH_PREFIX)%=%))
 	$(eval SPLIT_IMAGE_FUZZER = $(subst /, ,$(IMAGE_FUZZER)))
-	$(eval SPLIT_IMAGE_FUZZER_2 = $(word 2, $(SPLIT_IMAGE_FUZZER)))
-	docker push $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(SPLIT_IMAGE_FUZZER_2)
+	$(eval SPLIT_IMAGE_FUZZER_3 = $(word 3, $(SPLIT_IMAGE_FUZZER)))
+	docker push $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(SPLIT_IMAGE_FUZZER_3)
 
 clean: $(CLEAN_FUZZERS)
 
 $(CLEAN_FUZZERS):
 	$(eval IMAGE_FUZZER := $(@:$(CLEAN_PREFIX)%=%))
 	$(eval SPLIT_IMAGE_FUZZER = $(subst /, ,$(IMAGE_FUZZER)))
-	$(eval SPLIT_IMAGE_FUZZER_2 = $(word 2, $(SPLIT_IMAGE_FUZZER)))
-	docker rmi $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(SPLIT_IMAGE_FUZZER_2)
+	$(eval SPLIT_IMAGE_FUZZER_3 = $(word 3, $(SPLIT_IMAGE_FUZZER)))
+	docker rmi $(DOCKER_REGISTRY)/$(FUZZME_ORG)/$(SPLIT_IMAGE_FUZZER_3)
