@@ -15,7 +15,7 @@ Mayhem fuzzme templates for programming languages and fuzzers that you love! Lik
 Order is alphabetical.
 
 |     Target Name                                                                |     Language     |    Environment    |     Fuzzer         |     Image Size     |
-| :---------------                                                               | :--------------: | :---------------: | :---------------:  | -----------------: |
+| :---------------                                                               | :--------------: | :---------------: | :---------------:  | :----------------- |
 | [fuzzme/ada-base-executable](ada/base-executable/ada-base-executable)          | Ada              | Ada2012           | Base-Executable    | ![test](docker-logo.png) ![](https://img.shields.io/docker/image-size/fuzzme/ada-base-executable)   |
 | [fuzzme/c-afl-clang](c/afl/c-afl-clang)                                        | C                | C99               | AFL-clang          | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-clang)  |
 | [fuzzme/c-afl-gcc](c/afl/c-afl-gcc)                                            | C                | C99               | AFL-gcc            | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-gcc)  |
