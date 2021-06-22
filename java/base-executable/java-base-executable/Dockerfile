@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk
 
-COPY FuzzMe.java .
+COPY src/FuzzMe.java .
 
 # Build FuzzMe.jar
 RUN mkdir -p build && \

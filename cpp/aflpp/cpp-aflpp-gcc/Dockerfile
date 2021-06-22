@@ -1,5 +1,5 @@
 FROM fuzzers/aflplusplus:3.12c
-COPY fuzzme.cpp .
+COPY src/fuzzme.cpp .
 RUN afl-g++-fast -fno-inline fuzzme.cpp -o /fuzzme 
 RUN echo seed > /corpus/seed
 

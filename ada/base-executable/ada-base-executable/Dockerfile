@@ -1,6 +1,6 @@
 FROM tomekw/ada-gnat
-COPY fuzzme.adb .
-RUN gnatmake -o /fuzzme fuzzme.adb
+COPY src/fuzzme.adb .
+RUN gnatmake fuzzme.adb -o /fuzzme 
 
 # Set to fuzz!
 ENTRYPOINT []

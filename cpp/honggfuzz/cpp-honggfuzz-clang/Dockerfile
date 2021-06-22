@@ -1,5 +1,5 @@
 FROM fuzzers/honggfuzz:1.9
-COPY fuzzme.cpp .
+COPY src/fuzzme.cpp .
 RUN hfuzz-clang++ -fno-inline fuzzme.cpp -o fuzzme 
 
 FROM debian:stable-slim

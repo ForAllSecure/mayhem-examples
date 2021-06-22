@@ -1,5 +1,5 @@
 FROM fuzzers/jazzer:0.9.1-openjdk11
-COPY FuzzMe.java .
+COPY src/FuzzMe.java .
 # Build FuzzMe.jar
 RUN mkdir -p build && \
     javac -d build FuzzMe.java && \

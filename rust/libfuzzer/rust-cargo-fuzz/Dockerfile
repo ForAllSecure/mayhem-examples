@@ -1,5 +1,5 @@
 FROM fuzzers/cargo-fuzz:0.10.0
-COPY fuzzme.rs .
+COPY src/fuzzme.rs .
 RUN export USER=root && \
     cargo new fuzzme && \
     cd fuzzme && \

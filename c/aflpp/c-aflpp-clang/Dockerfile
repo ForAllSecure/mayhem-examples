@@ -1,5 +1,5 @@
 FROM fuzzers/aflplusplus:3.12c
-COPY fuzzme.c .
+COPY src/fuzzme.c .
 RUN afl-clang-fast -fno-inline -o /fuzzme fuzzme.c
 RUN echo seed > /corpus/seed
 
