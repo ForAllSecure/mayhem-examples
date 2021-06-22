@@ -12,9 +12,9 @@ Mayhem fuzzme templates for programming languages and fuzzers that you love! Lik
 
 ## Quickstart
 
-Use the Mayhem CLI to execute a new Mayhem run (via the `mayhem run` command) for any fuzzme target directory with a valid `Mayhemfile`. Alternatively, Mayhem users can execute a new Mayhem run by selecting and fuzzing a fuzzme target Docker image uploaded to either the private Mayhem Docker Registry or the public [Docker Hub](https://hub.docker.com/).
+Use the Mayhem CLI to execute a new Mayhem run (via the `mayhem run` command) for any fuzzme target directory with a valid `Mayhemfile`. Alternatively, Mayhem users can use the Mayhem UI to execute a new Mayhem run by selecting and fuzzing a fuzzme target Docker image uploaded to either the private Mayhem Docker Registry or the public [Docker Hub](https://hub.docker.com/).
 
-> **Note:** You will first need to upload the below fuzzme examples to either a private Mayhem Docker Registry or to the public Docker Hub. Read the [How to Get Started](#how-to-get-started) section for more details.
+> **Note:** Before executing a Mayhem run on the fuzzme examples, you'll need to first upload the below fuzzme targets to either a private Mayhem Docker Registry or to the public Docker Hub. Read the [How to Get Started](#how-to-get-started) section for more details.
 
 ## Fuzzme List by Language/Fuzzer
 
@@ -128,5 +128,5 @@ cmds:
 
 ForAllSecure was founded with the mission to make the world’s critical software safe. The company has been applying its patented technology from over a decade of CMU research to solving the difficult challenge of making software safer. ForAllSecure has partnered with Fortune 1000 companies in aerospace, automotive and high-tech industries, as well as the US Department of Defense to integrate Mayhem into software development cycles for continuous security. Profitable and revenue-funded, the company is scaling rapidly.
 
-[https://forallsecure.com/](https://forallsecure.com/)
-[https://forallsecure.com/mayhem-for-code](https://forallsecure.com/mayhem-for-code)
+* [https://forallsecure.com/](https://forallsecure.com/)
+* [https://forallsecure.com/mayhem-for-code](https://forallsecure.com/mayhem-for-code)
