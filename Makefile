@@ -33,6 +33,7 @@ FUZZERS := \
 	java/libfuzzer/java-jazzer \
 	java/base-executable/java-base-executable \
 	ocaml/base-executable/ocaml-base-executable \
+	ocaml/afl/ocaml-afl \
 	python/libfuzzer/python-atheris \
 	rust/afl/rust-afl \
 	rust/libfuzzer/rust-cargo-fuzz \

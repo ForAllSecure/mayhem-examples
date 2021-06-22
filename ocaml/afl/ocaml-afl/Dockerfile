@@ -1,9 +1,12 @@
-FROM debian:stable-slim as builder
+FROM fuzzers/afl:2.52
 RUN apt-get update && \
     apt-get install -y ocaml
 COPY src/fuzzme.ml .
-RUN ocamlopt fuzzme.ml -o /fuzzme 
+RUN ocamlopt -afl-instrument fuzzme.ml -o /fuzzme && \
+    mkdir /input && \
+    echo seed > input/seed && \
+    mkdir /output
 
 # Set to fuzz!
-ENTRYPOINT []
-CMD /fuzzme @@
+ENTRYPOINT ["afl-fuzz", "-i", "input", "-o", "output"]
+CMD ["/fuzzme"]
