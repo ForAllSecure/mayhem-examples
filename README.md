@@ -10,6 +10,12 @@ Mayhem fuzzme templates for programming languages and fuzzers that you love! Lik
 
 ---
 
+## Quickstart
+
+Use the Mayhem CLI to execute a new Mayhem run (using the `mayhem run` command) for any `fuzzme` target directory with a valid `Mayhemfile`. Alternatively, Mayhem users can also create a new Mayhem run by choosing to fuzz a `fuzzme` target Docker image uploaded to either the private Mayhem Docker Registry or the public Docker Hub.
+
+> **Note:** You will first need to upload the below `fuzzme` examples to either a private Mayhem Docker Registry or to the public Docker Hub. Read the [How to Get Started](#how-to-get-started) section for more details.
+
 ## Fuzzme List by Language/Fuzzer
 
 Order is alphabetical.
