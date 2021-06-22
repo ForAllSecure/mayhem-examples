@@ -1,5 +1,5 @@
 FROM fuzzers/honggfuzz:1.9
-COPY fuzzme.c .
+COPY src/fuzzme.c .
 RUN hfuzz-gcc fuzzme.c -o /fuzzme 
 
 FROM debian:stable-slim

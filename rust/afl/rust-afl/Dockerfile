@@ -1,6 +1,6 @@
 FROM rust:1.44-buster as rust-target
 RUN cargo install afl --version 0.7.0
-COPY fuzzme.rs .
+COPY src/fuzzme.rs .
 RUN export USER=root && \
     cargo new fuzzme && \
     cd fuzzme && \

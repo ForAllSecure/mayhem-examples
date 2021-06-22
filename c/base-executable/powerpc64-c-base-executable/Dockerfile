@@ -2,7 +2,7 @@ FROM debian:stable-slim as builder
 RUN apt-get update && \
     apt-get install -y gcc-powerpc64-linux-gnu make libc6-dbg && \
     rm -rf /var/lib/apt/lists/*
-COPY fuzzme.c .
+COPY src/fuzzme.c .
 RUN powerpc64-linux-gnu-gcc -o fuzzme -Wno-div-by-zero -fno-stack-protector -zexecstack -no-pie fuzzme.c
 
 # Set to fuzz!
