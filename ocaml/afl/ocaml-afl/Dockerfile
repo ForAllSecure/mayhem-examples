@@ -8,5 +8,5 @@ RUN ocamlopt -afl-instrument fuzzme.ml -o /fuzzme && \
     mkdir /output
 
 # Set to fuzz!
-ENTRYPOINT ["afl-fuzz", "-i", "input", "-o", "output"]
+#ENTRYPOINT ["afl-fuzz", "-i", "input", "-o", "output"]
 CMD ["/fuzzme", "@@"]
