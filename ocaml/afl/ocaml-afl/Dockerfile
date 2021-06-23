@@ -9,4 +9,4 @@ RUN ocamlopt -afl-instrument fuzzme.ml -o /fuzzme && \
 
 # Set to fuzz!
 ENTRYPOINT ["afl-fuzz", "-i", "input", "-o", "output"]
-CMD ["/fuzzme"]
+CMD ["/fuzzme", "@@"]

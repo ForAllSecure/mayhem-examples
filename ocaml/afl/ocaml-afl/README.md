@@ -1,10 +1,10 @@
 ## Building and Pushing the Docker Image
 
-Run the following to build the `fuzzme/ocaml-base-executable` Docker image and push it to a specified Docker registry.
+Run the following to build the `fuzzme/ocaml-afl` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $DOCKER_REGISTRY/fuzzme/ocaml-base-executable .
-docker push $DOCKER_REGISTRY/fuzzme/ocaml-base-executable
+docker build -t $DOCKER_REGISTRY/fuzzme/ocaml-afl .
+docker push $DOCKER_REGISTRY/fuzzme/ocaml-afl
 ```
 
 ## Executing the Mayhem Run
@@ -13,10 +13,10 @@ Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
 version: '1.13'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/ocaml/ocaml-base-executable:latest
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/ocaml-afl:latest
 duration: 600
 project: ocaml
-target: ocaml-base-executable
+target: ocaml-afl
 cmds:
-  - cmd: /fuzzme @@
+  - cmd: /fuzzme
 ```

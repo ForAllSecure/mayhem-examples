@@ -1,5 +1,6 @@
 let _ =
-  let s = read_line () in
+  let ic = open_in Sys.argv.(1) in
+  let s = input_line ic in
   match Array.to_list (Array.init (String.length s) (String.get s)) with
-    ['s'; 'e'; 'c'; 'r'; 'e'; 't'; ' '; 'c'; 'o'; 'd'; 'e'] -> failwith "uh oh"
+    ['b'; 'u'; 'g'] -> failwith "Found the bug!"
   | _ -> ()
