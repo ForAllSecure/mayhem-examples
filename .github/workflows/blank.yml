@@ -32,6 +32,7 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOCKER_REGISTRY: docker.io
 
       # Build images so that they're ready to be pushed
       - name: Build images
