@@ -12,31 +12,32 @@ FUZZERS := \
 	c/afl/c-afl-gcc \
 	c/aflpp/c-aflpp-clang \
 	c/aflpp/c-aflpp-gcc \
-	c/honggfuzz/c-honggfuzz-clang \
-	c/honggfuzz/c-honggfuzz-gcc \
-	c/libfuzzer/c-libfuzzer \
 	c/base-executable/c-base-executable \
 	c/base-executable/powerpc-c-base-executable \
 	c/base-executable/powerpc64-c-base-executable \
 	c/base-executable/powerpc64le-c-base-executable \
+	c/honggfuzz/c-honggfuzz-clang \
+	c/honggfuzz/c-honggfuzz-gcc \
+	c/libfuzzer/c-libfuzzer \
 	cpp/afl/cpp-afl-clang \
 	cpp/afl/cpp-afl-gcc \
 	cpp/aflpp/cpp-aflpp-clang \
 	cpp/aflpp/cpp-aflpp-gcc \
+	cpp/base-executable/cpp-base-executable \
 	cpp/honggfuzz/cpp-honggfuzz-clang \
 	cpp/honggfuzz/cpp-honggfuzz-gcc \
 	cpp/libfuzzer/cpp-libfuzzer \
-	cpp/base-executable/cpp-base-executable \
-	kotlin/libfuzzer/kotlin-jazzer \
-	go/libfuzzer/go-go-fuzz \
 	go/base-executable/go-base-executable \
-	java/libfuzzer/java-jazzer \
+	go/libfuzzer/go-go-fuzz \
 	java/base-executable/java-base-executable \
+	java/libfuzzer/java-jazzer \
+	kotlin/libfuzzer/kotlin-jazzer \
+	ocaml/afl/ocaml-afl \
 	ocaml/base-executable/ocaml-base-executable \
 	python/libfuzzer/python-atheris \
 	rust/afl/rust-afl \
-	rust/libfuzzer/rust-cargo-fuzz \
-	rust/base-executable/rust-base-executable
+	rust/base-executable/rust-base-executable \
+	rust/libfuzzer/rust-cargo-fuzz
 BUILD_FUZZERS := $(addprefix $(BUILD_PREFIX), $(FUZZERS))
 PUSH_FUZZERS := $(addprefix $(PUSH_PREFIX), $(FUZZERS))
 CLEAN_FUZZERS := $(addprefix $(CLEAN_PREFIX), $(FUZZERS))

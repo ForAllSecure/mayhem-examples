@@ -1,0 +1,8 @@
+version: '1.13'
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/ocaml-afl:latest
+duration: 600
+project: fuzzme
+target: ocaml-afl
+cmds:
+  - cmd: /fuzzme @@
+    afl: true

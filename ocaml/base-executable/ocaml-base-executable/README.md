@@ -13,9 +13,9 @@ Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
 version: '1.13'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/ocaml/ocaml-base-executable:latest
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/ocaml-base-executable:latest
 duration: 600
-project: ocaml
+project: fuzzme
 target: ocaml-base-executable
 cmds:
   - cmd: /fuzzme @@
