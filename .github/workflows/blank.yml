@@ -41,6 +41,8 @@ jobs:
 
       # Push images to dockerhub
       - name: Push images
+        env:
+          DOCKER_REGISTRY: docker.io
         run: make push
 
       # Runs a set of commands using the runners shell
