@@ -32,6 +32,7 @@ FUZZERS := \
 	go/base-executable/go-base-executable \
 	java/libfuzzer/java-jazzer \
 	java/base-executable/java-base-executable \
+	ocaml/afl/ocaml-afl \
 	ocaml/base-executable/ocaml-base-executable \
 	python/libfuzzer/python-atheris \
 	rust/afl/rust-afl \
