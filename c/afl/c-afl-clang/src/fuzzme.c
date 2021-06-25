@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <assert.h>
 
 int fuzzme(char *buf)
 {
@@ -8,7 +9,8 @@ int fuzzme(char *buf)
       if(buf[1] == 'u')
         if(buf[2] == 'g') {
           printf("You've got it!");
-          return buf[0]/(buf[0] - 'b');   // Defect: divide-by-zero.
+          int a;
+          assert(a == 42);
         }
   return 0;
 }
