@@ -8,8 +8,7 @@ int fuzzme(char *buf)
       if(buf[1] == 'u')
         if(buf[2] == 'g') {
           printf("You've got it!");
-          int a;
-          assert(a == 42);
+          return 1/0;      // Defect: divide-by-zero.
         }
     return 0;
 }
