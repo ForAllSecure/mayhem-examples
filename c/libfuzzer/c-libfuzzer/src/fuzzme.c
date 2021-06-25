@@ -9,7 +9,8 @@ int fuzzme(char *buf, unsigned len)
       if(buf[1] == 'u')
         if(buf[2] == 'g') {
           printf("Made it to the bug!");
-          return buf[0]/(buf[0] - 'b');      // Defect: divide-by-zero.
+          int a;
+          assert(a == 42);
         }
   return 0;
 }
