@@ -1,6 +1,7 @@
 #include <string.h>
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
 
 int fuzzme(char *buf)
 {
@@ -9,7 +10,7 @@ int fuzzme(char *buf)
       if(buf[1] == 'u')
         if(buf[2] == 'g') {
           std::cout << "You've got it!";
-          return buf[0]/(buf[0] - 'b');   // Defect: divide-by-zero.
+          abort();
         }
   return 0;
 }
