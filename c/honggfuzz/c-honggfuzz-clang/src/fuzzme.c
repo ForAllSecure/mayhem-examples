@@ -7,7 +7,7 @@ int fuzzme(char *buf, unsigned len)
     if(buf[0] == 'b')
       if(buf[1] == 'u')
         if(buf[2] == 'g') {
-          return buf[0]/(buf[0] - 'b');      // Defect: divide-by-zero.
+          abort();
         }
   return 0;
 }
