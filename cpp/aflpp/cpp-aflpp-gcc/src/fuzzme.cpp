@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
   }
 
   else {
-    char buf[12];
+    char buf[12] = "";
     infile.read(buf, sizeof(buf));
     fuzzme(buf);
     return 0;
