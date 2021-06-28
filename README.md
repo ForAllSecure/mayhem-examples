@@ -60,6 +60,26 @@ Order is alphabetical.
 | honggfuzz | ✓          |            | ✓          |
 | libFuzzer | ✓          | ✓          | ✓          |
 
+Use the `Mayhemfile` parameters as follows:
+
+* **Dictionary:** The path to an AFL-compatible dictionary file. The path should be relative to the root of the container. For instance, if the dictionary is under `/etc/foo/bar/http.dict` inside the image, the dictionary path in the Mayhemfile should be `/etc/foo/bar/http.dict`.
+
+  ```yaml
+  dictionary: /tmp/my-dictionary
+  ```
+
+* **Max Length:** Maximum length (in bytes) that will be provided as input to the fuzz target and should not exceed 100MB, otherwise the Mayhemfile will fail to validate. Test cases in the starting corpus larger than the specified maximum length will be truncated to the value set. This field is currently supported for libFuzzer and uninstrumented targets.
+
+  ```yaml
+  max_length: 8192
+  ```
+
+* **Sanitizers:** Set to true only if the target executable is compiled with a sanitizer
+
+  ```yaml
+  sanitizer: false
+  ```
+
 ## How can I contribute?
 
 Don't see your language/fuzzer in the list above? Let us know or better yet send us a PR adding it! Checkout our [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
