@@ -60,7 +60,7 @@ Order is alphabetical.
 | honggfuzz | ✓          |            | ✓          |
 | libFuzzer | ✓          | ✓          | ✓          |
 
-Use the `Mayhemfile` parameters are as follows:
+Use the `Mayhemfile` parameters as follows:
 
 * **Dictionary:** The path to an AFL-compatible dictionary file. The path should be relative to the root of the container. For instance, if the dictionary is under `/etc/foo/bar/http.dict` inside the image, the dictionary path in the Mayhemfile should be `/etc/foo/bar/http.dict`.
 
