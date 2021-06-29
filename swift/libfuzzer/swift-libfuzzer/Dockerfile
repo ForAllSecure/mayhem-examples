@@ -2,7 +2,7 @@ FROM ubuntu:groovy
 
 # Set non-interactive mode so tzdata doesn't hold up Docker build
 ENV DEBIAN_FRONTEND=noninteractive
-COPY src/fuzzme.swift src/swift-5.4.2-RELEASE-ubuntu20.04.tar.gz ./
+COPY src/fuzzme.swift .
 RUN apt-get update && \
     apt-get install -fy \
           binutils \
@@ -19,9 +19,11 @@ RUN apt-get update && \
           libz3-dev \
           pkg-config \
           tzdata \
-          zlib1g-dev \ 
+          zlib1g-dev \
+	  wget \ 
           libpython3.8 && \
-	  tar -xvzf swift-5.4.2-RELEASE-ubuntu20.04.tar.gz
+    wget https://swift.org/builds/swift-5.4.2-release/ubuntu2004/swift-5.4.2-RELEASE/swift-5.4.2-RELEASE-ubuntu20.04.tar.gz && \
+    tar -xvzf swift-5.4.2-RELEASE-ubuntu20.04.tar.gz
 ENV PATH="${PATH}:/swift-5.4.2-RELEASE-ubuntu20.04/usr/bin"
 RUN swiftc -sanitize=fuzzer -parse-as-library fuzzme.swift -o /fuzzme
 
