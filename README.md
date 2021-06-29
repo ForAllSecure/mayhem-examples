@@ -51,6 +51,7 @@ Order is alphabetical.
 | [fuzzme/rust-afl](rust/afl/rust-afl)                                           | Rust             | Rust 1.44         | [afl.rs](https://rust-fuzz.github.io/book/afl.html) | ![](https://img.shields.io/docker/image-size/fuzzme/rust-afl) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/rust-afl)
 | [fuzzme/rust-base-executable](rust/base-executable/rust-base-executable)       | Rust             | Rust 1.44         | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/rust-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/rust-base-executable)
 | [fuzzme/rust-cargo-fuzz](rust/libfuzzer/rust-cargo-fuzz)                       | Rust             | Rust 1.44         | [cargo-fuzz](https://rust-fuzz.github.io/book/cargo-fuzz.html) | ![](https://img.shields.io/docker/image-size/fuzzme/rust-cargo-fuzz) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/rust-cargo-fuzz)
+| [fuzzme/swift-libfuzzer](swift/libfuzzer/swift-libfuzzer)                      | Swift            | Swift 5.4.2       | [libFuzzer](https://github.com/apple/swift/blob/main/docs/libFuzzerIntegration.md) | ![](https://img.shields.io/docker/image-size/fuzzme/swift-libfuzzer) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/swift-libfuzzer)
 
 ## Supported Fuzzers
 

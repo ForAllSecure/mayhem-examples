@@ -37,7 +37,8 @@ FUZZERS := \
 	python/libfuzzer/python-atheris \
 	rust/afl/rust-afl \
 	rust/base-executable/rust-base-executable \
-	rust/libfuzzer/rust-cargo-fuzz
+	rust/libfuzzer/rust-cargo-fuzz \
+	swift/libfuzzer/swift-libfuzzer
 BUILD_FUZZERS := $(addprefix $(BUILD_PREFIX), $(FUZZERS))
 PUSH_FUZZERS := $(addprefix $(PUSH_PREFIX), $(FUZZERS))
 CLEAN_FUZZERS := $(addprefix $(CLEAN_PREFIX), $(FUZZERS))
