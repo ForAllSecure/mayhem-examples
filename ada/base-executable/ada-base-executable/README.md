@@ -11,8 +11,6 @@ docker push $DOCKER_REGISTRY/fuzzme/ada-base-executable
 
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
-> **Note:** This run may take up to two hours to detect the bug!
-
 ```yaml
 version: '1.13'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/ada-base-executable:latest
