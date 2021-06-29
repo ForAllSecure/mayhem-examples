@@ -24,6 +24,15 @@ RUN apt-get update && \
 ENV PATH="${PATH}:/swift-5.4.2-RELEASE-ubuntu20.04/usr/bin"
 RUN swiftc -sanitize=fuzzer -parse-as-library fuzzme.swift -o /fuzzme
 
+FROM ubuntu:groovy
+COPY --from=0 /fuzzme .
+COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftSwiftOnoneSupport.so /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftSwiftOnoneSupport.so
+COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftCore.so /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftCore.so
+COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicui18nswift.so.65 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicui18nswift.so.65
+COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicuucswift.so.65 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicuucswift.so.65
+COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicudataswift.so.65 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicudataswift.so.65
+RUN mkdir /corpus && echo seed > /corpus/seed
+
 # Set to fuzz!
 # ENTRYPOINT []
 CMD [ "/fuzzme" ]
