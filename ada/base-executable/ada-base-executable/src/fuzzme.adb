@@ -16,7 +16,7 @@ procedure Fuzzme is
     if Input (Input'First .. Input'First) = "b" then
       if Input (Input'First + 1 .. Input'First + 1) = "u" then
         if Input (Input'First + 2 .. Input'First + 2) = "g" then
-          raise Ada.Assertions.Assertion_Error; also works.
+          raise Ada.Assertions.Assertion_Error;
           -- Answer := One / Zero;
         end if;
       end if;

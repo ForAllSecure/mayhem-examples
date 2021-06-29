@@ -7,6 +7,7 @@
 Mayhem fuzzme templates for programming languages and fuzzers that you love! Like a "Hello World!" but for fuzzing!
 
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=ForAllSecure.fuzzme)
+[![CI](https://github.com/ForAllSecure/fuzzme/actions/workflows/blank.yml/badge.svg)](https://github.com/ForAllSecure/fuzzme/actions/workflows/blank.yml)
 
 ---
 
