@@ -21,7 +21,7 @@ RUN apt-get update && \
           tzdata \
           zlib1g-dev \ 
           libpython3.8 && \
-          tar -xvf swift-5.4.2-RELEASE-ubuntu20.04.tar.gz
+          tar -xvzf swift-5.4.2-RELEASE-ubuntu20.04.tar.gz
 ENV PATH="${PATH}:/swift-5.4.2-RELEASE-ubuntu20.04/usr/bin"
 RUN swiftc -sanitize=fuzzer -parse-as-library fuzzme.swift -o /fuzzme
 
