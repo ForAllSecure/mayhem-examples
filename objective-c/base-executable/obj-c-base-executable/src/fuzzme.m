@@ -7,7 +7,7 @@ int fuzzme(char *buf)
       if(buf[1] == 'u')
         if(buf[2] == 'g') {
           printf("You've got it!");
-          return 1/0;      // Defect: divide-by-zero.
+          abort();      // Defect: divide-by-zero.
         }
     return 0;
 }
@@ -21,6 +21,14 @@ int main (int argc, const char * argv[])
     [pool drain];    
     return -1;
   }
+
+  if ([[NSFileManager defaultManager] fileExistsAtPath:argv[1]]) {
+    NSLog (@"File exists");
+    [pool drain];
+    return -1;
+  }
+
+
   NSLog (@"Hello, World!");
   return 0; 
 }
