@@ -1,35 +1,44 @@
 #import <Foundation/Foundation.h>
 
-int fuzzme(char *buf)
-{
-  if(strlen(buf) >= 3)
-    if(buf[0] == 'b')
-      if(buf[1] == 'u')
-        if(buf[2] == 'g') {
-          printf("You've got it!");
-          abort();      // Defect: divide-by-zero.
+// declare our function
+int fuzzme(NSString * contents) {
+  if (contents.length >= 3) {
+    if ([contents characterAtIndex:0] == 'b') {
+      if ([contents characterAtIndex:1 == 'u']) {
+        if ([contents characterAtIndex:2 == 'g']) {
+          NSLog(@"Made it to the bug!");
+          abort();
         }
-    return 0;
+      }
+    }
+  }
+  return 0;
 }
 
 int main (int argc, const char * argv[])
 {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-  
+  NSString *path = [NSString stringWithUTF8String:argv[1]];
+
   if(argc != 2) {
     NSLog (@"Must supply a text file\n");
     [pool drain];    
     return -1;
   }
 
-  if ([[NSFileManager defaultManager] fileExistsAtPath:argv[1]]) {
+  if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
     NSLog (@"File exists");
+    NSData* data = [NSData dataWithContentsOfFile:path];
+    NSString* string = [[NSString alloc] initWithBytes:[data bytes] length:[data length] encoding:NSUTF8StringEncoding];
+    NSLog (@"string %@", string);
+
+    fuzzme(string);
     [pool drain];
+    return 0;
+  }
+  else {
     return -1;
   }
 
-
-  NSLog (@"Hello, World!");
-  return 0; 
 }
 
