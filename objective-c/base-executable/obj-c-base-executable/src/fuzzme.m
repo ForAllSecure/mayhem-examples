@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 // declare our function
-int fuzzme(NSString * contents) {
+int fuzzme(NSString* contents) {
   if (contents.length >= 3) {
     if ([contents characterAtIndex:0] == 'b') {
       if ([contents characterAtIndex:1 == 'u']) {
@@ -17,8 +17,7 @@ int fuzzme(NSString * contents) {
 
 int main (int argc, const char * argv[])
 {
-  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-  NSString *path = [NSString stringWithUTF8String:argv[1]];
+  NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 
   if(argc != 2) {
     NSLog (@"Must supply a text file\n");
@@ -26,13 +25,14 @@ int main (int argc, const char * argv[])
     return -1;
   }
 
+  NSString* path = [NSString stringWithUTF8String:argv[1]];
+
   if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
     NSLog (@"File exists");
     NSData* data = [NSData dataWithContentsOfFile:path];
-    NSString* string = [[NSString alloc] initWithBytes:[data bytes] length:[data length] encoding:NSUTF8StringEncoding];
-    NSLog (@"string %@", string);
-
-    fuzzme(string);
+    NSString* contents = [[NSString alloc] initWithBytes:[data bytes] length:[data length] encoding:NSUTF8StringEncoding];
+    
+    fuzzme(contents);
     [pool drain];
     return 0;
   }
