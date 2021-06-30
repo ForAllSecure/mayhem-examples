@@ -37,6 +37,7 @@ int main (int argc, const char * argv[])
     return 0;
   }
   else {
+    [pool drain];
     return -1;
   }
 
