@@ -32,6 +32,7 @@ FUZZERS := \
 	java/base-executable/java-base-executable \
 	java/libfuzzer/java-jazzer \
 	kotlin/libfuzzer/kotlin-jazzer \
+	objective-c/base-executable/obj-c-base-executable \
 	ocaml/afl/ocaml-afl \
 	ocaml/base-executable/ocaml-base-executable \
 	python/libfuzzer/python-atheris \
