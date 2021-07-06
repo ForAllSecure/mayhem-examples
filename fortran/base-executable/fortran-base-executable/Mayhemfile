@@ -1,0 +1,7 @@
+version: '1.13'
+baseimage: fuzzme/fortran-base-executable:latest
+duration: 600
+project: fuzzme
+target: fortran-base-executable
+cmds:
+  - cmd: /fuzzme @@
