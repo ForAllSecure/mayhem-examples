@@ -1,4 +1,4 @@
-version: '1.13'
+version: '1.14'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/ocaml-afl:latest
 duration: 600
 project: fuzzme
