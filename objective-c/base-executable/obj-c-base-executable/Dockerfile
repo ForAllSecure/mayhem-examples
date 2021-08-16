@@ -1,4 +1,4 @@
-FROM debian:stable-slim as builder
+FROM debian:buster-slim as builder
 RUN apt-get update && \
     apt-get install -fy build-essential gobjc gobjc++ gnustep gnustep-devel libgnustep-base-dev
 COPY src/fuzzme.m .

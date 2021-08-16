@@ -2,7 +2,7 @@ FROM fuzzers/honggfuzz:1.9
 COPY src/fuzzme.cpp .
 RUN hfuzz-clang++ -fno-inline fuzzme.cpp -o fuzzme 
 
-FROM debian:stable-slim
+FROM debian:buster-slim
 COPY --from=0 /fuzzme .
 COPY --from=0 /usr/local/bin/honggfuzz /usr/local/bin/honggfuzz
 COPY --from=0 /usr/lib/x86_64-linux-gnu/libunwind-ptrace.so.0 /usr/lib/x86_64-linux-gnu/libunwind-ptrace.so.0
