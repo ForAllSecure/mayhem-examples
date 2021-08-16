@@ -1,4 +1,4 @@
-version: '1.14'
+version: '1.15'
 baseimage: fuzzme/fortran-base-executable:latest
 duration: 600
 project: fuzzme
