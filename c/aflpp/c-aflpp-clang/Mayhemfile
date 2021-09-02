@@ -4,5 +4,5 @@ duration: 600
 project: fuzzme
 target: c-aflpp-clang
 cmds:
-  - cmd: /AFLplusplus/fuzzme @@
+  - cmd: /fuzzme @@
     afl: true

@@ -4,6 +4,6 @@ duration: 600
 project: fuzzme
 target: java-base-executable
 cmds:
-  - cmd: /usr/bin/TestMe.jar @@
+  - cmd: /usr/bin/FuzzMe.jar @@
     env:
       MFUZZ_JAVA: '1'
