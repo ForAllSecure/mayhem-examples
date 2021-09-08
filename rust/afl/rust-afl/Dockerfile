@@ -1,4 +1,4 @@
-FROM rust:1.44-buster as rust-target
+FROM fuzzers/cargo-fuzz:0.10.0
 RUN cargo install afl --version 0.7.0
 COPY src/fuzzme.rs .
 RUN export USER=root && \
