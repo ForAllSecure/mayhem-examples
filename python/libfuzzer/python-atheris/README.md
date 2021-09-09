@@ -12,9 +12,9 @@ docker push $DOCKER_REGISTRY/fuzzme/python-atheris
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.12'
+version: 1.14
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/python/python-atheris:latest
-duration: 300
+duration: 90
 project: python
 target: python-atheris
 tasks:

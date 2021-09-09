@@ -12,9 +12,9 @@ docker push $DOCKER_REGISTRY/fuzzme/cpp-aflpp-gcc
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.13'
+version: 1.14
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-aflpp-gcc:latest
-duration: 600
+duration: 90
 project: fuzzme
 target: cpp-aflpp-gcc
 cmds:

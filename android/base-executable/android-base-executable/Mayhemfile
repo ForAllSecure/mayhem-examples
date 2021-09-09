@@ -1,4 +1,4 @@
-version: '1.14'
+version: 1.14
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/android-base-executable:latest
 duration: 90
 project: fuzzme
