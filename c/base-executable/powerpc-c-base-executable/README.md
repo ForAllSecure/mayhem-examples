@@ -14,7 +14,7 @@ Then initiate a Mayhem run using a Mayhemfile similar to the following:
 ```yaml
 version: '1.14'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/powerpc-c-base-executable:latest
-duration: 90
+duration: 120
 project: fuzzme
 target: powerpc-c-base-executable
 cmds:
