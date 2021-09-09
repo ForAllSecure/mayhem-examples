@@ -17,11 +17,6 @@ baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/python/python-atheris:latest
 duration: 90
 project: python
 target: python-atheris
-tasks:
-  - name: exploitability_factors
-  - name: corpus_minimization
-  - name: regression_testing
-  - name: behavior_testing
 cmds:
   - cmd: /fuzzme.py
     libfuzzer: true
