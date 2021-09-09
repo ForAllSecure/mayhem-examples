@@ -12,7 +12,7 @@ docker push $DOCKER_REGISTRY/fuzzme/c-honggfuzz-clang
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: 1.14
+version: '1.14'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-honggfuzz-clang:latest
 duration: 90
 project: fuzzme
