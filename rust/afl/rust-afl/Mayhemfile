@@ -1,0 +1,8 @@
+version: '1.14'
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/rust/rust-afl:latest
+duration: 90
+project: rust
+target: rust-afl
+cmds:
+  - cmd: /fuzzme/target/debug/fuzzme
+    afl: true

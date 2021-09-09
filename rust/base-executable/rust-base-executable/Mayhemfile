@@ -1,0 +1,7 @@
+version: '1.14'
+baseimage: fuzzme/rust-base-executable:latest
+duration: 90
+project: fuzzme
+target: rust-base-executable
+cmds:
+  - cmd: /fuzzme @@

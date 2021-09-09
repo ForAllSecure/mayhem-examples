@@ -1,0 +1,7 @@
+version: '1.14'
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/obj-c-base-executable:latest
+duration: 90
+project: fuzzme
+target: obj-c-base-executable
+cmds:
+  - cmd: /fuzzme @@

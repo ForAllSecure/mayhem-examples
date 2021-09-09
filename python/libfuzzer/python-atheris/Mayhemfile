@@ -1,0 +1,8 @@
+version: '1.14'
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/python/python-atheris:latest
+duration: 90
+project: python
+target: python-atheris
+cmds:
+  - cmd: /fuzzme.py
+    libfuzzer: true
