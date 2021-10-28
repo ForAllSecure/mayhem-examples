@@ -1,0 +1,8 @@
+version: '1.13'
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-aflpp-clang:latest
+duration: 90
+project: fuzzme
+target: c-aflpp-clang
+cmds:
+  - cmd: /fuzzme @@
+    afl: true

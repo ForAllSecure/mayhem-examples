@@ -1,0 +1,9 @@
+version: '1.13'
+baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/powerpc-c-base-executable:latest
+duration: 120
+project: fuzzme
+target: powerpc-c-base-executable
+cmds:
+  - cmd: /fuzzme @@
+    env:
+      QEMU_LD_PREFIX: /usr/powerpc-linux-gnu
