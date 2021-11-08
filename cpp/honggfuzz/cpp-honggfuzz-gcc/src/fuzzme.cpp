@@ -1,5 +1,7 @@
 #include <stddef.h>
 #include <stdint.h>
+#include <iostream>
+#include <stdlib.h>
 
 int fuzzme(char *buf, unsigned len)
 {
