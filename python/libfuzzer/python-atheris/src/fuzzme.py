@@ -2,6 +2,7 @@
 
 import atheris
 import sys
+import os
 
 def TestOneInput(data):
     if len(data) >= 3 :    
@@ -9,7 +10,7 @@ def TestOneInput(data):
             if data[1] == ord('u'):
                 if data[2] == ord('g'):
                     print("Made it to the bug!")
-                    return 1 / 0
+                    os.abort()
 
 atheris.Setup(sys.argv, TestOneInput)
 atheris.Fuzz()

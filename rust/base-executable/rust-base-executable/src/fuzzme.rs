@@ -2,6 +2,7 @@ use std::env;
 use std::fs::File;
 use std::io;
 use std::io::prelude::*;
+use std::process;
 
 fn main() -> io::Result<()> {
     let args: Vec<String> = env::args().collect();
@@ -20,7 +21,7 @@ fn fuzzme(data: &[u8]) {
     if data[0] == 'b' as u8 {
         if data[1] == 'u' as u8 {
             if data[2] == 'g' as u8 {
-                div_by_val(0);
+                process::abort();
             }
         }
     }
