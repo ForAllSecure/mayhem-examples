@@ -13,7 +13,7 @@ func fuzzme(bytes []byte) int {
         if string(content[0]) == "b" {
             if string(content[1]) == "u" {
                 if string(content[2]) == "g" {
-                    _ = divBy(0)
+                    panic()
                 }
             }
         }
