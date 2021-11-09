@@ -1,7 +1,5 @@
 package fuzzme;
 
-import kotlin.system.exitProcess
-
 fun fuzzerInitialize(){
     // any state initialization goes here!
 }
@@ -12,7 +10,7 @@ fun fuzzerTestOneInput(data: ByteArray) {
         if (input.get(0) == 'b') {
             if (input.get(1) == 'u') {
                 if (input.get(2) == 'g') {
-                    exitProcess(0)
+                    val i: Int = 1 / 0;
                 }
             }
         }
