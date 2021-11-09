@@ -1,5 +1,7 @@
 #include <stddef.h>
 #include <stdint.h>
+#include <iostream>
+#include <stdlib.h>
 
 int fuzzme(char *buf, unsigned len)
 {
@@ -7,7 +9,7 @@ int fuzzme(char *buf, unsigned len)
     if(buf[0] == 'b')
       if(buf[1] == 'u')
         if(buf[2] == 'g') {
-          return 1/0;      // Defect: divide-by-zero.
+          abort();
         }
   return 0;
 }
