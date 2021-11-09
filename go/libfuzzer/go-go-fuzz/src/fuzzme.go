@@ -14,11 +14,6 @@ func fuzzme(bytes []byte) int {
     return 0
 }
 
-func divBy(val int) int {
-    y := 1 / val
-    return y
-}
-
 func Fuzz(data []byte) int {
     _ = fuzzme(data)
     return 0

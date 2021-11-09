@@ -26,7 +26,3 @@ fn fuzzme(data: &[u8]) {
         }
     }
 }
-
-fn div_by_val(num: i32) -> i32 {
-    return 1 / num;
-}

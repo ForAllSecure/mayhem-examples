@@ -21,11 +21,6 @@ func fuzzme(bytes []byte) int {
     return 0
 }
 
-func divBy(val int) int {
-    y := 1 / val
-    return y
-}
-
 func main() {
     if len(os.Args) != 2 {
         fmt.Printf("Usage: ./fuzzme <file>\n")
