@@ -13,10 +13,10 @@ Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
 version: '1.13'
-baseimage: fuzzme/rust-base-executable:latest
+baseimage: fuzzme/fortran-base-executable:latest
 duration: 90
 project: fuzzme
-target: rust-base-executable
+target: fortran-base-executable
 cmds:
   - cmd: /fuzzme @@
 ```
