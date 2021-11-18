@@ -12,7 +12,7 @@ docker push $DOCKER_REGISTRY/fuzzme/powerpc-c-base-executable
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.13'
+version: '1.14'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/powerpc-c-base-executable:latest
 duration: 120
 project: fuzzme
