@@ -1,4 +1,4 @@
-FROM fuzzers/jazzer:0.9.1-openjdk11
+FROM fuzzers/jazzer:0.10.0-openjdk11
 COPY src/FuzzMe.java .
 # Build FuzzMe.jar
 RUN mkdir -p build && \
