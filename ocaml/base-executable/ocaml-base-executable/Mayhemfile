@@ -1,4 +1,4 @@
-version: '1.16'
+version: '1.15'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/ocaml-base-executable:latest
 duration: 90
 project: fuzzme

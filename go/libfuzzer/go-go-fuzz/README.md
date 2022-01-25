@@ -12,7 +12,7 @@ docker push $DOCKER_REGISTRY/fuzzme/go-go-fuzz
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.16'
+version: '1.15'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/go/go-go-fuzz:latest
 duration: 90
 project: go
