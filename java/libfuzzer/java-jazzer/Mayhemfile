@@ -1,4 +1,4 @@
-version: '1.14'
+version: '1.16'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/java-jazzer:latest
 duration: 90
 project: fuzzme
