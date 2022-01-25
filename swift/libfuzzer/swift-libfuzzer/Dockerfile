@@ -1,4 +1,4 @@
-FROM ubuntu:groovy
+FROM ubuntu:jammy
 
 # Set non-interactive mode so tzdata doesn't hold up Docker build
 ENV DEBIAN_FRONTEND=noninteractive
@@ -28,7 +28,7 @@ ENV PATH="${PATH}:/swift-5.4.2-RELEASE-ubuntu20.04/usr/bin"
 RUN swiftc -sanitize=fuzzer -parse-as-library fuzzme.swift -o /fuzzme
 
 # Set multi-stage build to optimize space
-FROM ubuntu:groovy
+FROM ubuntu:jammy
 COPY --from=0 /fuzzme .
 COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftSwiftOnoneSupport.so /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftSwiftOnoneSupport.so
 COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftCore.so /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftCore.so

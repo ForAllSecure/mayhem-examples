@@ -10,20 +10,9 @@ fun fuzzerTestOneInput(data: ByteArray) {
         if (input.get(0) == 'b') {
             if (input.get(1) == 'u') {
                 if (input.get(2) == 'g') {
-                    val i: Int = 1 / 0;
+                    System.exit(-1);
                 }
             }
         }
     }
 }
-
-// fun fuzzerTestOneInput(data: ByteArray) {
-//     val input = String(data)
-//     if (input.startsWith("b", 0)) {
-//         if (input.startsWith("u", 1)) {
-//             if (input.startsWith("g", 2)) {
-//                 val i: Int = 1 / 0;
-//             }
-//         }
-//     }
-// }
