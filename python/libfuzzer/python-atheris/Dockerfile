@@ -1,4 +1,4 @@
-FROM fuzzers/atheris:1.0.3-python3.8
+FROM fuzzers/atheris:2.0.7-python3.9
 COPY src/fuzzme.py /fuzzme.py
 
 # Set to fuzz!
