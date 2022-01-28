@@ -7,7 +7,7 @@ public class FuzzMe {
             if (input.charAt(0) == 'b') {
                 if (input.charAt(1) == 'u') {
                     if (input.charAt(2) == 'g') {
-                        System.exit(-1);
+                        throw new RuntimeException("Made it to the bug!");
                     }
                 }
             }
