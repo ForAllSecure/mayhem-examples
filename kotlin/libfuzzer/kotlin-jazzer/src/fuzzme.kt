@@ -10,7 +10,7 @@ fun fuzzerTestOneInput(data: ByteArray) {
         if (input.get(0) == 'b') {
             if (input.get(1) == 'u') {
                 if (input.get(2) == 'g') {
-                    System.exit(-1);
+                    throw RuntimeException("Made it to the bug!");
                 }
             }
         }
