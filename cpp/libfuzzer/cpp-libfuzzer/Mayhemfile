@@ -1,4 +1,4 @@
-version: '1.15'
+version: '1.16'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-libfuzzer:latest
 duration: 90
 project: fuzzme
