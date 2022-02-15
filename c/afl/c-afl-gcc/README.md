@@ -12,7 +12,7 @@ docker push $DOCKER_REGISTRY/fuzzme/c-afl-gcc
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.15'
+version: '1.17'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-afl-gcc:latest
 duration: 90
 project: fuzzme

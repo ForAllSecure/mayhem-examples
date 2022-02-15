@@ -1,4 +1,4 @@
-version: '1.15'
+version: '1.17'
 baseimage: fuzzme/rust-base-executable:latest
 duration: 90
 project: fuzzme

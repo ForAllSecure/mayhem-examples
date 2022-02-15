@@ -1,4 +1,4 @@
-version: '1.15'
+version: '1.17'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-aflpp-clang:latest
 duration: 90
 project: fuzzme
