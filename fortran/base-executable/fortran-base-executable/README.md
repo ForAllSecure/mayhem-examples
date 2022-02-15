@@ -12,7 +12,7 @@ docker push $DOCKER_REGISTRY/fuzzme/fortran-base-executable
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.16'
+version: '1.17'
 baseimage: fuzzme/fortran-base-executable:latest
 duration: 90
 project: fuzzme

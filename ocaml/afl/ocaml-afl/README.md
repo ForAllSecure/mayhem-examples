@@ -12,7 +12,7 @@ docker push $DOCKER_REGISTRY/fuzzme/ocaml-afl
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.16'
+version: '1.17'
 baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/ocaml-afl:latest
 duration: 90
 project: fuzzme
