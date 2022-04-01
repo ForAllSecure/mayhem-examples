@@ -1,8 +1,8 @@
 FROM fuzzers/afl:2.52
 COPY src/fuzzme.cpp .
 RUN afl-g++ -fno-inline fuzzme.cpp -o /fuzzme 
-RUN echo seed > /corpus/seed
+RUN mkdir /tests && echo seed > /tests/seed
 
 # Set to fuzz!
-ENTRYPOINT ["afl-fuzz", "-i", "/corpus", "-o", "/out"]
+ENTRYPOINT ["afl-fuzz", "-i", "/tests", "-o", "/out"]
 CMD ["/fuzzme", "@@"]

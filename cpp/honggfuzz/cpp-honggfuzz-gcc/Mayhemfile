@@ -1,5 +1,4 @@
-version: '1.17'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-honggfuzz-gcc:latest
+image: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-honggfuzz-gcc:latest
 duration: 90
 project: fuzzme
 target: cpp-honggfuzz-gcc

@@ -1,5 +1,4 @@
-version: '1.17'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/rust-afl:latest
+image: $MAYHEM_DOCKER_REGISTRY/fuzzme/rust-afl:latest
 duration: 90
 project: rust
 target: rust-afl

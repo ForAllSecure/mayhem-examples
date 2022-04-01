@@ -3,8 +3,8 @@
 Run the following to build the `fuzzme/rust-cargo-fuzz` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $DOCKER_REGISTRY/fuzzme/rust-cargo-fuzz .
-docker push $DOCKER_REGISTRY/fuzzme/rust-cargo-fuzz
+docker build -t $MAYHEM_DOCKER_REGISTRY/fuzzme/rust-cargo-fuzz .
+docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/rust-cargo-fuzz
 ```
 
 ## Executing the Mayhem Run
@@ -12,8 +12,7 @@ docker push $DOCKER_REGISTRY/fuzzme/rust-cargo-fuzz
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.17'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/rust-cargo-fuzz:latest
+image: $MAYHEM_DOCKER_REGISTRY/fuzzme/rust-cargo-fuzz:latest
 duration: 90
 project: rust
 target: rust-cargo-fuzz

@@ -6,7 +6,7 @@ All targets are broken down by language, fuzzer, and target. The general structu
 - <language>
   - <fuzzer>
     - <target>
-      - corpus
+      - tests
       - src
       - Dockerfile
       - Mayhemfile
@@ -18,8 +18,8 @@ All targets should be able to be built and pushed using the following commands:
 > **Note:** You should first navigate to the corresponding target directory before executing the below commands.
 
 ```sh
-docker build -t $DOCKER_REGISTRY/fuzzme/<target_name> .
-docker push $DOCKER_REGISTRY/fuzzme/<target_name>
+docker build -t $MAYHEM_DOCKER_REGISTRY/fuzzme/<target_name> .
+docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/<target_name>
 ```
 
 The docker `ENTRYPOINT` for all fuzzme examples should be empty `[]`, unless local testing is desired. For example, the [c-afl-gcc](/c/afl/c-afl-gcc/Dockerfile) target sets the `ENTRYPOINT` to use the `afl-fuzz` utility to fuzz the containerized binary when the `c-afl-gcc` Docker image is run. The `CMD` for every dockerfile should be the command that is expected to be passed to the fuzzer.
