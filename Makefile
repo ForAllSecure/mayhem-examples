@@ -1,6 +1,6 @@
 default: all
 
-MAYHEM_DOCKER_REGISTRY ?=
+MAYHEM_DOCKER_REGISTRY ?= docker.io
 
 FUZZME_ORG = fuzzme
 BUILD_PREFIX := build/
