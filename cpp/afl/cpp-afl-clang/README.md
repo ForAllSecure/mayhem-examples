@@ -3,8 +3,8 @@
 Run the following to build the `fuzzme/cpp-afl-clang` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $DOCKER_REGISTRY/fuzzme/cpp-afl-clang .
-docker push $DOCKER_REGISTRY/fuzzme/cpp-afl-clang
+docker build -t $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-afl-clang .
+docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-afl-clang
 ```
 
 ## Executing the Mayhem Run
@@ -12,8 +12,7 @@ docker push $DOCKER_REGISTRY/fuzzme/cpp-afl-clang
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.17'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-afl-clang:latest
+image: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-afl-clang:latest
 duration: 90
 project: fuzzme
 target: cpp-afl-clang

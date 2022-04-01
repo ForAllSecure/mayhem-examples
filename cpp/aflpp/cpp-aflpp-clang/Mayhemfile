@@ -1,5 +1,4 @@
-version: '1.17'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-aflpp-clang:latest
+image: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-aflpp-clang:latest
 duration: 90
 project: fuzzme
 target: cpp-aflpp-clang

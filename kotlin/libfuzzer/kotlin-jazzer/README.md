@@ -3,8 +3,8 @@
 Run the following to build the `fuzzme/kotlin-jazzer` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $DOCKER_REGISTRY/fuzzme/kotlin-jazzer .
-docker push $DOCKER_REGISTRY/fuzzme/kotlin-jazzer
+docker build -t $MAYHEM_DOCKER_REGISTRY/fuzzme/kotlin-jazzer .
+docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/kotlin-jazzer
 ```
 
 ## Executing the Mayhem Run
@@ -12,8 +12,7 @@ docker push $DOCKER_REGISTRY/fuzzme/kotlin-jazzer
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-version: '1.17'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/kotlin-jazzer:latest
+image: $MAYHEM_DOCKER_REGISTRY/fuzzme/kotlin-jazzer:latest
 duration: 90
 project: fuzzme
 target: kotlin

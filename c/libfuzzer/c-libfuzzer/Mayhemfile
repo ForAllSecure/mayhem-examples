@@ -1,5 +1,4 @@
-version: '1.17'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-libfuzzer:latest
+image: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-libfuzzer:latest
 duration: 90
 project: fuzzme
 target: c-libfuzzer

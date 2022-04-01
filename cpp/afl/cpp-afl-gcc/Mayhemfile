@@ -1,5 +1,4 @@
-version: '1.17'
-baseimage: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-afl-gcc:latest
+image: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-afl-gcc:latest
 duration: 90
 project: cpp
 target: cpp-afl-gcc
