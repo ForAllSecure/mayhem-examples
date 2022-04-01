@@ -10,8 +10,8 @@ COPY --from=0 /usr/lib/x86_64-linux-gnu/libunwind-x86_64.so.8 /usr/lib/x86_64-li
 COPY --from=0 /usr/lib/x86_64-linux-gnu/libbfd-2.31.1-system.so /usr/lib/x86_64-linux-gnu/libbfd-2.31.1-system.so
 COPY --from=0 /usr/lib/x86_64-linux-gnu/libopcodes-2.31.1-system.so /usr/lib/x86_64-linux-gnu/libopcodes-2.31.1-system.so
 COPY --from=0 /usr/lib/x86_64-linux-gnu/libunwind.so.8 /usr/lib/x86_64-linux-gnu/libunwind.so.8
-RUN mkdir /corpus && echo seed > /corpus/seed
+RUN mkdir /tests && echo seed > /tests/seed
 
 # Set to fuzz!
-ENTRYPOINT ["honggfuzz", "-f", "/corpus", "--"]
+ENTRYPOINT ["honggfuzz", "-f", "/tests", "--"]
 CMD ["/fuzzme"]

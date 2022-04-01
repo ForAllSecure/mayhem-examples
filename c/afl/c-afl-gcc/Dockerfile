@@ -1,8 +1,8 @@
 FROM fuzzers/afl:2.52
 COPY src/fuzzme.c .
 RUN afl-gcc fuzzme.c -o /fuzzme
-RUN echo seed > /corpus/seed
+RUN echo seed > /tests/seed
 
 # Set to fuzz!
-ENTRYPOINT ["afl-fuzz", "-i", "/corpus", "-o", "/out"]
+ENTRYPOINT ["afl-fuzz", "-i", "/tests", "-o", "/out"]
 CMD ["/fuzzme", "@@"]
