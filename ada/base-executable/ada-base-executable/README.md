@@ -3,8 +3,8 @@
 Run the following to build the `fuzzme/ada-base-executable` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $MAYHEM_DOCKER_REGISTRYEGISTRY/fuzzme/ada-base-executable .
-docker push $MAYHEM_DOCKER_REGISTRYEGISTRY/fuzzme/ada-base-executable
+docker build -t $MAYHEM_DOCKER_REGISTRY/fuzzme/ada-base-executable .
+docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/ada-base-executable
 ```
 
 ## Executing the Mayhem Run
