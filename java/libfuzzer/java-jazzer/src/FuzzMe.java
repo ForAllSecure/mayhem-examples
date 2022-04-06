@@ -1,6 +1,6 @@
-package fuzzme;
+package mayhemexamples;
 
-public class FuzzMe {
+public class MayhemIt {
     public static void fuzzerTestOneInput(byte[] data) {
         String input = new String(data);
         if (input.length() >= 3) {

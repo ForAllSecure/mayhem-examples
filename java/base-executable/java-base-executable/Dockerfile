@@ -1,16 +1,16 @@
 FROM openjdk:8-jdk
 
-COPY src/FuzzMe.java .
+COPY src/MayhemIt.java .
 
-# Build FuzzMe.jar
+# Build MayhemIt.jar
 RUN mkdir -p build && \
-    javac -d build FuzzMe.java && \
+    javac -d build MayhemIt.java && \
     cd build && \
-    jar -cfe FuzzMe.jar fuzzme.FuzzMe * && \
-    chmod u+x FuzzMe.jar && \
-    mv FuzzMe.jar /usr/bin/FuzzMe.jar && \
+    jar -cfe MayhemIt.jar mayhem-examples.MayhemIt * && \
+    chmod u+x MayhemIt.jar && \
+    mv MayhemIt.jar /usr/bin/MayhemIt.jar && \
     rm -rf build
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD [ "/usr/bin/FuzzMe.jar", "@@" ]
+CMD [ "/usr/bin/MayhemIt.jar", "@@" ]

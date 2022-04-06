@@ -1,7 +1,7 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-afl-clang:latest
+image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/cpp-afl-clang:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: cpp-afl-clang
 cmds:
-  - cmd: /fuzzme @@
+  - cmd: /mayhemit @@
     afl: true

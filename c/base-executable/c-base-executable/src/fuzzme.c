@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int fuzzme(char *buf)
+int mayhemit(char *buf)
 {
   if(strlen(buf) >= 3)
     if(buf[0] == 'b')
@@ -31,6 +31,6 @@ int main(int argc, char *argv[])
     fprintf(stderr, "Could not read from %s\n", argv[1]);
     return -1;
   }
-  fuzzme(buf);
+  mayhemit(buf);
   return 0;
 }

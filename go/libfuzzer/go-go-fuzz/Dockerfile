@@ -1,8 +1,8 @@
 FROM fuzzers/go-fuzz:1.2.0
-COPY src/fuzzme.go .
-RUN go-fuzz-build -libfuzzer -o fuzzme.a && \
-    clang -fsanitize=fuzzer fuzzme.a -o fuzzme.libfuzzer
+COPY src/mayhemit.go .
+RUN go-fuzz-build -libfuzzer -o mayhemit.a && \
+    clang -fsanitize=fuzzer mayhemit.a -o mayhemit.libfuzzer
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD ["/go/fuzzme.libfuzzer"]
+CMD ["/go/mayhemit.libfuzzer"]

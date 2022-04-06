@@ -1,7 +1,7 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-aflpp-gcc:latest
+image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/c-aflpp-gcc:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: c-aflpp-gcc
 cmds:
-  - cmd: /fuzzme @@
+  - cmd: /mayhemit @@
     afl: true

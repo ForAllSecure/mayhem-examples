@@ -1,6 +1,6 @@
-image: fuzzme/fortran-base-executable:latest
+image: mayhem-examples/fortran-base-executable:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: fortran-base-executable
 cmds:
-  - cmd: /fuzzme @@
+  - cmd: /mayhemit @@

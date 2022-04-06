@@ -1,7 +1,7 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/rust-cargo-fuzz:latest
+image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/rust-cargo-fuzz:latest
 duration: 90
-project: rust
+project: mayhem-examples
 target: rust-cargo-fuzz
 cmds:
-  - cmd: /fuzzme/fuzz/target/x86_64-unknown-linux-gnu/release/fuzzme
+  - cmd: /mayhemit/fuzz/target/x86_64-unknown-linux-gnu/release/mayhemit
     libfuzzer: true

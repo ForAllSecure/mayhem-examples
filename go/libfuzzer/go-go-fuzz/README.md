@@ -1,10 +1,10 @@
 ## Building and Pushing the Docker Image
 
-Run the following to build the `fuzzme/go-go-fuzz` Docker image and push it to a specified Docker registry.
+Run the following to build the `mayhem-examples/go-go-fuzz` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $MAYHEM_DOCKER_REGISTRY/fuzzme/go-go-fuzz .
-docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/go-go-fuzz
+docker build -t $MAYHEM_DOCKER_REGISTRY/mayhem-examples/go-go-fuzz .
+docker push $MAYHEM_DOCKER_REGISTRY/mayhem-examples/go-go-fuzz
 ```
 
 ## Executing the Mayhem Run
@@ -12,11 +12,11 @@ docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/go-go-fuzz
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/go/go-go-fuzz:latest
+image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/go-go-fuzz:latest
 duration: 90
-project: go
+project: mayhem-examples
 target: go-go-fuzz
 cmds:
-  - cmd: /go/fuzzme.libfuzzer
+  - cmd: /go/mayhemit.libfuzzer
     libfuzzer: true
 ```

@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 // declare our function
-int fuzzme(NSString* contents) {
+int mayhemit(NSString* contents) {
   if (contents.length >= 3) {
     if ([contents characterAtIndex:0] == 'b') {
       if ([contents characterAtIndex:1 == 'u']) {
@@ -32,7 +32,7 @@ int main (int argc, const char * argv[])
     NSData* data = [NSData dataWithContentsOfFile:path];
     NSString* contents = [[NSString alloc] initWithBytes:[data bytes] length:[data length] encoding:NSUTF8StringEncoding];
     
-    fuzzme(contents);
+    mayhemit(contents);
     [pool drain];
     return 0;
   }

@@ -3,7 +3,7 @@
 #include <iostream>
 #include <stdlib.h>
 
-int fuzzme(char *buf, unsigned len)
+int mayhemit(char *buf, unsigned len)
 {
   if(len >= 3)
     if(buf[0] == 'b')
@@ -24,6 +24,6 @@ int main(void) {
 
 		HF_ITER(&buf, &len);
 
-		fuzzme(reinterpret_cast<char *>(buf), len);
+		mayhemit(reinterpret_cast<char *>(buf), len);
 	}
 }

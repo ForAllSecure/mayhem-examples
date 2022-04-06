@@ -1,7 +1,7 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-honggfuzz-clang:latest
+image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/c-honggfuzz-clang:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: c-honggfuzz-clang
 cmds:
-  - cmd: /fuzzme
+  - cmd: /mayhemit
     honggfuzz: true

@@ -1,8 +1,8 @@
 FROM fuzzers/afl:2.52
-COPY src/fuzzme.c .
-RUN afl-gcc fuzzme.c -o /fuzzme
+COPY src/mayhemit.c .
+RUN afl-gcc mayhemit.c -o /mayhemit
 RUN mkdir /tests && echo seed > /tests/seed
 
 # Set to fuzz!
 ENTRYPOINT ["afl-fuzz", "-i", "/tests", "-o", "/out"]
-CMD ["/fuzzme", "@@"]
+CMD ["/mayhemit", "@@"]

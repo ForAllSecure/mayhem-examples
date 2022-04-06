@@ -1,7 +1,7 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-libfuzzer:latest
+image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/c-libfuzzer:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: c-libfuzzer
 cmds:
-  - cmd: /fuzzme
+  - cmd: /mayhemit
     libfuzzer: true

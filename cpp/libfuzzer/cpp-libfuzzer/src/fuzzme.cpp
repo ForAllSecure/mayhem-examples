@@ -3,7 +3,7 @@
 #include <iostream>
 #include <stdlib.h>
 
-int fuzzme(char *buf, unsigned len)
+int mayhemit(char *buf, unsigned len)
 {
   if(len >= 3)
     if(buf[0] == 'b')
@@ -17,6 +17,6 @@ int fuzzme(char *buf, unsigned len)
 
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
 {
-  fuzzme((char *) Data, Size);
+  mayhemit((char *) Data, Size);
   return 0;
 }

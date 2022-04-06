@@ -1,7 +1,7 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/ocaml-afl:latest
+image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/ocaml-afl:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: ocaml-afl
 cmds:
-  - cmd: /fuzzme @@
+  - cmd: /mayhemit @@
     afl: true

@@ -1,6 +1,6 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/android-base-executable:latest
+image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/android-base-executable:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: android-base-executable
 cmds:
-  - cmd: /fuzzme @@
+  - cmd: /mayhemit @@

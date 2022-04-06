@@ -1,6 +1,6 @@
 package test
 
-func fuzzme(bytes []byte) int {
+func mayhemit(bytes []byte) int {
     content := string(bytes)
     if len(content) >= 3 {
         if string(content[0]) == "b" {
@@ -15,6 +15,6 @@ func fuzzme(bytes []byte) int {
 }
 
 func Fuzz(data []byte) int {
-    _ = fuzzme(data)
+    _ = mayhemit(data)
     return 0
 }

@@ -1,10 +1,10 @@
 FROM zenika/kotlin:1.4.20-M2-jdk11-slim
-COPY src/fuzzme.kt .
-RUN kotlinc fuzzme.kt -include-runtime -d fuzzme.jar
+COPY src/mayhemit.kt .
+RUN kotlinc mayhemit.kt -include-runtime -d mayhemit.jar
 
 FROM fuzzers/jazzer:0.9.1-openjdk11
-COPY --from=0 /fuzzme.jar .
+COPY --from=0 /mayhemit.jar .
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD [ "/usr/bin/jazzer_driver", "--cp=/fuzzme.jar", "--target_class=fuzzme.FuzzmeKt" ]
+CMD [ "/usr/bin/jazzer_driver", "--cp=/mayhemit.jar", "--target_class=mayhemexamples.FuzzmeKt" ]

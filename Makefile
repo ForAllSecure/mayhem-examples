@@ -2,7 +2,7 @@ default: all
 
 MAYHEM_DOCKER_REGISTRY ?= docker.io
 
-FUZZME_ORG = fuzzme
+FUZZME_ORG = mayhem-examples
 BUILD_PREFIX := build/
 PUSH_PREFIX := push/
 CLEAN_PREFIX := clean/

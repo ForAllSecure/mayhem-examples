@@ -2,7 +2,7 @@ FROM ubuntu:jammy
 
 # Set non-interactive mode so tzdata doesn't hold up Docker build
 ENV DEBIAN_FRONTEND=noninteractive
-COPY src/fuzzme.swift .
+COPY src/mayhemit.swift .
 RUN apt-get update && \
     apt-get install -fy \
           binutils \
@@ -25,11 +25,11 @@ RUN apt-get update && \
     wget https://swift.org/builds/swift-5.4.2-release/ubuntu2004/swift-5.4.2-RELEASE/swift-5.4.2-RELEASE-ubuntu20.04.tar.gz && \
     tar -xvzf swift-5.4.2-RELEASE-ubuntu20.04.tar.gz
 ENV PATH="${PATH}:/swift-5.4.2-RELEASE-ubuntu20.04/usr/bin"
-RUN swiftc -sanitize=fuzzer -parse-as-library fuzzme.swift -o /fuzzme
+RUN swiftc -sanitize=fuzzer -parse-as-library mayhemit.swift -o /mayhemit
 
 # Set multi-stage build to optimize space
 FROM ubuntu:jammy
-COPY --from=0 /fuzzme .
+COPY --from=0 /mayhemit .
 COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftSwiftOnoneSupport.so /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftSwiftOnoneSupport.so
 COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftCore.so /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftCore.so
 COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicui18nswift.so.65 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicui18nswift.so.65
@@ -39,4 +39,4 @@ RUN mkdir /tests && echo seed > /tests/seed
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD [ "/fuzzme" ]
+CMD [ "/mayhemit" ]

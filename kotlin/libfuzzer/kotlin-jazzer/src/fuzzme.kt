@@ -1,4 +1,4 @@
-package fuzzme;
+package mayhem;
 
 fun fuzzerInitialize(){
     // any state initialization goes here!
