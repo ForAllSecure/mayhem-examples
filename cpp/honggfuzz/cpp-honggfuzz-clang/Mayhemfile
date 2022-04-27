@@ -1,4 +1,4 @@
-image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/cpp-honggfuzz-clang:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/cpp-honggfuzz-clang:latest
 duration: 90
 project: mayhem-examples
 target: cpp-honggfuzz-clang

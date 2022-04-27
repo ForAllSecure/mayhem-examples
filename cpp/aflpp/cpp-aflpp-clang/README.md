@@ -1,10 +1,10 @@
 ## Building and Pushing the Docker Image
 
-Run the following to build the `mayhem-examples/cpp-aflpp-clang` Docker image and push it to a specified Docker registry.
+Run the following to build the `forallsecure/cpp-aflpp-clang` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $MAYHEM_DOCKER_REGISTRY/mayhem-examples/cpp-aflpp-clang .
-docker push $MAYHEM_DOCKER_REGISTRY/mayhem-examples/cpp-aflpp-clang
+docker build -t $MAYHEM_DOCKER_REGISTRY/forallsecure/cpp-aflpp-clang .
+docker push $MAYHEM_DOCKER_REGISTRY/forallsecure/cpp-aflpp-clang
 ```
 
 ## Executing the Mayhem Run
@@ -12,7 +12,7 @@ docker push $MAYHEM_DOCKER_REGISTRY/mayhem-examples/cpp-aflpp-clang
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/cpp-aflpp-clang:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/cpp-aflpp-clang:latest
 duration: 90
 project: mayhem-examples
 target: cpp-aflpp-clang

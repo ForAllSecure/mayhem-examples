@@ -1,4 +1,4 @@
-image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/c-aflpp-clang:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/c-aflpp-clang:latest
 duration: 90
 project: mayhem-examples
 target: c-aflpp-clang

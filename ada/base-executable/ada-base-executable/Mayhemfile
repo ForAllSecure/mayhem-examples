@@ -1,4 +1,4 @@
-image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/ada-base-executable:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/ada-base-executable:latest
 project: mayhem-examples
 target: ada-base-executable
 duration: 90

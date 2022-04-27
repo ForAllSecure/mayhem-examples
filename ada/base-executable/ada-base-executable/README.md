@@ -1,10 +1,10 @@
 ## Building and Pushing the Docker Image
 
-Run the following to build the `mayhem-examples/ada-base-executable` Docker image and push it to a specified Docker registry.
+Run the following to build the `forallsecure/ada-base-executable` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $MAYHEM_DOCKER_REGISTRY/mayhem-examples/ada-base-executable .
-docker push $MAYHEM_DOCKER_REGISTRY/mayhem-examples/ada-base-executable
+docker build -t $MAYHEM_DOCKER_REGISTRY/forallsecure/ada-base-executable .
+docker push $MAYHEM_DOCKER_REGISTRY/forallsecure/ada-base-executable
 ```
 
 ## Executing the Mayhem Run
@@ -12,7 +12,7 @@ docker push $MAYHEM_DOCKER_REGISTRY/mayhem-examples/ada-base-executable
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/ada-base-executable:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/ada-base-executable:latest
 project: mayhem-examples
 target: ada-base-executable
 duration: 90

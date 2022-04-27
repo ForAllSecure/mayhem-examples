@@ -1,4 +1,4 @@
-image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/c-afl-clang:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/c-afl-clang:latest
 duration: 90
 project: mayhem-examples
 target: c-afl-clang

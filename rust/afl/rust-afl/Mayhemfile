@@ -1,4 +1,4 @@
-image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/rust-afl:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/rust-afl:latest
 duration: 90
 project: rust
 target: rust-afl

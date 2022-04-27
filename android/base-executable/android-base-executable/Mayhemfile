@@ -1,4 +1,4 @@
-image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/android-base-executable:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/android-base-executable:latest
 duration: 90
 project: mayhem-examples
 target: android-base-executable

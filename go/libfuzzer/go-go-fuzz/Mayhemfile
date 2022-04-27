@@ -1,4 +1,4 @@
-image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/go-go-fuzz:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/go-go-fuzz:latest
 duration: 90
 project: go
 target: go-go-fuzz
