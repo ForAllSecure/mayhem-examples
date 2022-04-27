@@ -1,4 +1,4 @@
-@_cdecl("LLVMFuzzerTestOneInput") public func fuzzMe(data: UnsafePointer<CChar>, size: CInt) -> CInt {
+@_cdecl("LLVMFuzzerTestOneInput") public func mayhemIt(data: UnsafePointer<CChar>, size: CInt) -> CInt {
     let buffer = UnsafeBufferPointer(start: data, count: Int(size))
     guard buffer.count >= 3 else {
         return 1

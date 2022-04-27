@@ -1,10 +1,10 @@
 ## Building and Pushing the Docker Image
 
-Run the following to build the `fuzzme/c-base-executable` Docker image and push it to a specified Docker registry.
+Run the following to build the `forallsecure/c-base-executable` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $MAYHEM_DOCKER_REGISTRY/fuzzme/c-base-executable .
-docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/c-base-executable
+docker build -t $MAYHEM_DOCKER_REGISTRY/forallsecure/c-base-executable .
+docker push $MAYHEM_DOCKER_REGISTRY/forallsecure/c-base-executable
 ```
 
 ## Executing the Mayhem Run
@@ -12,10 +12,10 @@ docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/c-base-executable
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-base-executable:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/c-base-executable:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: c-base-executable
 cmds:
-  - cmd: /fuzzme @@
+  - cmd: /mayhemit @@
 ```

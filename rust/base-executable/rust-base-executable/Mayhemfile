@@ -1,6 +1,6 @@
-image: fuzzme/rust-base-executable:latest
+image: forallsecure/rust-base-executable:latest
 duration: 90
-project: fuzzme
+project: mayhem-examplesles
 target: rust-base-executable
 cmds:
-  - cmd: /fuzzme @@
+  - cmd: /mayhemit @@

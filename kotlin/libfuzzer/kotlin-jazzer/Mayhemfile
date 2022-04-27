@@ -1,7 +1,7 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/kotlin-jazzer:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/kotlin-jazzer:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: kotlin
 cmds:
-  - cmd: /usr/bin/jazzer_driver --cp=/fuzzme.jar --target_class=fuzzme.FuzzmeKt
+  - cmd: /usr/bin/jazzer_driver --cp=/mayhemit.jar --target_class=mayhemexamples.FuzzmeKt
     libfuzzer: true

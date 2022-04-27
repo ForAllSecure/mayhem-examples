@@ -1,7 +1,7 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-honggfuzz-gcc:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/cpp-honggfuzz-gcc:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: cpp-honggfuzz-gcc
 cmds:
-  - cmd: /fuzzme
+  - cmd: /mayhemit
     honggfuzz: true

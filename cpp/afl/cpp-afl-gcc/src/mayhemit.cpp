@@ -3,7 +3,7 @@
 #include <fstream>
 #include <stdlib.h>
 
-int fuzzme(char *buf)
+int mayhemit(char *buf)
 {
   if(strlen(buf) >= 3)
     if(buf[0] == 'b')
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
   else {
     char buf[12] = "";
     infile.read(buf, sizeof(buf));
-    fuzzme(buf);
+    mayhemit(buf);
     return 0;
   }
 }

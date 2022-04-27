@@ -1,7 +1,7 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/java-jazzer:latest
+image: $MAYHEM_DOCKER_REGISTRY/mayhem-examples/java-jazzer:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: java-jazzer
 cmds:
-  - cmd: /usr/bin/jazzer_driver --cp=/usr/bin/FuzzMe.jar --target_class=fuzzme.FuzzMe
+  - cmd: /usr/bin/jazzer_driver --cp=/usr/bin/MayhemIt.jar --target_class=mayhemexamples.MayhemIt
     libfuzzer: true

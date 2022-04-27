@@ -3,7 +3,7 @@ with Ada.Command_Line;
 with Ada.Assertions;
 with GNAT.Exception_Actions;
 
-procedure Fuzzme is
+procedure Mayhemit is
   Length : Integer := 3;
   Input : String (1 .. Length);
   Fd : File_Type;
@@ -33,5 +33,5 @@ begin
 exception
   when Occurence : others  =>
      GNAT.Exception_Actions.Core_Dump (Occurence);
-end Fuzzme;
+end Mayhemit;
 

@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 
-int fuzzme(char *buf)
+int mayhemit(char *buf)
 {
   if(strlen(buf) >= 3)
     if(buf[0] == 'b')
       if(buf[1] == 'u')
         if(buf[2] == 'g') {
-          printf("You've got it!");
-          abort();
+          *(int *)0x0 = 1; // Defect: null pointer dereference
         }
-    return 0;
+  return 0;
 }
 
 int main(int argc, char *argv[])
@@ -31,6 +30,6 @@ int main(int argc, char *argv[])
     fprintf(stderr, "Could not read from %s\n", argv[1]);
     return -1;
   }
-  fuzzme(buf);
+  mayhemit(buf);
   return 0;
 }

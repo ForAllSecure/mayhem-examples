@@ -1,13 +1,13 @@
 FROM fuzzers/jazzer:0.10.0-openjdk11
-COPY src/FuzzMe.java .
-# Build FuzzMe.jar
+COPY src/MayhemIt.java .
+# Build MayhemIt.jar
 RUN mkdir -p build && \
-    javac -d build FuzzMe.java && \
+    javac -d build MayhemIt.java && \
     cd build && \
-    jar cvf FuzzMe.jar * && \
-    mv FuzzMe.jar /usr/bin/FuzzMe.jar && \
+    jar cvf MayhemIt.jar * && \
+    mv MayhemIt.jar /usr/bin/MayhemIt.jar && \
     rm -rf build
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD [ "/usr/bin/jazzer_driver", "--cp=/usr/bin/FuzzMe.jar", "--target_class=fuzzme.FuzzMe" ]
+CMD [ "/usr/bin/jazzer_driver", "--cp=/usr/bin/MayhemIt.jar", "--target_class=mayhemexamples.MayhemIt" ]

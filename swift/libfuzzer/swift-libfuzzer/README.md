@@ -1,10 +1,10 @@
 ## Building and Pushing the Docker Image
 
-Run the following to build the `fuzzme/swift-libfuzzer` Docker image and push it to a specified Docker registry.
+Run the following to build the `forallsecure/swift-libfuzzer` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $MAYHEM_DOCKER_REGISTRY/fuzzme/swift-libfuzzer .
-docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/swift-libfuzzer
+docker build -t $MAYHEM_DOCKER_REGISTRY/forallsecure/swift-libfuzzer .
+docker push $MAYHEM_DOCKER_REGISTRY/forallsecure/swift-libfuzzer
 ```
 
 ## Executing the Mayhem Run
@@ -12,11 +12,11 @@ docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/swift-libfuzzer
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/swift-libfuzzer:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/swift-libfuzzer:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: swift-libfuzzer
 cmds:
-  - cmd: /fuzzme
+  - cmd: /mayhemit
     libfuzzer: true
 ```

@@ -1,7 +1,7 @@
 FROM golang:1.13.3-buster as go-target
-COPY src/fuzzme.go .
-RUN go build -o fuzzme -a fuzzme.go
+COPY src/mayhemit.go .
+RUN go build -o mayhemit -a mayhemit.go
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /go/fuzzme @@
+CMD /go/mayhemit @@

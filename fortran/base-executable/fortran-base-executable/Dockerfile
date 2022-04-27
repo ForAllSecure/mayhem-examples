@@ -1,10 +1,10 @@
 FROM debian:buster-slim
-COPY src/fuzzme.f90 .
+COPY src/mayhemit.f90 .
 RUN apt-get update && \
     apt-get install -fy gfortran && \
-    gfortran fuzzme.f90 -o /fuzzme
+    gfortran mayhemit.f90 -o /mayhemit
 COPY tests/seed.txt /tests/seed.txt
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD ["/fuzzme", "@@"]
+CMD ["/mayhemit", "@@"]

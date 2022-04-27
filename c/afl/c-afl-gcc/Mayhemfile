@@ -1,7 +1,7 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-afl-gcc:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/c-afl-gcc:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: c-afl-gcc
 cmds:
-  - cmd: /fuzzme @@
+  - cmd: /mayhemit @@
     afl: true

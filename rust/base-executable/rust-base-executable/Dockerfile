@@ -1,7 +1,7 @@
 FROM rust:1.44-buster as rust-target
-COPY src/fuzzme.rs .
-RUN rustc -o /fuzzme fuzzme.rs
+COPY src/mayhemit.rs .
+RUN rustc -o /mayhemit mayhemit.rs
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD ["/fuzzme", "@@"]
+CMD ["/mayhemit", "@@"]

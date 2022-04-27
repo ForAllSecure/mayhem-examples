@@ -1,10 +1,10 @@
 ## Building and Pushing the Docker Image
 
-Run the following to build the `fuzzme/kotlin-jazzer` Docker image and push it to a specified Docker registry.
+Run the following to build the `forallsecure/kotlin-jazzer` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $MAYHEM_DOCKER_REGISTRY/fuzzme/kotlin-jazzer .
-docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/kotlin-jazzer
+docker build -t $MAYHEM_DOCKER_REGISTRY/forallsecure/kotlin-jazzer .
+docker push $MAYHEM_DOCKER_REGISTRY/forallsecure/kotlin-jazzer
 ```
 
 ## Executing the Mayhem Run
@@ -12,11 +12,11 @@ docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/kotlin-jazzer
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/kotlin-jazzer:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/kotlin-jazzer:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: kotlin
 cmds:
-  - cmd: /usr/bin/jazzer_driver --cp=/fuzzme.jar --target_class=fuzzme.FuzzmeKt
+  - cmd: /usr/bin/jazzer_driver --cp=/mayhemit.jar --target_class=mayhemexamples.FuzzmeKt
     libfuzzer: true
 ```

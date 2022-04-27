@@ -2,9 +2,9 @@ FROM debian:buster-slim as builder
 RUN apt-get update && \
     apt-get install -y gcc make libc6-dbg && \
     rm -rf /var/lib/apt/lists/*
-COPY src/fuzzme.c .
-RUN gcc fuzzme.c -o /fuzzme
+COPY src/mayhemit.c .
+RUN gcc mayhemit.c -o /mayhemit
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /fuzzme @@
+CMD /mayhemit @@

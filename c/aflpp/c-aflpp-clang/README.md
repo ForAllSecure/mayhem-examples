@@ -1,10 +1,10 @@
 ## Building and Pushing the Docker Image
 
-Run the following to build the `fuzzme/c-aflpp-clang` Docker image and push it to a specified Docker registry.
+Run the following to build the `forallsecure/c-aflpp-clang` Docker image and push it to a specified Docker registry.
 
 ```sh
-docker build -t $MAYHEM_DOCKER_REGISTRY/fuzzme/c-aflpp-clang .
-docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/c-aflpp-clang
+docker build -t $MAYHEM_DOCKER_REGISTRY/forallsecure/c-aflpp-clang .
+docker push $MAYHEM_DOCKER_REGISTRY/forallsecure/c-aflpp-clang
 ```
 
 ## Executing the Mayhem Run
@@ -12,11 +12,11 @@ docker push $MAYHEM_DOCKER_REGISTRY/fuzzme/c-aflpp-clang
 Then initiate a Mayhem run using a Mayhemfile similar to the following:
 
 ```yaml
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-aflpp-clang:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/c-aflpp-clang:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: c-aflpp-clang
 cmds:
-  - cmd: /AFLplusplus/fuzzme @@
+  - cmd: /AFLplusplus/mayhemit @@
     afl: true
 ```

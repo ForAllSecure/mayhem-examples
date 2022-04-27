@@ -1,6 +1,6 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/ada-base-executable:latest
-project: fuzzme
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/ada-base-executable:latest
+project: mayhem-examples
 target: ada-base-executable
 duration: 90
 cmds:
-  - cmd: /fuzzme @@
+  - cmd: /mayhemit @@

@@ -1,9 +1,9 @@
 FROM fuzzers/honggfuzz:1.9
-COPY src/fuzzme.c .
-RUN hfuzz-clang -fno-inline fuzzme.c -o /fuzzme 
+COPY src/mayhemit.c .
+RUN hfuzz-clang -fno-inline mayhemit.c -o /mayhemit 
 
 FROM debian:buster-slim
-COPY --from=0 /fuzzme .
+COPY --from=0 /mayhemit .
 COPY --from=0 /usr/local/bin/honggfuzz /usr/local/bin/honggfuzz
 COPY --from=0 /usr/lib/x86_64-linux-gnu/libunwind-ptrace.so.0 /usr/lib/x86_64-linux-gnu/libunwind-ptrace.so.0
 COPY --from=0 /usr/lib/x86_64-linux-gnu/libunwind-x86_64.so.8 /usr/lib/x86_64-linux-gnu/libunwind-x86_64.so.8
@@ -14,4 +14,4 @@ RUN mkdir /tests && echo seed > /tests/seed
 
 # Set to fuzz!
 ENTRYPOINT ["honggfuzz", "-f", "/tests", "--"]
-CMD ["/fuzzme"]
+CMD ["/mayhemit"]

@@ -1,7 +1,7 @@
 FROM tomekw/ada-gnat
-COPY src/fuzzme.adb .
-RUN gnatmake fuzzme.adb -o /fuzzme 
+COPY src/mayhemit.adb .
+RUN gnatmake mayhemit.adb -o /mayhemit 
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD ["/fuzzme", "@@"]
+CMD ["/mayhemit", "@@"]

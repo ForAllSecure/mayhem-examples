@@ -1,7 +1,7 @@
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/cpp-libfuzzer:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/cpp-libfuzzer:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: cpp-libfuzzer
 cmds:
-  - cmd: /fuzzme
+  - cmd: /mayhemit
     libfuzzer: true

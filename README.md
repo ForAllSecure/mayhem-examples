@@ -1,60 +1,60 @@
-<h1 align="center">Fuzzme with Mayhem</h1>
+<h1 align="center">Mayhem Examples</h1>
 
 <p align="center">
   <img src=".images/mayhem-logo.png" alt="Hello World! of Mayhem Docker Images"/>
 </p>
 
-Mayhem fuzzme templates for programming languages and fuzzers that you love! Like a "Hello World!" but for fuzzing!
+Mayhem example templates for programming languages and fuzzers that you love! Like a "Hello World!" but for fuzzing!
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=ForAllSecure.fuzzme)
-[![CI](https://github.com/ForAllSecure/fuzzme/actions/workflows/blank.yml/badge.svg)](https://github.com/ForAllSecure/fuzzme/actions/workflows/blank.yml)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=ForAllSecure.mayhem-examples)
+[![CI](https://github.com/ForAllSecure/mayhem-examples/actions/workflows/blank.yml/badge.svg)](https://github.com/ForAllSecure/mayhem-examples/actions/workflows/blank.yml)
 
 ---
 
 ## Quickstart
 
-Use the Mayhem CLI to execute a new Mayhem run (via the `mayhem run` command) for any fuzzme target directory with a valid `Mayhemfile`. Alternatively, Mayhem users can use the Mayhem UI to execute a new Mayhem run by selecting and fuzzing a fuzzme target Docker image uploaded to either the private Mayhem Docker Registry or the public [Docker Hub](https://hub.docker.com/).
+Use the Mayhem CLI to execute a new Mayhem run (via the `mayhem run` command) for any mayhem-examples target directory with a valid `Mayhemfile`. Alternatively, Mayhem users can use the Mayhem UI to execute a new Mayhem run by selecting and fuzzing a mayhem-examples target Docker image uploaded to either the private Mayhem Docker Registry or the public [Docker Hub](https://hub.docker.com/).
 
-> **Note:** Before executing a Mayhem run on the fuzzme examples, you'll need to first upload the below fuzzme targets to either a private Mayhem Docker Registry or to the public Docker Hub. Read the [How to Get Started](#how-to-get-started) section for more details.
+> **Note:** Before executing a Mayhem run on the mayhem-examples, you'll need to first upload the below mayhem-example targets to either a private Mayhem Docker Registry or to the public Docker Hub. Read the [How to Get Started](#how-to-get-started) section for more details.
 
-## Fuzzme List by Language/Fuzzer
+## Target List by Language/Fuzzer
 
 Order is alphabetical.
 
 |     Target Name                                                                    |     Language     |    Environment    |     Fuzzer         |    Image Size     | Link |
 | :---------------                                                                   | :--------------: | :---------------: | :---------------:  | :-----------------| ---- |
-| [fuzzme/ada-base-executable](ada/base-executable/ada-base-executable)              | Ada              | Ada2012           | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/ada-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/ada-base-executable)
-| [fuzzme/android-base-executable](android/base-executable/android-base-executable)  | C                | C99               | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/android-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/android-base-executable)
-| [fuzzme/c-afl-clang](c/afl/c-afl-clang)                                            | C                | C99               | [AFL-clang](https://github.com/google/AFL) | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-clang) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/c-afl-clang)
-| [fuzzme/c-afl-gcc](c/afl/c-afl-gcc)                                                | C                | C99               | [AFL-gcc](https://github.com/google/AFL) | ![](https://img.shields.io/docker/image-size/fuzzme/c-afl-gcc) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/c-afl-gcc)
-| [fuzzme/c-aflpp-clang](c/aflpp/c-aflpp-clang)                                      | C                | C99               | [AFL++-clang](https://github.com/AFLplusplus/AFLplusplus) | ![](https://img.shields.io/docker/image-size/fuzzme/c-aflpp-clang) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/c-aflpp-clang)
-| [fuzzme/c-aflpp-gcc](c/aflpp/c-aflpp-gcc)                                          | C                | C99               | [AFL++-gcc](https://github.com/AFLplusplus/AFLplusplus) | ![](https://img.shields.io/docker/image-size/fuzzme/c-aflpp-gcc) | [![](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/c-aflpp-gcc)
-| [fuzzme/c-base-executable](c/base-executable/c-base-executable)                    | C                | C99               | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/c-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/c-base-executable)
-| [fuzzme/c-honggfuzz-clang](c/honggfuzz/c-honggfuzz-clang)                          | C                | C99               | [Honggfuzz-clang](https://github.com/google/honggfuzz) | ![](https://img.shields.io/docker/image-size/fuzzme/c-honggfuzz-clang) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/c-honggfuzz-clang)
-| [fuzzme/c-honggfuzz-gcc](c/honggfuzz/c-honggfuzz-gcc)                              | C                | C99               | [Honggfuzz-gcc](https://github.com/google/honggfuzz) | ![](https://img.shields.io/docker/image-size/fuzzme/c-honggfuzz-gcc) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/c-honggfuzz-gcc)
-| [fuzzme/c-libfuzzer](c/libfuzzer/c-libfuzzer)                                      | C                | C99               | [libFuzzer](https://llvm.org/docs/LibFuzzer.html) | ![](https://img.shields.io/docker/image-size/fuzzme/c-libfuzzer) | [![](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/c-libfuzzer)
-| [fuzzme/cpp-afl-clang](cpp/afl/cpp-afl-clang)                                      | C++              | C++11             | [AFL-clang](https://github.com/google/AFL) | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-afl-clang) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/cpp-afl-clang)
-| [fuzzme/cpp-afl-gcc](cpp/afl/cpp-afl-gcc)                                          | C++              | C++11             | [AFL-gcc](https://github.com/google/AFL) | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-afl-gcc) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/cpp-afl-gcc)
-| [fuzzme/cpp-aflpp-clang](cpp/aflpp/cpp-aflpp-clang)                                | C++              | C++11             | [AFL++-clang](https://github.com/AFLplusplus/AFLplusplus) | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-aflpp-clang) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/cpp-aflpp-clang)
-| [fuzzme/cpp-aflpp-gcc](cpp/aflpp/cpp-aflpp-gcc)                                    | C++              | C++11             | [AFL++-gcc](https://github.com/AFLplusplus/AFLplusplus) | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-aflpp-gcc) | [![](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/cpp-aflpp-gcc)
-| [fuzzme/cpp-base-executable](cpp/base-executable/cpp-base-executable)              | C++              | C++11             | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/cpp-base-executable)
-| [fuzzme/cpp-honggfuzz-clang](cpp/honggfuzz/cpp-honggfuzz-clang)                    | C++              | C++11             | [Honggfuzz-clang](https://github.com/google/honggfuzz) | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-honggfuzz-clang) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/cpp-honggfuzz-clang)
-| [fuzzme/cpp-honggfuzz-gcc](cpp/honggfuzz/cpp-honggfuzz-gcc)                        | C++              | C++11             | [Honggfuzz-gcc](https://github.com/google/honggfuzz) | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-honggfuzz-gcc) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/cpp-honggfuzz-gcc)
-| [fuzzme/cpp-libfuzzer](cpp/libfuzzer/cpp-libfuzzer)                                | C++              | C++11             | [libFuzzer](https://llvm.org/docs/LibFuzzer.html) | ![](https://img.shields.io/docker/image-size/fuzzme/cpp-libfuzzer) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/cpp-libfuzzer)
-| [fuzzme/fortran-base-executable](fortran/base-executable/fortran-base-executable)  | Fortran          | Fortran 8.3.0     | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/fortran-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/fortran-base-executable)
-| [fuzzme/go-base-executable](go/base-executable/go-base-executable)                 | Go               | Go 1.13           | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/go-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/go-base-executable)
-| [fuzzme/go-go-fuzz](go/libfuzzer/go-go-fuzz)                                       | Go               | Go 1.13           | [go-fuzz](https://github.com/dvyukov/go-fuzz) | ![](https://img.shields.io/docker/image-size/fuzzme/go-go-fuzz) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/go-go-fuzz)
-| [fuzzme/java-base-executable](java/base-executable/java-base-executable)           | Java             | Openjdk11         | Base-Executable | ![](https://img.shields.io/docker/image-size/fuzzme/java-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/java-base-executable)
-| [fuzzme/java-jazzer](java/libfuzzer/java-jazzer)                                   | Java             | Openjdk11         | [jazzer](https://github.com/CodeIntelligenceTesting/jazzer) | ![](https://img.shields.io/docker/image-size/fuzzme/java-jazzer) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/java-jazzer)
-| [fuzzme/kotlin-jazzer](kotlin/libfuzzer/kotlin-jazzer)                             | Kotlin           | Openjdk11         | [jazzer](https://github.com/CodeIntelligenceTesting/jazzer) | ![](https://img.shields.io/docker/image-size/fuzzme/kotlin-jazzer) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/kotlin-jazzer)
-| [fuzzme/obj-c-base-executable](objective-c/base-executable/obj-c-base-executable)  | Objective-C      | Objective-C 2.0   | Base-Executable | ![](https://img.shields.io/docker/image-size/fuzzme/obj-c-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/obj-c-base-executable)
-| [fuzzme/ocaml-afl](ocaml/afl/ocaml-afl)                                            | OCaml            | OCaml 4.0         | [AFL](https://ocaml.org/manual/afl-fuzz.html) | ![](https://img.shields.io/docker/image-size/fuzzme/ocaml-afl) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/ocaml-afl)
-| [fuzzme/ocaml-base-executable](ocaml/base-executable/ocaml-base-executable)        | OCaml            | OCaml 4.0         | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/ocaml-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/ocaml-base-executable)
-| [fuzzme/python-atheris](python/libfuzzer/python-atheris)                           | Python           | Python3.8         | [Atheris](https://github.com/google/atheris) | ![](https://img.shields.io/docker/image-size/fuzzme/python-atheris) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/python-atheris)
-| [fuzzme/rust-afl](rust/afl/rust-afl)                                               | Rust             | Rust 1.44         | [afl.rs](https://rust-fuzz.github.io/book/afl.html) | ![](https://img.shields.io/docker/image-size/fuzzme/rust-afl) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/rust-afl)
-| [fuzzme/rust-base-executable](rust/base-executable/rust-base-executable)           | Rust             | Rust 1.44         | Base-Executable    | ![](https://img.shields.io/docker/image-size/fuzzme/rust-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/rust-base-executable)
-| [fuzzme/rust-cargo-fuzz](rust/libfuzzer/rust-cargo-fuzz)                           | Rust             | Rust 1.44         | [cargo-fuzz](https://rust-fuzz.github.io/book/cargo-fuzz.html) | ![](https://img.shields.io/docker/image-size/fuzzme/rust-cargo-fuzz) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/rust-cargo-fuzz)
-| [fuzzme/swift-libfuzzer](swift/libfuzzer/swift-libfuzzer)                          | Swift            | Swift 5.4.2       | [libFuzzer](https://github.com/apple/swift/blob/main/docs/libFuzzerIntegration.md) | ![](https://img.shields.io/docker/image-size/fuzzme/swift-libfuzzer) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/fuzzme/swift-libfuzzer)
+| [forallsecure/ada-base-executable](ada/base-executable/ada-base-executable)              | Ada              | Ada2012           | Base-Executable    | ![](https://img.shields.io/docker/image-size/forallsecure/ada-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/ada-base-executable)
+| [forallsecure/android-base-executable](android/base-executable/android-base-executable)  | C                | C99               | Base-Executable    | ![](https://img.shields.io/docker/image-size/forallsecure/android-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/android-base-executable)
+| [forallsecure/c-afl-clang](c/afl/c-afl-clang)                                            | C                | C99               | [AFL-clang](https://github.com/google/AFL) | ![](https://img.shields.io/docker/image-size/forallsecure/c-afl-clang) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/c-afl-clang)
+| [forallsecure/c-afl-gcc](c/afl/c-afl-gcc)                                                | C                | C99               | [AFL-gcc](https://github.com/google/AFL) | ![](https://img.shields.io/docker/image-size/forallsecure/c-afl-gcc) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/c-afl-gcc)
+| [forallsecure/c-aflpp-clang](c/aflpp/c-aflpp-clang)                                      | C                | C99               | [AFL++-clang](https://github.com/AFLplusplus/AFLplusplus) | ![](https://img.shields.io/docker/image-size/forallsecure/c-aflpp-clang) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/c-aflpp-clang)
+| [forallsecure/c-aflpp-gcc](c/aflpp/c-aflpp-gcc)                                          | C                | C99               | [AFL++-gcc](https://github.com/AFLplusplus/AFLplusplus) | ![](https://img.shields.io/docker/image-size/forallsecure/c-aflpp-gcc) | [![](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/c-aflpp-gcc)
+| [forallsecure/c-base-executable](c/base-executable/c-base-executable)                    | C                | C99               | Base-Executable    | ![](https://img.shields.io/docker/image-size/forallsecure/c-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/c-base-executable)
+| [forallsecure/c-honggfuzz-clang](c/honggfuzz/c-honggfuzz-clang)                          | C                | C99               | [Honggfuzz-clang](https://github.com/google/honggfuzz) | ![](https://img.shields.io/docker/image-size/forallsecure/c-honggfuzz-clang) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/c-honggfuzz-clang)
+| [forallsecure/c-honggfuzz-gcc](c/honggfuzz/c-honggfuzz-gcc)                              | C                | C99               | [Honggfuzz-gcc](https://github.com/google/honggfuzz) | ![](https://img.shields.io/docker/image-size/forallsecure/c-honggfuzz-gcc) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/c-honggfuzz-gcc)
+| [forallsecure/c-libfuzzer](c/libfuzzer/c-libfuzzer)                                      | C                | C99               | [libFuzzer](https://llvm.org/docs/LibFuzzer.html) | ![](https://img.shields.io/docker/image-size/forallsecure/c-libfuzzer) | [![](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/c-libfuzzer)
+| [forallsecure/cpp-afl-clang](cpp/afl/cpp-afl-clang)                                      | C++              | C++11             | [AFL-clang](https://github.com/google/AFL) | ![](https://img.shields.io/docker/image-size/forallsecure/cpp-afl-clang) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/cpp-afl-clang)
+| [forallsecure/cpp-afl-gcc](cpp/afl/cpp-afl-gcc)                                          | C++              | C++11             | [AFL-gcc](https://github.com/google/AFL) | ![](https://img.shields.io/docker/image-size/forallsecure/cpp-afl-gcc) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/cpp-afl-gcc)
+| [forallsecure/cpp-aflpp-clang](cpp/aflpp/cpp-aflpp-clang)                                | C++              | C++11             | [AFL++-clang](https://github.com/AFLplusplus/AFLplusplus) | ![](https://img.shields.io/docker/image-size/forallsecure/cpp-aflpp-clang) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/cpp-aflpp-clang)
+| [forallsecure/cpp-aflpp-gcc](cpp/aflpp/cpp-aflpp-gcc)                                    | C++              | C++11             | [AFL++-gcc](https://github.com/AFLplusplus/AFLplusplus) | ![](https://img.shields.io/docker/image-size/forallsecure/cpp-aflpp-gcc) | [![](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/cpp-aflpp-gcc)
+| [forallsecure/cpp-base-executable](cpp/base-executable/cpp-base-executable)              | C++              | C++11             | Base-Executable    | ![](https://img.shields.io/docker/image-size/forallsecure/cpp-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/cpp-base-executable)
+| [forallsecure/cpp-honggfuzz-clang](cpp/honggfuzz/cpp-honggfuzz-clang)                    | C++              | C++11             | [Honggfuzz-clang](https://github.com/google/honggfuzz) | ![](https://img.shields.io/docker/image-size/forallsecure/cpp-honggfuzz-clang) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/cpp-honggfuzz-clang)
+| [forallsecure/cpp-honggfuzz-gcc](cpp/honggfuzz/cpp-honggfuzz-gcc)                        | C++              | C++11             | [Honggfuzz-gcc](https://github.com/google/honggfuzz) | ![](https://img.shields.io/docker/image-size/forallsecure/cpp-honggfuzz-gcc) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/cpp-honggfuzz-gcc)
+| [forallsecure/cpp-libfuzzer](cpp/libfuzzer/cpp-libfuzzer)                                | C++              | C++11             | [libFuzzer](https://llvm.org/docs/LibFuzzer.html) | ![](https://img.shields.io/docker/image-size/forallsecure/cpp-libfuzzer) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/cpp-libfuzzer)
+| [forallsecure/fortran-base-executable](fortran/base-executable/fortran-base-executable)  | Fortran          | Fortran 8.3.0     | Base-Executable    | ![](https://img.shields.io/docker/image-size/forallsecure/fortran-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/fortran-base-executable)
+| [forallsecure/go-base-executable](go/base-executable/go-base-executable)                 | Go               | Go 1.13           | Base-Executable    | ![](https://img.shields.io/docker/image-size/forallsecure/go-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/go-base-executable)
+| [forallsecure/go-go-fuzz](go/libfuzzer/go-go-fuzz)                                       | Go               | Go 1.13           | [go-fuzz](https://github.com/dvyukov/go-fuzz) | ![](https://img.shields.io/docker/image-size/forallsecure/go-go-fuzz) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/go-go-fuzz)
+| [forallsecure/java-base-executable](java/base-executable/java-base-executable)           | Java             | Openjdk11         | Base-Executable | ![](https://img.shields.io/docker/image-size/forallsecure/java-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/java-base-executable)
+| [forallsecure/java-jazzer](java/libfuzzer/java-jazzer)                                   | Java             | Openjdk11         | [jazzer](https://github.com/CodeIntelligenceTesting/jazzer) | ![](https://img.shields.io/docker/image-size/forallsecure/java-jazzer) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/java-jazzer)
+| [forallsecure/kotlin-jazzer](kotlin/libfuzzer/kotlin-jazzer)                             | Kotlin           | Openjdk11         | [jazzer](https://github.com/CodeIntelligenceTesting/jazzer) | ![](https://img.shields.io/docker/image-size/forallsecure/kotlin-jazzer) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/kotlin-jazzer)
+| [forallsecure/obj-c-base-executable](objective-c/base-executable/obj-c-base-executable)  | Objective-C      | Objective-C 2.0   | Base-Executable | ![](https://img.shields.io/docker/image-size/forallsecure/obj-c-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/obj-c-base-executable)
+| [forallsecure/ocaml-afl](ocaml/afl/ocaml-afl)                                            | OCaml            | OCaml 4.0         | [AFL](https://ocaml.org/manual/afl-fuzz.html) | ![](https://img.shields.io/docker/image-size/forallsecure/ocaml-afl) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/ocaml-afl)
+| [forallsecure/ocaml-base-executable](ocaml/base-executable/ocaml-base-executable)        | OCaml            | OCaml 4.0         | Base-Executable    | ![](https://img.shields.io/docker/image-size/forallsecure/ocaml-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/ocaml-base-executable)
+| [forallsecure/python-atheris](python/libfuzzer/python-atheris)                           | Python           | Python3.8         | [Atheris](https://github.com/google/atheris) | ![](https://img.shields.io/docker/image-size/forallsecure/python-atheris) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/python-atheris)
+| [forallsecure/rust-afl](rust/afl/rust-afl)                                               | Rust             | Rust 1.44         | [afl.rs](https://rust-fuzz.github.io/book/afl.html) | ![](https://img.shields.io/docker/image-size/forallsecure/rust-afl) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/rust-afl)
+| [forallsecure/rust-base-executable](rust/base-executable/rust-base-executable)           | Rust             | Rust 1.44         | Base-Executable    | ![](https://img.shields.io/docker/image-size/forallsecure/rust-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/rust-base-executable)
+| [forallsecure/rust-cargo-fuzz](rust/libfuzzer/rust-cargo-fuzz)                           | Rust             | Rust 1.44         | [cargo-fuzz](https://rust-fuzz.github.io/book/cargo-fuzz.html) | ![](https://img.shields.io/docker/image-size/forallsecure/rust-cargo-fuzz) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/rust-cargo-fuzz)
+| [forallsecure/swift-libfuzzer](swift/libfuzzer/swift-libfuzzer)                          | Swift            | Swift 5.4.2       | [libFuzzer](https://github.com/apple/swift/blob/main/docs/libFuzzerIntegration.md) | ![](https://img.shields.io/docker/image-size/forallsecure/swift-libfuzzer) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/swift-libfuzzer)
 
 ## Supported Fuzzers
 
@@ -91,7 +91,7 @@ Don't see your language/fuzzer in the list above? Let us know or better yet send
 
 ## How to Get Started
 
-Navigate to each Language/Fuzzer folder and follow the individual build instructions. Alternatively, you can use the included `Makefile` in the root directory of the `fuzzme` GitHub repository to build the compilation of Dockerfiles and then tag and push the resulting Docker images to the Docker registry of your choice (private or public such as [Docker Hub](https://hub.docker.com/)) all in one go!
+Navigate to each Language/Fuzzer folder and follow the individual build instructions. Alternatively, you can use the included `Makefile` in the root directory of the `mayhem-examples` GitHub repository to build the compilation of Dockerfiles and then tag and push the resulting Docker images to the Docker registry of your choice (private or public such as [Docker Hub](https://hub.docker.com/)) all in one go!
 
 You'll need to first log into your desired Docker registry using the `docker login` command and then set a `MAYHEM_DOCKER_REGISTRY` environment variable to the URL of the specified Docker registry.
 
@@ -119,23 +119,23 @@ With the Docker images now pushed to a private or public Docker registry, just u
 For example, you'll need to set a `Mayhemfile` with a `baseimage` parameter similar to the following for a private Docker registry, where `$MAYHEM_DOCKER_REGISTRY` represents the URL of the private Mayhem Docker registry:
 
 ```yaml
-image: $MAYHEM_DOCKER_REGISTRY/fuzzme/c-base-executable:latest
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/c-base-executable:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: c-base-executable
 cmds:
-  - cmd: /fuzzme @@
+  - cmd: /mayhemit @@
 ```
 
 Otherwise, you can set the `Mayhemfile` with a `baseimage` parameter to a public Docker Hub URL like so:
 
 ```yaml
-image: fuzzme/c-base-executable:latest
+image: forallsecure/c-base-executable:latest
 duration: 90
-project: fuzzme
+project: mayhem-examples
 target: c-base-executable
 cmds:
-  - cmd: /fuzzme @@
+  - cmd: /mayhemit @@
 ```
 
 ## Why Use Docker?
@@ -164,3 +164,4 @@ ForAllSecure was founded with the mission to make the world’s critical softwar
 
 * [https://forallsecure.com/](https://forallsecure.com/)
 * [https://forallsecure.com/mayhem-for-code](https://forallsecure.com/mayhem-for-code)
+* [https://community.forallsecure.com/](https://community.forallsecure.com/)

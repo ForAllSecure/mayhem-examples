@@ -4,17 +4,17 @@ RUN apt-get update && \
     wget https://dl.google.com/android/repository/android-ndk-r21e-linux-x86_64.zip && \
     unzip android-ndk-r21e-linux-x86_64.zip && \
     cd android-ndk-r21e && \
-    mkdir fuzzme && \
-    cd fuzzme && \
+    mkdir mayhemit && \
+    cd mayhemit && \
     mkdir jni
-COPY src/fuzzme.c src/Android.mk src/Application.mk /android-ndk-r21e/fuzzme/jni/
-WORKDIR /android-ndk-r21e/fuzzme/jni/
+COPY src/mayhemit.c src/Android.mk src/Application.mk /android-ndk-r21e/mayhemit/jni/
+WORKDIR /android-ndk-r21e/mayhemit/jni/
 RUN ../../ndk-build
-WORKDIR /android-ndk-r21e/fuzzme/libs/x86_64
+WORKDIR /android-ndk-r21e/mayhemit/libs/x86_64
 
 FROM debian:buster-slim
-COPY --from=0 /android-ndk-r21e/fuzzme/libs/x86_64/fuzzme /fuzzme
+COPY --from=0 /android-ndk-r21e/mayhemit/libs/x86_64/mayhemit /mayhemit
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD [ "fuzzme", "@@" ]
+CMD [ "mayhemit", "@@" ]
