@@ -14,7 +14,7 @@ Then initiate a Mayhem run using a Mayhemfile similar to the following:
 ```yaml
 image: $MAYHEM_DOCKER_REGISTRY/forallsecure/ocaml-base-executable:latest
 duration: 90
-project: forallsecure
+project: mayhem-examplesles
 target: ocaml-base-executable
 cmds:
   - cmd: /mayhemit @@

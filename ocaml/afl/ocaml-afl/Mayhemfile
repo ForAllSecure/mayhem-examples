@@ -1,6 +1,6 @@
 image: $MAYHEM_DOCKER_REGISTRY/forallsecure/ocaml-afl:latest
 duration: 90
-project: forallsecure
+project: mayhem-examples
 target: ocaml-afl
 cmds:
   - cmd: /mayhemit @@

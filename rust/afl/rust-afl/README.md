@@ -14,7 +14,7 @@ Then initiate a Mayhem run using a Mayhemfile similar to the following:
 ```yaml
 image: $MAYHEM_DOCKER_REGISTRY/forallsecure/rust/rust-afl:latest
 duration: 90
-project: forallsecure
+project: mayhem-examples
 target: rust-afl
 cmds:
   - cmd: /mayhemit/target/debug/mayhemit

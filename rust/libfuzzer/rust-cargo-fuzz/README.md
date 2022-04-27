@@ -14,7 +14,7 @@ Then initiate a Mayhem run using a Mayhemfile similar to the following:
 ```yaml
 image: $MAYHEM_DOCKER_REGISTRY/forallsecure/rust-cargo-fuzz:latest
 duration: 90
-project: forallsecure
+project: mayhem-examples
 target: rust-cargo-fuzz
 cmds:
   - cmd: /mayhemit/fuzz/target/x86_64-unknown-linux-gnu/release/mayhemit

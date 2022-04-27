@@ -14,7 +14,7 @@ Then initiate a Mayhem run using a Mayhemfile similar to the following:
 ```yaml
 image: $MAYHEM_DOCKER_REGISTRY/forallsecure/python/python-atheris:latest
 duration: 90
-project: forallsecure
+project: mayhem-examples
 target: python-atheris
 cmds:
   - cmd: /mayhemit.py

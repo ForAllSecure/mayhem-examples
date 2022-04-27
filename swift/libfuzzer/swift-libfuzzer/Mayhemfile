@@ -1,6 +1,6 @@
 image: $MAYHEM_DOCKER_REGISTRY/forallsecure/swift-libfuzzer:latest
 duration: 90
-project: forallsecure
+project: mayhem-examples
 target: swift-libfuzzer
 cmds:
   - cmd: /mayhemit

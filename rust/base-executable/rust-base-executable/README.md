@@ -14,7 +14,7 @@ Then initiate a Mayhem run using a Mayhemfile similar to the following:
 ```yaml
 image: forallsecure/rust-base-executable:latest
 duration: 90
-project: forallsecure
+project: mayhem-examplesles
 target: rust-base-executable
 cmds:
   - cmd: /mayhemit @@
