@@ -1,6 +1,6 @@
 image: forallsecure/rust-base-executable:latest
 duration: 90
-project: mayhem-examplesles
+project: mayhem-examples
 target: rust-base-executable
 cmds:
   - cmd: /mayhemit @@

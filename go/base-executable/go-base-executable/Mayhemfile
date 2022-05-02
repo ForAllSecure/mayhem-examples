@@ -1,4 +1,4 @@
-image: $MAYHEM_DOCKER_REGISTRY/forallsecure/go-base-executable:latest
+image: forallsecure/go-base-executable:latest
 duration: 90
 project: mayhem-examples
 target: go-base-executable
