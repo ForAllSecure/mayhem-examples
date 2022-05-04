@@ -1,6 +1,6 @@
 image: $MAYHEM_DOCKER_REGISTRY/forallsecure/go-go-fuzz:latest
 duration: 90
-project: go
+project: mayhem-examples
 target: go-go-fuzz
 cmds:
   - cmd: /go/mayhemit.libfuzzer

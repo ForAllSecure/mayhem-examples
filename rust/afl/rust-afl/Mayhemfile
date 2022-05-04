@@ -1,6 +1,6 @@
 image: $MAYHEM_DOCKER_REGISTRY/forallsecure/rust-afl:latest
 duration: 90
-project: rust
+project: mayhem-examples
 target: rust-afl
 cmds:
   - cmd: /mayhemit/target/debug/mayhemit
