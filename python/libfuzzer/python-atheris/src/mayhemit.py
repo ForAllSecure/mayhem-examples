@@ -11,5 +11,6 @@ def TestOneInput(data):
                 if data[2] == ord('g'):
                     raise Exception("Made it to the bug!")
 
+atheris.instrument_all()
 atheris.Setup(sys.argv, TestOneInput)
 atheris.Fuzz()
