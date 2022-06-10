@@ -116,7 +116,7 @@ make push
 
 With the Docker images now pushed to a private or public Docker registry, just use either the Mayhem CLI or the Mayhem UI to create a new run and start fuzzing!
 
-For example, you'll need to set a `Mayhemfile` with a `baseimage` parameter similar to the following for a private Docker registry, where `$MAYHEM_DOCKER_REGISTRY` represents the URL of the private Mayhem Docker registry:
+For example, you'll need to set a `Mayhemfile` with a `image` parameter similar to the following for a private Docker registry, where `$MAYHEM_DOCKER_REGISTRY` represents the URL of the private Mayhem Docker registry:
 
 ```yaml
 image: $MAYHEM_DOCKER_REGISTRY/forallsecure/c-base-executable:latest
@@ -127,7 +127,7 @@ cmds:
   - cmd: /mayhemit @@
 ```
 
-Otherwise, you can set the `Mayhemfile` with a `baseimage` parameter to a public Docker Hub URL like so:
+Otherwise, you can set the `Mayhemfile` with a `image` parameter to a public Docker Hub URL like so:
 
 ```yaml
 image: forallsecure/c-base-executable:latest
