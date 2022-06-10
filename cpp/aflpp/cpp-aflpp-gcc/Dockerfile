@@ -1,8 +1,8 @@
 FROM fuzzers/aflplusplus:3.12c
 COPY src/mayhemit.cpp .
 RUN afl-g++-fast -fno-inline mayhemit.cpp -o /mayhemit 
-RUN mkdir /tests && echo seed > /tests/seed
+RUN mkdir /testsuite && echo seed > /testsuite/seed
 
 # Set to fuzz!
-ENTRYPOINT ["afl-fuzz", "-i", "/tests", "-o", "/out"]
+ENTRYPOINT ["afl-fuzz", "-i", "/testsuite", "-o", "/out"]
 CMD ["/mayhemit", "@@"]
