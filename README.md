@@ -73,7 +73,7 @@ Use the `Mayhemfile` parameters as follows:
   dictionary: /tmp/my-dictionary
   ```
 
-* **Max Length:** Maximum length (in bytes) that will be provided as input to the fuzz target and should not exceed 100MB, otherwise the Mayhemfile will fail to validate. Test cases in the starting tests larger than the specified maximum length will be truncated to the value set.
+* **Max Length:** Maximum length (in bytes) that will be provided as input to the fuzz target and should not exceed 100MB, otherwise the Mayhemfile will fail to validate. Test cases in the starting testsuite larger than the specified maximum length will be truncated to the value set.
 
   ```yaml
   max_length: 8192

@@ -6,7 +6,7 @@ All targets are broken down by language, fuzzer, and target. The general structu
 - <language>
   - <fuzzer>
     - <target>
-      - tests
+      - testsuite
       - src
       - Dockerfile
       - Mayhemfile

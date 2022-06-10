@@ -35,7 +35,7 @@ COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libswiftCore.
 COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicui18nswift.so.65 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicui18nswift.so.65
 COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicuucswift.so.65 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicuucswift.so.65
 COPY --from=0 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicudataswift.so.65 /swift-5.4.2-RELEASE-ubuntu20.04/usr/lib/swift/linux/libicudataswift.so.65
-RUN mkdir /tests && echo seed > /tests/seed
+RUN mkdir /testsuite && echo seed > /testsuite/seed
 
 # Set to fuzz!
 ENTRYPOINT []
