@@ -6,4 +6,4 @@ RUN gcc $(gnustep-config --objc-flags) $(gnustep-config --base-libs) mayhemit.m 
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /mayhemit @@
+CMD ["/mayhemit", "@@"]

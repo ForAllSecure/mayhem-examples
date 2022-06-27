@@ -7,4 +7,4 @@ RUN g++ mayhemit.cpp -o mayhemit
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /mayhemit @@
+CMD ["/mayhemit", "@@"]

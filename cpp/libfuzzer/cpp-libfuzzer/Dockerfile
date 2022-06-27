@@ -4,4 +4,4 @@ RUN clang++-12 -fsanitize=fuzzer,address -fno-inline mayhemit.cpp -o mayhemit
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /mayhemit
+CMD ["/mayhemit"]
