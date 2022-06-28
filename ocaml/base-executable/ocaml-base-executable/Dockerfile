@@ -6,4 +6,4 @@ RUN ocamlopt mayhemit.ml -o /mayhemit
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /mayhemit @@
+CMD ["/mayhemit", "@@"]

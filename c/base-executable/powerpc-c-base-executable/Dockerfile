@@ -7,4 +7,4 @@ RUN powerpc-linux-gnu-gcc -o mayhemit -Wno-div-by-zero -fno-stack-protector -zex
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /mayhemit @@
+CMD ["/mayhemit", "@@"]

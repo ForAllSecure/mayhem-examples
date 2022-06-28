@@ -4,4 +4,4 @@ RUN go build -o mayhemit -a mayhemit.go
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /go/mayhemit @@
+CMD ["/go/mayhemit", "@@"]

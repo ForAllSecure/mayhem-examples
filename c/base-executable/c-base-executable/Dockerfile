@@ -7,4 +7,4 @@ RUN gcc mayhemit.c -o /mayhemit
 
 # Set to fuzz!
 ENTRYPOINT []
-CMD /mayhemit @@
+CMD ["/mayhemit", "@@"]
