@@ -28,6 +28,7 @@ FUZZERS := \
 	cpp/honggfuzz/cpp-honggfuzz-clang \
 	cpp/honggfuzz/cpp-honggfuzz-gcc \
 	cpp/libfuzzer/cpp-libfuzzer \
+	csharp/libfuzzer/csharp-sharpfuzz \
 	fortran/base-executable/fortran-base-executable \
 	go/base-executable/go-base-executable \
 	go/libfuzzer/go-go-fuzz \
