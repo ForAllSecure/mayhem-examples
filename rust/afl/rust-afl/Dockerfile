@@ -1,4 +1,4 @@
-FROM fuzzers/cargo-fuzz:0.11.0
+FROM fuzzers/cargo-fuzz:0.10.0
 RUN cargo install afl --version 0.7.0
 COPY src/mayhemit.rs .
 RUN export USER=root && \
