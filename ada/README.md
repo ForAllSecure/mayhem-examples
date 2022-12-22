@@ -14,10 +14,10 @@ To use Mayhem:
  3. Run Mayhem on the compiled binary with the optional test cases.
 
 
-AdaCore's commercial [GNATfuzz
-tool](https://www.adacore.com/dynamic-analysis/gnatfuzz "GNATfuzz")
-helps automate step (1) and (2) saving you significant time.  GNATfuzz
-uses program analysis to automatically infer target functions to fuzz,
-create an initial test corpus, and generate any needed wrappers needed
-for fuzzing. 
+AdaCore's commercial <a
+href="https://www.adacore.com/dynamic-analysis/gnatfuzz"
+target="_blank">GNATfuzz tool</a> helps automate step (1) and (2)
+saving you significant time.  GNATfuzz uses program analysis to
+automatically infer target functions to fuzz, create an initial test
+corpus, and generate any needed wrappers needed for fuzzing.
 
