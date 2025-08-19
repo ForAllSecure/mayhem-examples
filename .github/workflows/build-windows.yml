@@ -41,7 +41,7 @@ jobs:
         #   shell: pwsh
         #   run: |
         #     $mayhemUrl = if ([string]::IsNullOrEmpty("${{ inputs.mayhem_url }}")) { 'https://app.mayhem.security' } else { "${{ inputs.mayhem_url }}" }
-        #     $workspace = if ([string]::IsNullOrEmpty("${{ inputs.workspace }}")) { 'dforbes' } else { "${{ inputs.workspace }}" }
+        #     $workspace = if ([string]::IsNullOrEmpty("${{ inputs.workspace }}")) { 'mayhem-examples' } else { "${{ inputs.workspace }}" }
         #     echo "MAYHEM_URL=$mayhemUrl" | Out-File -FilePath $env:GITHUB_ENV -Append
         #     echo "WORKSPACE=$workspace" | Out-File -FilePath $env:GITHUB_ENV -Append
         
