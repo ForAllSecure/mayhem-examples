@@ -1,8 +1,9 @@
-FROM fuzzers/afl:2.52
-RUN apt-get update && \
-    apt-get install -y ocaml
+FROM ubuntu AS base
+RUN apt update -y && apt install -y curl afl++ unzip
+RUN curl -fsSL https://opam.ocaml.org/install.sh | bash
+RUN opam init --disable-sandboxing -y
 COPY src/mayhemit.ml .
-RUN ocamlopt -afl-instrument unix.cmxa mayhemit.ml -o /mayhemit && \
+RUN eval $(opam env) && ocamlopt -afl-instrument unix.cmxa mayhemit.ml -o /mayhemit && \
     mkdir /input && \
     echo seed > input/seed && \
     mkdir /output
