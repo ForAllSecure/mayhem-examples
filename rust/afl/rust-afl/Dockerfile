@@ -1,6 +1,7 @@
 FROM fuzzers/cargo-fuzz:0.11.0
 RUN cargo install afl --version 0.7.0
 COPY src/mayhemit.rs .
+ENV RUSTFLAGS="-Znew-llvm-pass-manager=no"
 RUN export USER=root && \
     cargo new mayhemit && \
     cd mayhemit && \
