@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim
+FROM debian:bookworm-slim AS builder
 RUN apt-get update && \ 
     apt-get install -fy wget zip make && \
     wget https://dl.google.com/android/repository/android-ndk-r21e-linux-x86_64.zip && \
@@ -13,7 +13,7 @@ RUN ../../ndk-build
 WORKDIR /android-ndk-r21e/mayhemit/libs/x86_64
 
 FROM debian:bookworm-slim
-COPY --from=0 /android-ndk-r21e/mayhemit/libs/x86_64/mayhemit /mayhemit
+COPY --from=builder /android-ndk-r21e/mayhemit/libs/x86_64/mayhemit /mayhemit
 
 # Set to fuzz!
 ENTRYPOINT []
