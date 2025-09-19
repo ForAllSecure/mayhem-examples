@@ -2,7 +2,7 @@ FROM fuzzers/honggfuzz:1.9
 COPY src/mayhemit.c .
 RUN hfuzz-gcc mayhemit.c -o /mayhemit 
 
-FROM debian:buster-slim
+FROM debian:bookworm-slim
 COPY --from=0 /mayhemit .
 COPY --from=0 /usr/local/bin/honggfuzz /usr/local/bin/honggfuzz
 COPY --from=0 /usr/lib/x86_64-linux-gnu/libunwind-ptrace.so.0 /usr/lib/x86_64-linux-gnu/libunwind-ptrace.so.0

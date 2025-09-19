@@ -1,4 +1,4 @@
-FROM debian:buster-slim as builder
+FROM debian:bookworm-slim as builder
 RUN apt-get update && \
     apt-get install -fy build-essential gobjc gobjc++ gnustep gnustep-devel libgnustep-base-dev
 COPY src/mayhemit.m .

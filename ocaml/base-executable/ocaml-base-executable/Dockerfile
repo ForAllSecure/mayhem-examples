@@ -1,4 +1,4 @@
-FROM debian:buster-slim as builder
+FROM debian:bookworm-slim as builder
 RUN apt-get update && \
     apt-get install -y ocaml
 COPY src/mayhemit.ml .

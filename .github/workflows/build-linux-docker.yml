@@ -1,0 +1,32 @@
+name: Build Linux Docker Images for Mayhem
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v5
+
+      - name: Docker login
+        run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build images
+        env:
+          MAYHEM_DOCKER_REGISTRY: docker.io
+        run: make build
+
+      - name: Push images
+        env:
+          MAYHEM_DOCKER_REGISTRY: docker.io
+        run: make push

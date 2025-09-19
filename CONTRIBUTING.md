@@ -1,19 +1,22 @@
 # How do I contribute?
 
-All targets are broken down by language, fuzzer, and target. The general structure is:
+All targets are broken down by language, OS, fuzzer, and target. The general structure is:
 
 ```sh
 - <language>
-  - <fuzzer>
-    - <target>
-      - testsuite
-      - src
-      - Dockerfile
-      - Mayhemfile
-      - README.md
+  - <os>
+    - <fuzzer>
+      - <target>
+        - testsuite
+        - src
+        - Dockerfile
+        - Mayhemfile
+        - README.md
 ```
 
-All targets should be able to be built and pushed using the following commands:
+## Linux Targets
+
+All Linux targets should be able to be built and pushed using the following commands:
 
 > **Note:** You should first navigate to the corresponding target directory before executing the below commands.
 
@@ -43,3 +46,9 @@ if input[0] == "b"
 ```
 
 You can also use the included `Makefile` at the root of the `mayhem-examples` repository to automatically build and push all images using the `make build` and `make push` commands, respectively.
+
+## Windows Targets
+
+For Windows targets, the structure is similar, but the build and packaging process is different. Namely, you will not use a Dockerfile or Mayhemfile, and will compile the target directly using the appropriate compiler for the language (e.g., `csc.exe` for C# or `clang++.exe` for C++). You can find more examples under the (`base-executable/windows/README.md`)[base-executable/windows/README.md] and [cpp/windows/libfuzzer/README.md](cpp/windows/libfuzzer/README.md) directories.
+
+Be sure to include a `README.md` as well.

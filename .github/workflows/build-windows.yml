@@ -1,0 +1,67 @@
+name: Build Windows Targets for Mayhem
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+        - name: Check out the repo
+          uses: actions/checkout@v5
+
+        - name: Setup Developer Command Prompt
+          uses: TheMrMilchmann/setup-msvc-dev@v3
+          with:
+            arch: x64
+        
+        - name: Build Windows C++ targets
+          run: |
+            cl.exe cpp\windows\base-executable\msvc-cpp-base-executable\src\fuzz_target.cpp /nologo /Zi /FS /MDd /EHsc /Fo: "fuzz_target_msvc.obj" /Fe: "fuzz_target_msvc.exe"
+            clang++.exe cpp\windows\base-executable\clang-cpp-base-executable\src\fuzz_target.cpp -g -O1 -o fuzz_target_clang.exe
+            clang++.exe cpp\windows\libfuzzer\src\libfuzzer_target.cpp -g -O1 -fsanitize=fuzzer -o fuzz_target_libfuzzer.exe
+            g++.exe cpp\windows\base-executable\gcc-cpp-base-executable\src\fuzz_target.cpp -g -O1 -o fuzz_target_mingw.exe
+
+        - name: Build Windows C# targets
+          run: |
+            csc.exe /unsafe /nologo /out:/dotnet_fuzz.exe csharp\windows\base-executable\csharp-base-executable\src\dotnet_fuzz.cs
+        
+        # - name: Install Mayhem
+        #   shell: pwsh
+        #   run: |
+        #     Invoke-WebRequest -Uri "https://app.mayhem.security/cli/Windows/mayhem.msi" -OutFile "mayhem.msi"
+        #     Start-Process msiexec.exe -ArgumentList "/i mayhem.msi /quiet /norestart" -Wait
+        #     echo "MAYHEM_PATH=C:\Program Files (x86)\Mayhem\mayhem.exe" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+        # - name: Set values
+        #   shell: pwsh
+        #   run: |
+        #     $mayhemUrl = if ([string]::IsNullOrEmpty("${{ inputs.mayhem_url }}")) { 'https://app.mayhem.security' } else { "${{ inputs.mayhem_url }}" }
+        #     $workspace = if ([string]::IsNullOrEmpty("${{ inputs.workspace }}")) { 'mayhem-examples' } else { "${{ inputs.workspace }}" }
+        #     echo "MAYHEM_URL=$mayhemUrl" | Out-File -FilePath $env:GITHUB_ENV -Append
+        #     echo "WORKSPACE=$workspace" | Out-File -FilePath $env:GITHUB_ENV -Append
+        
+        # - name: Mayhem login
+        #   shell: pwsh
+        #   run: |
+        #     &$env:MAYHEM_PATH login "$env:MAYHEM_URL" "${{ secrets.MAYHEM_TOKEN }}"
+
+        # - name: Mayhem run
+        #   shell: pwsh
+        #   run: |
+        #     &$env:MAYHEM_PATH package -o mayhem_package_msvc fuzz_target_msvc.exe
+        #     Copy-Item -Path cpp\windows\base-executable\msvc\testsuite -Destination mayhem_package_msvc\testsuite
+        #     &$env:MAYHEM_PATH run --owner $env:WORKSPACE --project mayhem-examples --target cpp-windows-msvc --duration 5m mayhem_package_msvc
+        #     &$env:MAYHEM_PATH package -o mayhem_package_clang fuzz_target_clang.exe
+        #     Copy-Item -Path cpp\windows\base-executable\clang\testsuite -Destination mayhem_package_clang\testsuite
+        #     &$env:MAYHEM_PATH run --owner $env:WORKSPACE --project mayhem-examples --target cpp-windows-clang --duration 5m mayhem_package_clang
+        #     &$env:MAYHEM_PATH package -o mayhem_package_libfuzzer fuzz_target_libfuzzer.exe
+        #     Copy-Item -Path cpp\windows\libfuzzer\testsuite -Destination mayhem_package_libfuzzer\testsuite
+        #     &$env:MAYHEM_PATH run --owner $env:WORKSPACE --project mayhem-examples --target cpp-windows-libfuzzer --duration 5m mayhem_package_libfuzzer
+        #     &$env:MAYHEM_PATH package -o mayhem_package_mingw fuzz_target_mingw.exe
+        #     Copy-Item -Path cpp\windows\base-executable\gcc\testsuite -Destination mayhem_package_mingw\testsuite
+        #     &$env:MAYHEM_PATH run --owner $env:WORKSPACE --project mayhem-examples --target cpp-windows-mingw --duration 5m mayhem_package_mingw

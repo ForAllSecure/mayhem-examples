@@ -1,4 +1,4 @@
-FROM debian:buster-slim as builder
+FROM debian:bookworm-slim as builder
 RUN apt-get update && \
     apt-get install -y gcc-powerpc-linux-gnu make libc6-dbg && \
     rm -rf /var/lib/apt/lists/*
