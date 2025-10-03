@@ -1,12 +1,11 @@
-FROM fuzzers/cargo-fuzz:0.11.0
-RUN cargo install afl --version 0.7.0
+FROM rust:1.90.0
+RUN cargo install cargo-afl
 COPY src/mayhemit.rs .
-ENV RUSTFLAGS="-Znew-llvm-pass-manager=no"
 RUN export USER=root && \
     cargo new mayhemit && \
     cd mayhemit && \
     mv /mayhemit.rs src/main.rs && \
-    echo afl = '"0.4"' >> Cargo.toml && \
+    echo afl = '"*"' >> Cargo.toml && \
     cargo afl build
 RUN echo seed > /tmp/seed
 
