@@ -20,15 +20,15 @@ FUZZERS := \
 	c/honggfuzz/c-honggfuzz-clang \
 	c/honggfuzz/c-honggfuzz-gcc \
 	c/libfuzzer/c-libfuzzer \
-	cpp/afl/cpp-afl-clang \
-	cpp/afl/cpp-afl-gcc \
-	cpp/aflpp/cpp-aflpp-clang \
-	cpp/aflpp/cpp-aflpp-gcc \
-	cpp/base-executable/cpp-base-executable \
-	cpp/honggfuzz/cpp-honggfuzz-clang \
-	cpp/honggfuzz/cpp-honggfuzz-gcc \
-	cpp/libfuzzer/cpp-libfuzzer \
-	csharp/libfuzzer/csharp-sharpfuzz \
+	cpp/linux/afl/cpp-afl-clang \
+	cpp/linux/afl/cpp-afl-gcc \
+	cpp/linux/aflpp/cpp-aflpp-clang \
+	cpp/linux/aflpp/cpp-aflpp-gcc \
+	cpp/linux/base-executable/cpp-base-executable \
+	cpp/linux/honggfuzz/cpp-honggfuzz-clang \
+	cpp/linux/honggfuzz/cpp-honggfuzz-gcc \
+	cpp/linux/libfuzzer/cpp-libfuzzer \
+	csharp/linux/libfuzzer/csharp-sharpfuzz \
 	fortran/base-executable/fortran-base-executable \
 	go/base-executable/go-base-executable \
 	go/libfuzzer/go-go-fuzz \

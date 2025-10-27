@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:bookworm-slim
 COPY src/mayhemit.f90 .
 RUN apt-get update && \
     apt-get install -fy gfortran && \

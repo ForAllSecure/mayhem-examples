@@ -7,7 +7,7 @@
 Mayhem example templates for programming languages and fuzzers that you love! Like a "Hello World!" but for fuzzing!
 
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=ForAllSecure.mayhem-examples)
-[![CI](https://github.com/ForAllSecure/mayhem-examples/actions/workflows/blank.yml/badge.svg)](https://github.com/ForAllSecure/mayhem-examples/actions/workflows/blank.yml)
+[![CI](https://github.com/ForAllSecure/mayhem-examples/actions/workflows/build-linux-docker.yml/badge.svg)](https://github.com/ForAllSecure/mayhem-examples/actions/workflows/build-linux-docker.yml)
 
 ---
 
@@ -15,7 +15,7 @@ Mayhem example templates for programming languages and fuzzers that you love! Li
 
 Use the Mayhem CLI to execute a new Mayhem run (via the `mayhem run` command) for any mayhem-examples target directory with a valid `Mayhemfile`. Alternatively, Mayhem users can use the Mayhem UI to execute a new Mayhem run by selecting and fuzzing a mayhem-examples target Docker image uploaded to either the private Mayhem Docker Registry or the public [Docker Hub](https://hub.docker.com/).
 
-> **Note:** Before executing a Mayhem run on the mayhem-examples, you'll need to first upload the below mayhem-example targets to either a private Mayhem Docker Registry or to the public Docker Hub. Read the [How to Get Started](#how-to-get-started) section for more details.
+> **Note:** Before executing a Mayhem run on most of the mayhem-examples, you'll need to first upload the below mayhem-example targets to either a private Mayhem Docker Registry, or to the public Github Container Registry or Docker Hub. Read the [How to Get Started](#how-to-get-started) section for more details. Windows targets can be built directly and packaged with the `mayhem package` command.
 
 ## Target List by Language/Fuzzer
 
@@ -56,6 +56,12 @@ Order is alphabetical.
 | [forallsecure/rust-base-executable](rust/base-executable/rust-base-executable)           | Rust             | Rust 1.44         | Base-Executable    | ![](https://img.shields.io/docker/image-size/forallsecure/rust-base-executable) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/rust-base-executable)
 | [forallsecure/rust-cargo-fuzz](rust/libfuzzer/rust-cargo-fuzz)                           | Rust             | Rust 1.44         | [cargo-fuzz](https://rust-fuzz.github.io/book/cargo-fuzz.html) | ![](https://img.shields.io/docker/image-size/forallsecure/rust-cargo-fuzz) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/rust-cargo-fuzz)
 | [forallsecure/swift-libfuzzer](swift/libfuzzer/swift-libfuzzer)                          | Swift            | Swift 5.4.2       | [libFuzzer](https://github.com/apple/swift/blob/main/docs/libFuzzerIntegration.md) | ![](https://img.shields.io/docker/image-size/forallsecure/swift-libfuzzer) | [![docker-logo](.images/docker-logo.png)](https://hub.docker.com/r/forallsecure/swift-libfuzzer)
+
+
+#### Looking for Windows targets?
+
+You can find information about building Windows base executable targets [here](base-executable/windows/README.md) and Windows libFuzzer targets [here](cpp/windows/libfuzzer/README.md).
+
 
 ## Supported Fuzzers
 
@@ -161,8 +167,6 @@ Mayhem can run Docker images stored on either the included private Docker regist
 
 ## About Us
 
-ForAllSecure was founded with the mission to make the world’s critical software safe. The company has been applying its patented technology from over a decade of CMU research to solving the difficult challenge of making software safer. ForAllSecure has partnered with Fortune 1000 companies in aerospace, automotive and high-tech industries, as well as the US Department of Defense to integrate Mayhem into software development cycles for continuous security. Profitable and revenue-funded, the company is scaling rapidly.
+Mayhem was founded with the mission to make the world’s critical software safe. The company has been applying its patented technology from over a decade of CMU research to solving the difficult challenge of making software safer. Mayhem has partnered with Fortune 1000 companies in aerospace, automotive and high-tech industries, as well as the US Department of Defense to integrate Mayhem into software development cycles for continuous security. Profitable and revenue-funded, the company is scaling rapidly.
 
-* [https://forallsecure.com/](https://forallsecure.com/)
-* [https://forallsecure.com/mayhem-for-code](https://forallsecure.com/mayhem-for-code)
-* [https://community.forallsecure.com/](https://community.forallsecure.com/)
+* [https://mayhem.security/](https://mayhem.security/)

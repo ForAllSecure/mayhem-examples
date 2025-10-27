@@ -1,7 +1,0 @@
-image: $MAYHEM_DOCKER_REGISTRY/forallsecure/csharp-sharpfuzz:latest
-duration: 90
-project: mayhem-examples
-target: csharp
-cmds:
-  - cmd: /fuzzme/libfuzzer-dotnet --target_path=/fuzzme/fuzzme
-    libfuzzer: true
